@@ -4,6 +4,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <title>Title</title>
 
     <!-- Favicon -->
@@ -27,6 +28,9 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/node-waves/node-waves.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/global.css" />
 
     <!-- Helpers -->
     <script src="./assets/vendor/js/helpers.js"></script>
@@ -65,7 +69,60 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
-                Content
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header pb-0">
+                                <div class="divider">
+                                    <div class="divider-text">Filters</div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-floating form-floating-outline">
+                                    <input type="text" class="form-control" 
+                                    id="searchInput" placeholder="Search here.."
+                                    onkeyup="filterCharacters()">
+                                    <label for="searchInput">Search</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header pb-0">
+                        <div class="divider">
+                            <div class="divider-text">Characters</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-4">
+                            <div class="char-card pb-3">
+                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_alecdora_01.png" alt="char1">
+                            </div>
+                            <div class="char-card pb-3">
+                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
+                            </div>
+                            <div class="char-card pb-3">
+                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
+                            </div>
+                            <div class="char-card pb-3">
+                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
+                            </div>
+                            <div class="char-card pb-3">
+                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
+                            </div>
+                            <div class="char-card pb-3">
+                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
+                            </div>
+                            <div class="char-card pb-3">
+                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
+                            </div>
+                            <div class="char-card pb-3">
+                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--/ Content -->
     
@@ -101,5 +158,6 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
 <script>
 	$("#nav-placeholder").load("./html/navbar.html")
 </script>
+<script src="./js/filterCharacters.js"></script>
 
 </html>
