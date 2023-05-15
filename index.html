@@ -96,29 +96,41 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                     </div>
                     <div class="card-body">
                         <div class="row mb-4">
-                            <div class="char-card pb-3">
-                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_alecdora_01.png" alt="char1">
+                            <div class="char-card pb-3" data-cardname="alecdora">
+                                <div class="char-cardContainer">
+                                    <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_alecdora_01.png" loading="lazy" alt="char1">
+                                    <p class="char-title bg-body px-1">Alecdora</p>
+                                </div>
                             </div>
-                            <div class="char-card pb-3">
-                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
+                            <div class="char-card pb-3" data-cardname="asta">
+                                <div class="char-cardContainer">
+                                    <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_asta_01.png" loading="lazy" alt="char1">
+                                    <div class="char-title bg-body px-1">Asta</div>
+                                </div>
                             </div>
-                            <div class="char-card pb-3">
-                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
+                            <div class="char-card pb-3" data-cardname="alecdora">
+                                <div class="char-cardContainer">
+                                    <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_alecdora_01.png" loading="lazy" alt="char1">
+                                    <p class="char-title bg-body px-1">Alecdora</p>
+                                </div>
                             </div>
-                            <div class="char-card pb-3">
-                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
+                            <div class="char-card pb-3" data-cardname="asta">
+                                <div class="char-cardContainer">
+                                    <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_asta_01.png" loading="lazy" alt="char1">
+                                    <div class="char-title bg-body px-1">Asta</div>
+                                </div>
                             </div>
-                            <div class="char-card pb-3">
-                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
+                            <div class="char-card pb-3" data-cardname="alecdora">
+                                <div class="char-cardContainer">
+                                    <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_alecdora_01.png" loading="lazy" alt="char1">
+                                    <p class="char-title bg-body px-1">Alecdora</p>
+                                </div>
                             </div>
-                            <div class="char-card pb-3">
-                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
-                            </div>
-                            <div class="char-card pb-3">
-                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
-                            </div>
-                            <div class="char-card pb-3">
-                                <img class="char-portrait bg-dark" src="./img/UI_Portrait_H_S_asta_01.png" alt="char1">
+                            <div class="char-card pb-3" data-cardname="asta">
+                                <div class="char-cardContainer">
+                                    <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_asta_01.png" loading="lazy" alt="char1">
+                                    <div class="char-title bg-body px-1">Asta</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -153,11 +165,14 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
+
+    <!-- External JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.3/purify.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        $("#nav-placeholder").load("./html/navbar.html")
+    </script>
+    <script src="./js/filterCharacters.js"></script>
 </body>
-
-<script>
-	$("#nav-placeholder").load("./html/navbar.html")
-</script>
-<script src="./js/filterCharacters.js"></script>
-
 </html>

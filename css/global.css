@@ -16,8 +16,12 @@
 
 @media (max-width: 750px) {
     .char-card {
-        width: calc(100%/3) !important;
+        width: calc(100%/4) !important;
     }
+}
+
+.char-cardContainer {
+    position: relative;
 }
 
 .char-portrait {
@@ -25,3 +29,10 @@
     width: 100%;
 }
 
+.char-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.7rem;
+    transform: translateY(-40%);
+}
