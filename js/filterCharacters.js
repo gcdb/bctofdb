@@ -1,10 +1,18 @@
 function filterCharacters() {
-    let value = document.getElementById("searchInput").value.toLowerCase();
-    value = DOMPurify.sanitize(value);
-    console.log(value);
+    let nameVal = document.getElementById("nameInput").value.toLowerCase();
+    nameVal = DOMPurify.sanitize(nameVal);
 
-    let shownCards = document.querySelectorAll(value ? `.char-card[data-cardname*="${value}"]` : '.char-card');
-    let hiddenCards = document.querySelectorAll(value ? `.char-card:not([data-cardname*="${value}"])` : 'invalid-selector-i-just-want-an-empty-nodelist-ty-no-judge-plz');
+    let squadVal = document.getElementById("squadInput");
+    
+    let rarityVal = document.getElementById("rarityInput");
+    console.log(rarityVal);
+
+    let typeVal = document.getElementById("typeInput");
+    
+
+    let cardDiv = document.getElementById('char-cardDiv');
+    let shownCards = cardDiv.querySelectorAll(nameVal ? `.char-card[data-cardname*="${nameVal}"]` : '.char-card');
+    let hiddenCards = cardDiv.querySelectorAll(nameVal ? `.char-card:not([data-cardname*="${nameVal}"])` : 'invalid-selector-i-just-want-an-empty-nodelist-ty-no-judge-plz');
 
     shownCards.forEach(x => x.classList.remove('d-none'));
     hiddenCards.forEach(x => x.classList.add('d-none'));

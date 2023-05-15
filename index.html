@@ -78,11 +78,79 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div class="form-floating form-floating-outline">
-                                    <input type="text" class="form-control" 
-                                    id="searchInput" placeholder="Search here.."
-                                    onkeyup="filterCharacters()">
-                                    <label for="searchInput">Search</label>
+                                <div class="mb-2">
+                                    <div class="form-floating form-floating-outline">
+                                        <input type="text" class="form-control" 
+                                        id="nameInput" placeholder="Search here.."
+                                        onkeyup="filterCharacters()">
+                                        <label for="searchInput">Search</label>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <div class="form-floating form-floating-outline" data-bs-toggle="dropdown">
+                                            <input type="text" class="form-control" 
+                                            id="squadInput" placeholder="Search Squads.."
+                                            onkeyup="filterDropdown(VAL_SQUAD)"
+                                            onblur="clearFilter(VAL_SQUAD)"
+                                            >
+                                            <label for="squadInput">Squad</label>
+                                            <ul id="squadDropdown" class="dropdown-menu w-100">
+                                                <li data-value="Aqua Deer"><a class="dropdown-item">Aqua Deer</a></li>
+                                                <li data-value="Black Bulls"><a class="dropdown-item" >Black Bulls</a></li>
+                                                <li data-value="Blue Rose"><a class="dropdown-item" >Blue Rose</a></li>
+                                                <li data-value="Clover Kingdom"><a class="dropdown-item" >Clover Kingdom</a></li>
+                                                <li data-value="Crimson Lion"><a class="dropdown-item" >Crimson Lion</a></li>
+                                                <li data-value="Diamond Kingdom"><a class="dropdown-item" >Diamond Kingdom</a></li>
+                                                <li data-value="Golden Dawn"><a class="dropdown-item" >Golden Dawn</a></li>
+                                                <li data-value="Green Mantis"><a class="dropdown-item" >Green Mantis</a></li>
+                                                <li data-value="Silver Eagle"><a class="dropdown-item" >Silver Eagle</a></li>
+                                                <li data-value="The Eye of the Midnight Sun"><a class="dropdown-item" >The Eye of the Midnight Sun</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-floating form-floating-outline" data-bs-toggle="dropdown">
+                                            <input type="text" class="form-control" 
+                                            id="rarityInput" placeholder="Search Rarities.."
+                                            onkeyup="filterDropdown(VAL_RARITY)"
+                                            onblur="clearFilter(VAL_RARITY)"
+                                            >
+                                            <label for="searchInput">Rarity</label>
+                                            <ul id="rarityDropdown" class="dropdown-menu w-100">
+                                                <li data-value="SSR"><a class="dropdown-item" >SSR</a></li>
+                                                <li data-value="SR"><a class="dropdown-item" >SR</a></li>
+                                                <li data-value="R"><a class="dropdown-item">R</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-floating form-floating-outline" data-bs-toggle="dropdown">
+                                            <input type="text" class="form-control" 
+                                            id="typeInput" placeholder="Search Types.."
+                                            onkeyup="filterDropdown(VAL_TYPE)"
+                                            onblur="clearFilter(VAL_TYPE)"
+                                            >
+                                            <label for="searchInput">Type</label>
+                                            <ul id="typeDropdown" class="dropdown-menu w-100">
+                                                <li data-value="Proficiency"><a class="dropdown-item" >Proficiency</a></li>
+                                                <li data-value="Tenacity"><a class="dropdown-item" >Tenacity</a></li>
+                                                <li data-value="Wisdom"><a class="dropdown-item">Wisdom</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="activeFilterRow" class="row">
+                                    <div class="w-auto">
+                                        <div class="bg-body px-3 py-1 rounded">
+                                            test
+                                        </div>
+                                    </div>
+                                    <div class="w-auto">
+                                        <div class="bg-body px-3 py-1 rounded">
+                                            test
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +163,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="row mb-4">
+                        <div id="char-cardDiv" class="row mb-4">
                             <div class="char-card pb-3" data-cardname="alecdora">
                                 <div class="char-cardContainer">
                                     <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_alecdora_01.png" loading="lazy" alt="char1">
@@ -174,5 +242,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
         $("#nav-placeholder").load("./html/navbar.html")
     </script>
     <script src="./js/filterCharacters.js"></script>
+    <script src="./js/displayDropdowns.js"></script>
+    <script src="./js/filterDropdowns.js"></script>
 </body>
 </html>
