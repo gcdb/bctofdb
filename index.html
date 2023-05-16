@@ -29,8 +29,13 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     <link rel="stylesheet" href="./assets/vendor/libs/node-waves/node-waves.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
 
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.bootstrap5.min.css" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/selectizeOverwrite.css" />
+
 
     <!-- Helpers -->
     <script src="./assets/vendor/js/helpers.js"></script>
@@ -38,6 +43,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
     <script src="./assets/vendor/js/template-customizer.js"></script>
+
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="./assets/js/config.js"></script>
 </head>
@@ -53,6 +59,9 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     <script src="./assets/vendor/libs/hammer/hammer.js"></script>
     <script src="./assets/vendor/js/menu.js"></script>
     <!-- endbuild -->
+
+    <!-- Exernal JS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"></script>
 
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar layout-without-menu">
@@ -78,78 +87,61 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div class="mb-2">
+                                <div class="mb-3">
                                     <div class="form-floating form-floating-outline">
-                                        <input type="text" class="form-control" 
+                                        <input type="text" class="form-control bg-body" 
                                         id="nameInput" placeholder="Search here.."
                                         onkeyup="filterCharacters()">
-                                        <label for="searchInput">Search</label>
+                                        <label for="searchInput">Search Names..</label>
                                     </div>
                                 </div>
-                                <div class="row mb-3">
+                                <div class="row mb-2">
                                     <div class="col">
-                                        <div class="form-floating form-floating-outline" data-bs-toggle="dropdown">
-                                            <input type="text" class="form-control" 
-                                            id="squadInput" placeholder="Search Squads.."
-                                            onkeyup="filterDropdown(VAL_SQUAD)"
-                                            onblur="clearFilter(VAL_SQUAD)"
-                                            >
-                                            <label for="squadInput">Squad</label>
-                                            <ul id="squadDropdown" class="dropdown-menu w-100">
-                                                <li data-value="Aqua Deer"><a class="dropdown-item">Aqua Deer</a></li>
-                                                <li data-value="Black Bulls"><a class="dropdown-item" >Black Bulls</a></li>
-                                                <li data-value="Blue Rose"><a class="dropdown-item" >Blue Rose</a></li>
-                                                <li data-value="Clover Kingdom"><a class="dropdown-item" >Clover Kingdom</a></li>
-                                                <li data-value="Crimson Lion"><a class="dropdown-item" >Crimson Lion</a></li>
-                                                <li data-value="Diamond Kingdom"><a class="dropdown-item" >Diamond Kingdom</a></li>
-                                                <li data-value="Golden Dawn"><a class="dropdown-item" >Golden Dawn</a></li>
-                                                <li data-value="Green Mantis"><a class="dropdown-item" >Green Mantis</a></li>
-                                                <li data-value="Silver Eagle"><a class="dropdown-item" >Silver Eagle</a></li>
-                                                <li data-value="The Eye of the Midnight Sun"><a class="dropdown-item" >The Eye of the Midnight Sun</a></li>
-                                            </ul>
+                                        <p class="fw-semibold d-block mb-0">Rarity</p>
+                                        <div class="form-check form-check-inline mt-3">
+                                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-SSR" value="SSR" />
+                                            <label class="form-check-label" for="inlineRadio1">SSR</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-SR" value="SR" />
+                                            <label class="form-check-label" for="inlineRadio2">SR</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-R" value="R" />
+                                            <label class="form-check-label" for="inlineRadio3">R</label>
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <div class="form-floating form-floating-outline" data-bs-toggle="dropdown">
-                                            <input type="text" class="form-control" 
-                                            id="rarityInput" placeholder="Search Rarities.."
-                                            onkeyup="filterDropdown(VAL_RARITY)"
-                                            onblur="clearFilter(VAL_RARITY)"
-                                            >
-                                            <label for="searchInput">Rarity</label>
-                                            <ul id="rarityDropdown" class="dropdown-menu w-100">
-                                                <li data-value="SSR"><a class="dropdown-item" >SSR</a></li>
-                                                <li data-value="SR"><a class="dropdown-item" >SR</a></li>
-                                                <li data-value="R"><a class="dropdown-item">R</a></li>
-                                            </ul>
+                                        <p class="fw-semibold d-block mb-0">Type</p>
+                                        <div class="form-check form-check-inline mt-3">
+                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-proficiency" value="Proficiency" />
+                                            <label class="form-check-label" for="inlineRadio1">Proficiency</label>
                                         </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-floating form-floating-outline" data-bs-toggle="dropdown">
-                                            <input type="text" class="form-control" 
-                                            id="typeInput" placeholder="Search Types.."
-                                            onkeyup="filterDropdown(VAL_TYPE)"
-                                            onblur="clearFilter(VAL_TYPE)"
-                                            >
-                                            <label for="searchInput">Type</label>
-                                            <ul id="typeDropdown" class="dropdown-menu w-100">
-                                                <li data-value="Proficiency"><a class="dropdown-item" >Proficiency</a></li>
-                                                <li data-value="Tenacity"><a class="dropdown-item" >Tenacity</a></li>
-                                                <li data-value="Wisdom"><a class="dropdown-item">Wisdom</a></li>
-                                            </ul>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-tenacity" value="Tenacity" />
+                                            <label class="form-check-label" for="inlineRadio2">Tenacity</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-wisdom" value="Wisdom" />
+                                            <label class="form-check-label" for="inlineRadio3">Wisdom</label>
                                         </div>
                                     </div>
                                 </div>
-                                <div id="activeFilterRow" class="row">
-                                    <div class="w-auto">
-                                        <div class="bg-body px-3 py-1 rounded">
-                                            test
-                                        </div>
-                                    </div>
-                                    <div class="w-auto">
-                                        <div class="bg-body px-3 py-1 rounded">
-                                            test
-                                        </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <select id="selectize-squad" placeholder="Search Squads..">
+                                            <option value=""></option>
+                                            <option value="Aqua Deer">Aqua Deer</option>
+                                            <option value="Black Bulls">Black Bulls</option>
+                                            <option value="Blue Rose">Blue Rose</option>
+                                            <option value="Clover Kingdom">Clover Kingdom</option>
+                                            <option value="Crimson Lion">Crimson Lion</option>
+                                            <option value="Diamond Kingdom">Diamond Kingdom</option>
+                                            <option value="Golden Dawn">Golden Dawn</option>
+                                            <option value="Green Mantis">Green Mantis</option>
+                                            <option value="Silver Eagle">Silver Eagle</option>
+                                            <option value="The Eye of the Midnight Sun">The Eye of the Midnight Sun</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -241,8 +233,13 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     <script>
         $("#nav-placeholder").load("./html/navbar.html")
     </script>
+    <script>
+        $(document).ready(function() {
+            $('#selectize-squad').selectize({
+            // Configuration options here
+            });
+        });
+    </script>
     <script src="./js/filterCharacters.js"></script>
-    <script src="./js/displayDropdowns.js"></script>
-    <script src="./js/filterDropdowns.js"></script>
 </body>
 </html>
