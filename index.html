@@ -99,49 +99,55 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                                     <div class="col">
                                         <p class="fw-semibold d-block mb-0">Rarity</p>
                                         <div class="form-check form-check-inline mt-3">
-                                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-SSR" value="SSR" />
-                                            <label class="form-check-label" for="inlineRadio1">SSR</label>
+                                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-ssr" value="ssr" />
+                                            <label class="form-check-label" for="rarityRadio-ssr">SSR</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-SR" value="SR" />
-                                            <label class="form-check-label" for="inlineRadio2">SR</label>
+                                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-sr" value="sr" />
+                                            <label class="form-check-label" for="rarityRadio-sr">SR</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-R" value="R" />
-                                            <label class="form-check-label" for="inlineRadio3">R</label>
+                                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-r" value="r" />
+                                            <label class="form-check-label" for="rarityRadio-r">R</label>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <p class="fw-semibold d-block mb-0">Type</p>
                                         <div class="form-check form-check-inline mt-3">
-                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-proficiency" value="Proficiency" />
-                                            <label class="form-check-label" for="inlineRadio1">Proficiency</label>
+                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-proficiency" value="proficiency" />
+                                            <label class="form-check-label" for="typeRadio-proficiency">Proficiency</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-tenacity" value="Tenacity" />
-                                            <label class="form-check-label" for="inlineRadio2">Tenacity</label>
+                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-tenacity" value="tenacity" />
+                                            <label class="form-check-label" for="typeRadio-tenacity">Tenacity</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-wisdom" value="Wisdom" />
-                                            <label class="form-check-label" for="inlineRadio3">Wisdom</label>
+                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-wisdom" value="wisdom" />
+                                            <label class="form-check-label" for="typeRadio-wisdom">Wisdom</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col">
-                                        <select id="selectize-squad" placeholder="Search Squads..">
+                                    <div class="col-10">
+                                        <select id="squadSelect" placeholder="Search Squads..">
                                             <option value=""></option>
-                                            <option value="Aqua Deer">Aqua Deer</option>
-                                            <option value="Black Bulls">Black Bulls</option>
-                                            <option value="Blue Rose">Blue Rose</option>
-                                            <option value="Clover Kingdom">Clover Kingdom</option>
-                                            <option value="Crimson Lion">Crimson Lion</option>
-                                            <option value="Diamond Kingdom">Diamond Kingdom</option>
-                                            <option value="Golden Dawn">Golden Dawn</option>
-                                            <option value="Green Mantis">Green Mantis</option>
-                                            <option value="Silver Eagle">Silver Eagle</option>
-                                            <option value="The Eye of the Midnight Sun">The Eye of the Midnight Sun</option>
+                                            <option value="aqua-deer">Aqua Deer</option>
+                                            <option value="black-bulls">Black Bulls</option>
+                                            <option value="blue-rose">Blue Rose</option>
+                                            <option value="clover-kingdom">Clover Kingdom</option>
+                                            <option value="crimson-lion">Crimson Lion</option>
+                                            <option value="diamond-kingdom">Diamond Kingdom</option>
+                                            <option value="golden-dawn">Golden Dawn</option>
+                                            <option value="green-mantis">Green Mantis</option>
+                                            <option value="silver-eagle">Silver Eagle</option>
+                                            <option value="the-eye-of-the-midnight-sun">The Eye of the Midnight Sun</option>
                                         </select>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-primary w-100" onclick="clearFields()">
+                                            <span class="mdi mdi-filter-remove-outline me-1"></span>
+                                            <span class="d-none d-md-inline-flex">CLEAR</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -156,37 +162,49 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                     </div>
                     <div class="card-body">
                         <div id="char-cardDiv" class="row mb-4">
-                            <div class="char-card pb-3" data-cardname="alecdora">
+                            <div class="char-card pb-3" data-name="alecdora" data-squad="golden-dawn">
                                 <div class="char-cardContainer">
                                     <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_alecdora_01.png" loading="lazy" alt="char1">
                                     <p class="char-title bg-body px-1">Alecdora</p>
                                 </div>
                             </div>
-                            <div class="char-card pb-3" data-cardname="asta">
+                            <div class="char-card pb-3" data-name="asta" data-squad="black-bulls">
                                 <div class="char-cardContainer">
                                     <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_asta_01.png" loading="lazy" alt="char1">
                                     <div class="char-title bg-body px-1">Asta</div>
                                 </div>
                             </div>
-                            <div class="char-card pb-3" data-cardname="alecdora">
+                            <div class="char-card pb-3" data-name="alecdora" data-squad="golden-dawn">
                                 <div class="char-cardContainer">
                                     <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_alecdora_01.png" loading="lazy" alt="char1">
                                     <p class="char-title bg-body px-1">Alecdora</p>
                                 </div>
                             </div>
-                            <div class="char-card pb-3" data-cardname="asta">
+                            <div class="char-card pb-3" data-name="asta" data-squad="black-bulls">
                                 <div class="char-cardContainer">
                                     <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_asta_01.png" loading="lazy" alt="char1">
                                     <div class="char-title bg-body px-1">Asta</div>
                                 </div>
                             </div>
-                            <div class="char-card pb-3" data-cardname="alecdora">
+                            <div class="char-card pb-3" data-name="alecdora" data-squad="golden-dawn">
                                 <div class="char-cardContainer">
                                     <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_alecdora_01.png" loading="lazy" alt="char1">
                                     <p class="char-title bg-body px-1">Alecdora</p>
                                 </div>
                             </div>
-                            <div class="char-card pb-3" data-cardname="asta">
+                            <div class="char-card pb-3" data-name="asta" data-squad="black-bulls">
+                                <div class="char-cardContainer">
+                                    <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_asta_01.png" loading="lazy" alt="char1">
+                                    <div class="char-title bg-body px-1">Asta</div>
+                                </div>
+                            </div>
+                            <div class="char-card pb-3" data-name="alecdora" data-squad="golden-dawn">
+                                <div class="char-cardContainer">
+                                    <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_alecdora_01.png" loading="lazy" alt="char1">
+                                    <p class="char-title bg-body px-1">Alecdora</p>
+                                </div>
+                            </div>
+                            <div class="char-card pb-3" data-name="asta" data-squad="black-bulls">
                                 <div class="char-cardContainer">
                                     <img class="char-portrait bg-dark rounded" src="./img/UI_Portrait_H_S_asta_01.png" loading="lazy" alt="char1">
                                     <div class="char-title bg-body px-1">Asta</div>
@@ -230,16 +248,18 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.3/purify.min.js"></script>
 
     <!-- Custom JS -->
+    <script src="./js/filterHelpers.js"></script>
     <script>
         $("#nav-placeholder").load("./html/navbar.html")
     </script>
     <script>
         $(document).ready(function() {
-            $('#selectize-squad').selectize({
-            // Configuration options here
+            $('#squadSelect').selectize({
+                onChange: filterCharacters
             });
+
+            $("input[name=rarityRadio], input[name=typeRadio]").change(filterCharacters);
         });
     </script>
-    <script src="./js/filterCharacters.js"></script>
 </body>
 </html>
