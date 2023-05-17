@@ -24,6 +24,14 @@
     position: relative;
 }
 
+.char-cardContainer img:hover {
+    box-shadow: 0 0 20px 3px inset white;
+}
+
+.char-cardContainer a {
+    color: var(--bs-card-color) !important;
+}
+
 .char-portrait {
     --bs-bg-opacity: 0.1 !important;
     width: 100%;
