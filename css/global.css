@@ -44,3 +44,7 @@
     font-size: 0.7rem;
     transform: translateY(-40%);
 }
+
+.bg-opacity-10 {
+    --bs-bg-opacity: 0.1 !important;
+}
