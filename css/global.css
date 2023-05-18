@@ -59,3 +59,8 @@ span.char-badge {
     background-color: rgba(81, 72, 72, 0.8);
     border-radius: 0 0 0.5rem 0.5rem;
 }
+
+.tooltip-inner {
+    max-width: 350px;
+    min-width: 250px
+}

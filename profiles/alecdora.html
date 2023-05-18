@@ -88,7 +88,39 @@
                                             </div>
                                         </div>
                                         <div class="col-3 p-0 d-flex align-items-center">
-                                            <img class="align-bottom" src="../img/equips/UI_alecdora_grimoire.png" loading="lazy" alt="char-grimoire">
+                                            <img class="w-100" src="../img/equips/private_grimoire_sr_alecdora_01_item.png" loading="lazy" alt="char-grimoire"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="
+                                            <div class='row'>
+                                                <div class='col text-start fw-bold'>
+                                                    <span>The Captain's Condemnation</span>
+                                                </div>
+                                            </div>
+                                            <div class='row mb-2'>
+                                                <div class='col text-start'>
+                                                    <span>Private Grimoire</span>
+                                                </div>
+                                            </div>
+                                            <div class='row mb-3'>
+                                                <div class='col text-start'>
+                                                    <div class='badge bg-primary'>
+                                                        <span>Tenacity</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class='row mb-2'>
+                                                <div class='col text-start'>
+                                                    <span class='text-warning'>The Long Sh-'Long'</span>
+                                                </div>
+                                            </div>
+                                            <div class='row'>
+                                                <div class='col text-start'>
+                                                    <span>
+                                                        Increase CRIT DMG by
+                                                        <span class='text-info'>100/200/300%</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            " data-bs-placement="bottom">
                                         </div>
                                     </div>
                                 </div>
@@ -331,6 +363,12 @@
     <!-- Custom JS -->
     <script>
         $("#nav-placeholder").load("../html/navbar.html")
+    </script>
+    <script>
+        $(document).ready(() => {
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        });
     </script>
 </body>
 
