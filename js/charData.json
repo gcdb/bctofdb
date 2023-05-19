@@ -1,0 +1,53 @@
+{
+    "ssr_t_alecdora": {
+        "name": "alecdora",
+        "squad": "golden-dawn",
+        "rarity": "ssr",
+        "type": "t",
+        "new": true
+    },
+    "ssr_p_asta": {
+        "name": "asta",
+        "squad": "black-bulls",
+        "rarity": "ssr",
+        "type": "p",
+        "new": true
+    },
+    "ssr_p_baro": {
+        "name": "baro",
+        "squad": "black-bulls",
+        "rarity": "ssr",
+        "type": "p",
+        "new": true
+    },
+    "ssr_w_cartherine": {
+        "name": "cartherine",
+        "squad": "diamond-kingdom",
+        "rarity": "ssr",
+        "type": "w"
+    },
+    "ssr_w_charlotte": {
+        "name": "charlotte",
+        "squad": "diamond-kingdom",
+        "rarity": "ssr",
+        "type": "w"
+    },
+    "ssr_w_charmy": {
+        "name": "charmy",
+        "squad": "diamond-kingdom",
+        "rarity": "ssr",
+        "type": "w"
+    },
+    "ssr_w_fana": {
+        "name": "fana",
+        "squad": "diamond-kingdom",
+        "rarity": "ssr",
+        "type": "w"
+    },
+    "ssr_w_fgtyuno": {
+        "name": "yuno",
+        "squad": "diamond-kingdom",
+        "rarity": "ssr",
+        "type": "w"
+    }
+}
