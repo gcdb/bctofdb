@@ -1,6 +1,6 @@
 let cardDiv = $('#char-cardDiv');
 
-$.getJSON(`${BASE_DIR}/js/charData.json`, (data) => {
+$.getJSON(`/${BASE_DIR}/js/charData.json`, (data) => {
     Object.entries(data).forEach(char => {
         let c = char[1];
 
@@ -27,11 +27,11 @@ $.getJSON(`${BASE_DIR}/js/charData.json`, (data) => {
         charCardContainer.classList.add('char-cardContainer');
 
         let a = document.createElement('a');
-        a.href = `${BASE_DIR}/${PROFILES_DIRNAME}/${c.name}.html`;
+        a.href = `/${BASE_DIR}/${PROFILES_DIRNAME}/${c.name}.html`;
 
         let img = document.createElement('img');
         img.classList.add('char-portrait', 'bg-dark', 'rounded');
-        img.src = `${BASE_DIR}/img/characters/UI_Portrait_H_S_${c.name}_01.png`;
+        img.src = `/${BASE_DIR}/img/characters/UI_Portrait_H_S_${c.name}_01.png`;
         img.loading = 'lazy';
         img.alt = c.name;
 
