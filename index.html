@@ -265,11 +265,8 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.3/purify.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="./js/filterHelpers.js"></script>
     <script src="./js/appConstants.js"></script>
-    <script>
-        $("#nav-placeholder").load("./html/navbar.html")
-    </script>
+    <script src="./js/filterHelpers.js"></script>
     <script>
         $(document).ready(function() {
             $('#squadSelect').selectize({
@@ -277,18 +274,20 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
             });
             $("input[name=rarityRadio], input[name=typeRadio]").change(filterCharacters);
 
-            // Set navbar active tab
-            $('.navbar-nav .nav-link').each((idx, elem) => {
-                if (elem.text === 'Characters') elem.classList.add('fw-bold', 'active');
-            });
+            // Load navbar
+            // NOTE IF YOU'RE CHANGING THIS, appConstants.js needs to be loaded before this for BASE_DIR to exist.
+            $("#nav-placeholder").load(`/${BASE_DIR}/html/navbar.html`, () => {
+                // Set active tab
+                $('.navbar-nav .nav-link').each((idx, elem) => {
+                    if (elem.text === 'Characters') elem.classList.add('fw-bold', 'active');
+                });
+            })
 
             // Set href for each card based on data-name attribute
             $(".char-card").each((idx, elem) => {
                 let name = elem.getAttribute('data-name');
-                $(elem).find("a").attr("href", `./${PROFILES_DIRNAME}/${name}.html`);
+                $(elem).find("a").attr("href", `/${BASE_DIR}/${PROFILES_DIRNAME}/${name}.html`);
             });
-
-
         });
     </script>
 </body>

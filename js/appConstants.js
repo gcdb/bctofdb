@@ -1,1 +1,2 @@
-PROFILES_DIRNAME = "profiles"
+BASE_DIR = '.';
+PROFILES_DIRNAME = 'profiles';
