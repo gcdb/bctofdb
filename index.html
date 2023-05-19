@@ -8,7 +8,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     <title>Title</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -277,11 +277,18 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
             });
             $("input[name=rarityRadio], input[name=typeRadio]").change(filterCharacters);
 
+            // Set navbar active tab
+            $('.navbar-nav .nav-link').each((idx, elem) => {
+                if (elem.text === 'Characters') elem.classList.add('fw-bold', 'active');
+            });
 
+            // Set href for each card based on data-name attribute
             $(".char-card").each((idx, elem) => {
                 let name = elem.getAttribute('data-name');
                 $(elem).find("a").attr("href", `./${PROFILES_DIRNAME}/${name}.html`);
             });
+
+
         });
     </script>
 </body>
