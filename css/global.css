@@ -64,3 +64,10 @@ span.char-badge {
     max-width: 350px;
     min-width: 250px
 }
+
+@media (min-width: 800px) {
+    div.form-check-md-inline {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+}
