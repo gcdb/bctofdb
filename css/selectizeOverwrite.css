@@ -29,6 +29,10 @@
     background: none;
 }
 
+.selectize-input input::placeholder{
+    color: var(--bs-body-color);
+}
+
 #selectize-squad-selectized {
     color: #d2d2e8;
 }
