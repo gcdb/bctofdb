@@ -358,10 +358,7 @@
 
             // Load navbar
             // NOTE IF YOU'RE CHANGING THIS, appConstants.js needs to be loaded before this for BASE_DIR to exist.
-            $("#nav-placeholder").load(`/${BASE_DIR}/html/navbar.html`, () => {
-                // Set navbar brand image
-                $('#navItemsContainer img')[0].src = `/${BASE_DIR}/img/site/UI_BlackClover_Logo.png`
-            })
+            $("#nav-placeholder").load(`/${BASE_DIR}/html/navbar.html`)
         });
     </script>
 </body>
