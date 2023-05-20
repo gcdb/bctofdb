@@ -5,6 +5,12 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+    <script src="./js/appConstants.js"></script>
+    <script type="text/javascript">
+        document.head.innerHTML += `<base href='/${BASE_DIR}/'>`;
+    </script>
+
     <title>Title</title>
 
     <!-- Favicon -->
@@ -121,11 +127,9 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     <!-- endbuild -->
 
     <!-- External JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.3/purify.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="./js/appConstants.js"></script>
     <script>
         $(document).ready(function() {
             // Load navbar
