@@ -12,40 +12,190 @@
         "rarity": "ssr",
         "type": "t"
     },
-    "ssr_p_baro": {
-        "name": "baro",
+    "sr_t_asta": {
+        "name": "asta",
         "squad": "black-bulls",
+        "rarity": "sr",
+        "type": "t"
+    },
+    "r_w_catherine": {
+        "name": "cartherine",
+        "squad": "the-eye-of-the-midnight-sun",
+        "rarity": "r",
+        "type": "w"
+    },
+    "ssr_t_charlotte": {
+        "name": "charlotte",
+        "squad": "blue-rose",
+        "rarity": "ssr",
+        "type": "t"
+    },
+    "r_w_charmy": {
+        "name": "charmy",
+        "squad": "black-bulls",
+        "rarity": "r",
+        "type": "p"
+    },
+    "ssr_t_fuegoleon": {
+        "name": "fuegoleon",
+        "squad": "crimson-lion",
+        "rarity": "ssr",
+        "type": "t"
+    },
+    "ssr_r_georqe": {
+        "name": "georqe",
+        "squad": "the-eye-of-the-midnight-sun",
+        "rarity": "r",
+        "type": "p"
+    },
+    "ssr_p_heath": {
+        "name": "heath",
+        "squad": "the-eye-of-the-midnight-sun",
+        "rarity": "sr",
+        "type": "p"
+    },
+    "ssr_p_jack": {
+        "name": "jack",
+        "squad": "green-mantis",
         "rarity": "ssr",
         "type": "p"
     },
-    "ssr_w_cartherine": {
-        "name": "cartherine",
+    "sr_t_leofold": {
+        "name": "leofold",
+        "squad": "crimson-lion",
+        "rarity": "sr",
+        "type": "t"
+    },
+    "sr_w_lotus": {
+        "name": "lotus",
         "squad": "diamond-kingdom",
+        "rarity": "sr",
+        "type": "w"
+    },
+    "sr_p_luck": {
+        "name": "luck",
+        "squad": "black-bulls",
+        "rarity": "sr",
+        "type": "p"
+    },
+    "sr_t_magna": {
+        "name": "magna",
+        "squad": "black-bulls",
+        "rarity": "sr",
+        "type": "t"
+    },
+    "ssr_t_mars": {
+        "name": "mars",
+        "squad": "diamond-kingdom",
+        "rarity": "r",
+        "type": "w"
+    },
+    "sr_t_mimosa": {
+        "name": "mimosa",
+        "squad": "golden-dawn",
+        "rarity": "sr",
+        "type": "t"
+    },
+    "ssr_w_mimosa": {
+        "name": "mimosa_101",
+        "squad": "golden-dawn",
         "rarity": "ssr",
         "type": "w"
     },
-    "ssr_w_charlotte": {
-        "name": "charlotte",
-        "squad": "diamond-kingdom",
+    "sr_w_nebra": {
+        "name": "mimosa",
+        "squad": "silver-eagle",
+        "rarity": "sr",
+        "type": "w"
+    },
+    "sr_t_noelle": {
+        "name": "noelle",
+        "squad": "black-bulls",
+        "rarity": "sr",
+        "type": "t"
+    },
+    "ssr_p_nozel": {
+        "name": "nozel",
+        "squad": "silver-eagle",
+        "rarity": "ssr",
+        "type": "p"
+    },
+    "sr_p_rades": {
+        "name": "rades",
+        "squad": "the-eye-of-the-midnight-sun",
+        "rarity": "sr",
+        "type": "p"
+    },
+    "r_t_revchi": {
+        "name": "revchi",
+        "squad": "clover-kingdom",
+        "rarity": "r",
+        "type": "p"
+    },
+    "ssr_p_rill": {
+        "name": "rill",
+        "squad": "aqua-deer",
+        "rarity": "ssr",
+        "type": "p"
+    },
+    "r_p_salim": {
+        "name": "salim",
+        "squad": "clover-kingdom",
+        "rarity": "r",
+        "type": "p"
+    },
+    "ssr_p_sally": {
+        "name": "sally",
+        "squad": "the-eye-of-the-midnight-sun",
+        "rarity": "ssr",
+        "type": "p"
+    },
+    "r_p_sekke": {
+        "name": "sekke",
+        "squad": "green-mantis",
+        "rarity": "r",
+        "type": "p"
+    },
+    "sr_t_siren": {
+        "name": "siren",
+        "squad": "golden-dawn",
+        "rarity": "sr",
+        "type": "t"
+    },
+    "sr_w_solid": {
+        "name": "solid",
+        "squad": "silver-eagle",
+        "rarity": "sr",
+        "type": "w"
+    },
+    "sr_w_valtos": {
+        "name": "valtos",
+        "squad": "the-eye-of-the-midnight-sun",
+        "rarity": "sr",
+        "type": "w"
+    },
+    "ssr_w_william": {
+        "name": "william",
+        "squad": "golden-dawn",
         "rarity": "ssr",
         "type": "w"
     },
-    "ssr_w_charmy": {
-        "name": "charmy",
-        "squad": "diamond-kingdom",
+    "ssr_t_yami": {
+        "name": "yami",
+        "squad": "black-bulls",
         "rarity": "ssr",
-        "type": "w"
+        "type": "t"
     },
-    "ssr_w_fana": {
-        "name": "fana",
-        "squad": "diamond-kingdom",
-        "rarity": "ssr",
-        "type": "w"
-    },
-    "ssr_w_fgtyuno": {
+    "sr_p_yuno": {
         "name": "yuno",
-        "squad": "diamond-kingdom",
+        "squad": "golden-dawn",
+        "rarity": "sr",
+        "type": "p"
+    },
+    "ssr_p_yuno": {
+        "name": "yuno",
+        "squad": "golden-dawn",
         "rarity": "ssr",
-        "type": "w"
+        "type": "p"
     }
 }
