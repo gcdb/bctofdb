@@ -7,7 +7,7 @@ $.getJSON(`/${BASE_DIR}/js/charData.json`, (data) => {
 
     // Images
     $('#portrait-image').attr('src', `/${BASE_DIR}/img/characters/UI_Portrait_H_Illust_${charName}_01.png`);
-    $('#grimoire-image').attr('src', `/${BASE_DIR}/img/equips/private_grimoire_sr_${charName}_01_item.png`)
+    $('#grimoire-image').attr('src', `/${BASE_DIR}/img/equips/private_grimoire_${c.rarity}_${charName}_01_item.png`)
     $('#atk01').attr('src', `/${BASE_DIR}/img/skills/UI_${charName}_01_atk_01.png`);
     $('#skill01').attr('src', `/${BASE_DIR}/img/skills/UI_${charName}_01_skill_01.png`);
     $('#special01').attr('src', `/${BASE_DIR}/img/skills/UI_${charName}_01_special_01.png`);
