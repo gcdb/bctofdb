@@ -4,31 +4,31 @@
         <div class="me-2" style="height: 40px">
             <img class="h-100" src="" loading="lazy" alt="brand-logo">
         </div>
-        </button>
-        <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">Characters</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">Grimoires</a>
-            </li>
-        </ul>
-    </div>
+    </button>
+    <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+            <a class="nav-link fs-5" href="javascript:void(0)">Characters</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link fs-5" href="javascript:void(0)">Grimoires</a>
+        </li>
+    </ul>
+</div>
 </nav>
 <!--/ Navbar -->
 <script>
     // Set navbar brand image
     $('#navItemsContainer img')[0].src = `/${BASE_DIR}/img/site/UI_BlackClover_Logo.png`
-
+    
     // Set navbar links
     $('.navbar-nav .nav-link').each((idx, elem) => {
         switch (elem.text) {
             case 'Characters':
-                $(elem).attr('href', `/${BASE_DIR}/index.html`)
-                break;
+            $(elem).attr('href', `/${BASE_DIR}/index.html`)
+            break;
             case 'Grimoires':
-                $(elem).attr('href', `/${BASE_DIR}/index.html`)
-                break;
+            $(elem).attr('href', `/${BASE_DIR}/index.html`)
+            break;
         }
     })
 </script>

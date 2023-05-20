@@ -5,7 +5,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-    <title>Title</title>
+    <title>Characters</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.png" />
@@ -155,9 +155,9 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
             <!--/ Content -->
     
             <!-- Footer -->
-            <footer class="content-footer footer bg-footer-theme">
-                Footer
-            </footer>
+            <div id="footer-placeholder">
+
+            </div>
             <!--/ Footer -->
     
             <!-- Content area backdrop -->
@@ -215,6 +215,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                 $('.navbar-nav .nav-link').each((idx, elem) => {
                     if (elem.text === 'Characters') elem.classList.add('fw-bold', 'active');
                 });
+                $("#footer-placeholder").load(`/${BASE_DIR}/html/footer.html`)
             })
 
             // Set href for each card based on data-name attribute

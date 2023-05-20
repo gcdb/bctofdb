@@ -1,24 +1,22 @@
 {
-    "ssr_t_alecdora": {
+    "ssr_w_alecdora": {
         "name": "alecdora",
         "squad": "golden-dawn",
-        "rarity": "ssr",
-        "type": "t",
+        "rarity": "sr",
+        "type": "w",
         "new": true
     },
-    "ssr_p_asta": {
-        "name": "asta",
+    "ssr_t_asta": {
+        "name": "asta_101",
         "squad": "black-bulls",
         "rarity": "ssr",
-        "type": "p",
-        "new": true
+        "type": "t"
     },
     "ssr_p_baro": {
         "name": "baro",
         "squad": "black-bulls",
         "rarity": "ssr",
-        "type": "p",
-        "new": true
+        "type": "p"
     },
     "ssr_w_cartherine": {
         "name": "cartherine",
