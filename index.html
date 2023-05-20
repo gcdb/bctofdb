@@ -155,9 +155,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
             <!--/ Content -->
     
             <!-- Footer -->
-            <div id="footer-placeholder">
-
-            </div>
+            <div id="footer-placeholder"></div>
             <!--/ Footer -->
     
             <!-- Content area backdrop -->
@@ -215,8 +213,9 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                 $('.navbar-nav .nav-link').each((idx, elem) => {
                     if (elem.text === 'Characters') elem.classList.add('fw-bold', 'active');
                 });
-                $("#footer-placeholder").load(`/${BASE_DIR}/html/footer.html`)
             })
+
+            $("#footer-placeholder").load(`/${BASE_DIR}/html/footer.html`)
 
             // Set href for each card based on data-name attribute
             $(".char-card").each((idx, elem) => {
