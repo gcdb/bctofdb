@@ -71,7 +71,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-3 mb-4 mb-md-0">
-                                            <img class="char-portrait bg-dark rounded" src="../img/characters/UI_Portrait_H_Illust_alecdora_01.png" loading="lazy" alt="char-portrait">
+                                            <img id="portrait-image" class="char-portrait bg-dark rounded" src="../img/characters/UI_Portrait_H_Illust_alecdora_01.png" loading="lazy" alt="char-portrait">
                                         </div>
                                         <div class="col-md-4 mb-4 mb-md-0 mt-md-3">
                                             <h5 class="mb-1">Golden Dawn Magic Knight</h5>
@@ -93,11 +93,11 @@
                                         <div class="col-md-5 d-flex">
                                             <div class="row m-0 py-4 bg-body rounded align-items-center ">
                                                 <div class="col-4">
-                                                    <img class="w-100" src="../img/equips/private_grimoire_sr_alecdora_01_item.png" loading="lazy" alt="char-grimoire">
+                                                    <img id="grimoire-image" class="w-100" src="../img/equips/private_grimoire_sr_alecdora_01_item.png" loading="lazy" alt="char-grimoire">
                                                 </div>
                                                 <div class="col-8">
                                                     <h6 class="mb-1 fw-light">Private Grimoire</h6>
-                                                    <h5 class="m-0 fw-bold">The Captain's Condemnation Longname Grimoire</h5>
+                                                    <h5 id="grimoire-name" class="m-0 fw-bold">The Captain's Condemnation Longname Grimoire</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -112,7 +112,7 @@
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Passive</p>
-                                            <h4 class="fw-bold">Resting Bij Face</h3>
+                                            <h4 id="passive-name" class="fw-bold">Resting Bij Face</h3>
                                             <hr/>
                                             <h5 class="fw-light">Applies 10% <b>[Received Healing Increase]</b> to all friendly targets</h5>
                                         </div>
@@ -123,11 +123,11 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_asta_tuto_special_01.png" loading="lazy" alt="skill1">
+                                            <img id="atk01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_asta_tuto_special_01.png" loading="lazy" alt="atk01">
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Skill</p>
-                                            <h4 class="fw-bold">Short Skill Name (Lv. 1)</h3>
+                                            <h4 id="atk-name" class="fw-bold">Short Skill Name (Lv. 1)</h3>
                                             <hr/>
                                             <h5 class="fw-light"> Has a 40% chance to apply <b>[DEF Increase Lv. 1]</b> to all friendly targets for 1 turn.</h5>
                                             <div id="tag-squad" class="badge w-auto bg-primary rounded">
@@ -148,11 +148,11 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_asta_tuto_special_01.png" loading="lazy" alt="skill1">
+                                            <img id="skill01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_asta_tuto_special_01.png" loading="lazy" alt="skill01">
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Skill</p>
-                                            <h4 class="fw-bold">Long-ass Skill Name: Longer than my boi Johnny Sin's dong (Lv. 1)</h3>
+                                            <h4 id="skill-name" class="fw-bold">Long-ass Skill Name: Longer than my boi Johnny Sin's dong (Lv. 1)</h3>
                                             <hr/>
                                             <h5 class="fw-light"> Has a 40% chance to apply <b>[DEF Increase Lv. 1]</b> to all friendly targets for 1 turn.</h5>
                                             <div id="tag-squad" class="badge w-auto bg-primary rounded">
@@ -173,11 +173,11 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_asta_tuto_special_01.png" loading="lazy" alt="skill1">
+                                            <img id="special01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_asta_tuto_special_01.png" loading="lazy" alt="special01">
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Special</p>
-                                            <h4 class="fw-bold">Speshul (Lv.1)</h3>
+                                            <h4 id="special-name" class="fw-bold">Speshul (Lv.1)</h3>
                                             <hr/>
                                             <h5 class="fw-light mb-2">Applies <b>[Recovery]</b> equal to 25% of M.ATK to a friendly target.</h5>
                                             <h5 class="fw-light mb-2">Has a 50% chance to apply <b>[Immortality]</b> to a friendly target for 1 turn.</h5>
@@ -197,10 +197,10 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_asta_tuto_special_01.png" loading="lazy" alt="skill1">
+                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_common_match_01.png" loading="lazy" alt="combined-atk">
                                         </div>
                                         <div class="col">
-                                            <p class="mb-0">Special</p>
+                                            <p class="mb-0">Combined Attack</p>
                                             <h4 class="fw-bold">Mega-Speshul (Lv.1)</h3>
                                             <hr/>
                                             <h5 class="fw-light mb-2">Applies <b>[Recovery]</b> equal to 25% of M.ATK to a friendly target.</h5>
@@ -349,6 +349,7 @@
 
     <!-- Custom JS -->
     <script src="../js/appConstants.js"></script>
+    <script src="../js/profileDataHandler.js"></script>
     <script>
         $(document).ready(() => {
             const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')

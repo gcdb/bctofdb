@@ -1,201 +1,210 @@
 {
-    "ssr_w_alecdora": {
+    "alecdora": {
         "name": "alecdora",
-        "squad": "golden-dawn",
+        "squad": "Golden Dawn",
         "rarity": "sr",
-        "type": "w",
+        "type": "wisdom",
         "new": true
     },
-    "ssr_t_asta": {
-        "name": "asta_101",
-        "squad": "black-bulls",
-        "rarity": "ssr",
-        "type": "t"
-    },
-    "sr_t_asta": {
+    "asta_101": {
         "name": "asta",
-        "squad": "black-bulls",
-        "rarity": "sr",
-        "type": "t"
+        "squad": "Black Bulls",
+        "rarity": "ssr",
+        "type": "tenacity",
+        "imgPath": "asta_101"
     },
-    "r_w_catherine": {
+    "asta": {
+        "name": "asta",
+        "squad": "Black Bulls",
+        "rarity": "sr",
+        "type": "tenacity",
+        "profileData": {
+            "grimoireName": "Five-Leaf Clover",
+            "passiveName": "I have a BBC, Big Black Cleaver",
+            "atkName": "Big Smak",
+            "skillName": "Longest Skill Shot You've Ever Seen: Longer than my boi Johnny Sin's dong",
+            "specialName": "Speshul 404 Face oAo"
+        }
+    },
+    "cartherine": {
         "name": "cartherine",
-        "squad": "the-eye-of-the-midnight-sun",
+        "squad": "The Eye of the Midnight Sun",
         "rarity": "r",
-        "type": "w"
+        "type": "wisdom"
     },
-    "ssr_t_charlotte": {
+    "charlotte": {
         "name": "charlotte",
-        "squad": "blue-rose",
+        "squad": "Blue Rose",
         "rarity": "ssr",
-        "type": "t"
+        "type": "tenacity"
     },
-    "r_w_charmy": {
+    "charmy": {
         "name": "charmy",
-        "squad": "black-bulls",
+        "squad": "Black Bulls",
         "rarity": "r",
-        "type": "p"
+        "type": "proficiency"
     },
-    "ssr_t_fuegoleon": {
+    "fuegoleon": {
         "name": "fuegoleon",
-        "squad": "crimson-lion",
+        "squad": "Crimson Lion",
         "rarity": "ssr",
-        "type": "t"
+        "type": "tenacity"
     },
-    "ssr_r_georqe": {
+    "georqe": {
         "name": "georqe",
-        "squad": "the-eye-of-the-midnight-sun",
+        "squad": "The Eye of the Midnight Sun",
         "rarity": "r",
-        "type": "p"
+        "type": "proficiency"
     },
-    "ssr_p_heath": {
+    "heath": {
         "name": "heath",
-        "squad": "the-eye-of-the-midnight-sun",
+        "squad": "The Eye of the Midnight Sun",
         "rarity": "sr",
-        "type": "p"
+        "type": "proficiency"
     },
-    "ssr_p_jack": {
+    "jack": {
         "name": "jack",
-        "squad": "green-mantis",
+        "squad": "Green Mantis",
         "rarity": "ssr",
-        "type": "p"
+        "type": "proficiency"
     },
-    "sr_t_leofold": {
+    "leofold": {
         "name": "leofold",
-        "squad": "crimson-lion",
+        "squad": "Crimson Lion",
         "rarity": "sr",
-        "type": "t"
+        "type": "tenacity"
     },
-    "sr_w_lotus": {
+    "lotus": {
         "name": "lotus",
-        "squad": "diamond-kingdom",
+        "squad": "Diamond Kingdom",
         "rarity": "sr",
-        "type": "w"
+        "type": "wisdom"
     },
-    "sr_p_luck": {
+    "luck": {
         "name": "luck",
-        "squad": "black-bulls",
+        "squad": "Black Bulls",
         "rarity": "sr",
-        "type": "p"
+        "type": "proficiency"
     },
-    "sr_t_magna": {
+    "magna": {
         "name": "magna",
-        "squad": "black-bulls",
+        "squad": "Black Bulls",
         "rarity": "sr",
-        "type": "t"
+        "type": "tenacity"
     },
-    "ssr_t_mars": {
+    "mars": {
         "name": "mars",
-        "squad": "diamond-kingdom",
+        "squad": "Diamond Kingdom",
         "rarity": "r",
-        "type": "w"
+        "type": "wisdom"
     },
-    "sr_t_mimosa": {
+    "mimosa": {
         "name": "mimosa",
-        "squad": "golden-dawn",
+        "squad": "Golden Dawn",
         "rarity": "sr",
-        "type": "t"
+        "type": "tenacity"
     },
-    "ssr_w_mimosa": {
-        "name": "mimosa_101",
-        "squad": "golden-dawn",
+    "mimosa_101": {
+        "name": "mimosa",
+        "squad": "Golden Dawn",
         "rarity": "ssr",
-        "type": "w"
+        "type": "wisdom",
+        "imgPath": "mimosa_101"
     },
-    "sr_w_nebra": {
-        "name": "mimosa",
-        "squad": "silver-eagle",
+    "nebra": {
+        "name": "nebra",
+        "squad": "Silver Eagle",
         "rarity": "sr",
-        "type": "w"
+        "type": "wisdom"
     },
-    "sr_t_noelle": {
+    "noelle": {
         "name": "noelle",
-        "squad": "black-bulls",
+        "squad": "Black Bulls",
         "rarity": "sr",
-        "type": "t"
+        "type": "tenacity"
     },
-    "ssr_p_nozel": {
+    "nozel": {
         "name": "nozel",
-        "squad": "silver-eagle",
+        "squad": "Silver Eagle",
         "rarity": "ssr",
-        "type": "p"
+        "type": "proficiency"
     },
-    "sr_p_rades": {
+    "rades": {
         "name": "rades",
-        "squad": "the-eye-of-the-midnight-sun",
+        "squad": "The Eye of the Midnight Sun",
         "rarity": "sr",
-        "type": "p"
+        "type": "proficiency"
     },
-    "r_t_revchi": {
+    "revchi": {
         "name": "revchi",
-        "squad": "clover-kingdom",
+        "squad": "Clover Kingdom",
         "rarity": "r",
-        "type": "p"
+        "type": "proficiency"
     },
-    "ssr_p_rill": {
+    "rill": {
         "name": "rill",
-        "squad": "aqua-deer",
+        "squad": "Aqua Deer",
         "rarity": "ssr",
-        "type": "p"
+        "type": "proficiency"
     },
-    "r_p_salim": {
+    "salim": {
         "name": "salim",
-        "squad": "clover-kingdom",
+        "squad": "Clover Kingdom",
         "rarity": "r",
-        "type": "p"
+        "type": "proficiency"
     },
-    "ssr_p_sally": {
+    "sally": {
         "name": "sally",
-        "squad": "the-eye-of-the-midnight-sun",
+        "squad": "The Eye of the Midnight Sun",
         "rarity": "ssr",
-        "type": "p"
+        "type": "proficiency"
     },
-    "r_p_sekke": {
+    "sekke": {
         "name": "sekke",
-        "squad": "green-mantis",
+        "squad": "Green Mantis",
         "rarity": "r",
-        "type": "p"
+        "type": "proficiency"
     },
-    "sr_t_siren": {
+    "siren": {
         "name": "siren",
-        "squad": "golden-dawn",
+        "squad": "Golden Dawn",
         "rarity": "sr",
-        "type": "t"
+        "type": "tenacity"
     },
-    "sr_w_solid": {
+    "solid": {
         "name": "solid",
-        "squad": "silver-eagle",
+        "squad": "Silver Eagle",
         "rarity": "sr",
-        "type": "w"
+        "type": "wisdom"
     },
-    "sr_w_valtos": {
+    "valtos": {
         "name": "valtos",
-        "squad": "the-eye-of-the-midnight-sun",
+        "squad": "The Eye of the Midnight Sun",
         "rarity": "sr",
-        "type": "w"
+        "type": "wisdom"
     },
-    "ssr_w_william": {
+    "william": {
         "name": "william",
-        "squad": "golden-dawn",
+        "squad": "Golden Dawn",
         "rarity": "ssr",
-        "type": "w"
+        "type": "wisdom"
     },
-    "ssr_t_yami": {
+    "yami": {
         "name": "yami",
-        "squad": "black-bulls",
+        "squad": "Black Bulls",
         "rarity": "ssr",
-        "type": "t"
+        "type": "tenacity"
     },
-    "sr_p_yuno": {
+    "yuno": {
         "name": "yuno",
-        "squad": "golden-dawn",
+        "squad": "Golden Dawn",
         "rarity": "sr",
-        "type": "p"
+        "type": "proficiency"
     },
-    "ssr_p_yuno": {
+    "yuno2": {
         "name": "yuno",
-        "squad": "golden-dawn",
+        "squad": "Golden Dawn",
         "rarity": "ssr",
-        "type": "p"
+        "type": "proficiency"
     }
 }
