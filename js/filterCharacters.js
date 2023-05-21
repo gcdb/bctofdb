@@ -38,17 +38,12 @@ function filterCharacters() {
         })
         hiddenQuery += ')';
 
-        console.log(shownQuery);
-
         shownCards = cardDiv.querySelectorAll(shownQuery);
         hiddenCards = cardDiv.querySelectorAll(hiddenQuery);
     }
     
     shownCards.forEach(x => x.classList.remove('d-none'));
     hiddenCards.forEach(x => x.classList.add('d-none'));
-
-    console.log(shownCards);
-    console.log(hiddenCards);
 }
 
 function clearFields() {

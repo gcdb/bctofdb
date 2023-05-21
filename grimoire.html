@@ -34,12 +34,10 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.bootstrap5.min.css" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/coreOverwrite.css" />
-    <link rel="stylesheet" href="./css/selectizeOverwrite.css" />
 
 
     <!-- Helpers -->
@@ -82,7 +80,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                                     <div class="form-floating form-floating-outline">
                                         <input type="text" class="form-control bg-body" 
                                         id="grimoireNameInput" placeholder="Search here.."
-                                        onkeyup="filterCharacters()">
+                                        onkeyup="filterGrimoires()">
                                         <label for="searchInput">Search Grimoire Names..</label>
                                     </div>
                                 </div>
@@ -105,16 +103,12 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                                     <div class="col">
                                         <p class="fw-semibold d-block mb-3">Type</p>
                                         <div class="form-check form-check-md-inline">
-                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-proficiency" value="proficiency" />
-                                            <label class="form-check-label" for="typeRadio-proficiency">Proficiency</label>
+                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-normal" value="normal" />
+                                            <label class="form-check-label" for="typeRadio-normal">Normal</label>
                                         </div>
                                         <div class="form-check form-check-md-inline">
-                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-tenacity" value="tenacity" />
-                                            <label class="form-check-label" for="typeRadio-tenacity">Tenacity</label>
-                                        </div>
-                                        <div class="form-check form-check-md-inline">
-                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-wisdom" value="wisdom" />
-                                            <label class="form-check-label" for="typeRadio-wisdom">Wisdom</label>
+                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-upgrade" value="upgrade" />
+                                            <label class="form-check-label" for="typeRadio-upgrade">Upgrade</label>
                                         </div>
                                     </div>
                                 </div>
@@ -123,7 +117,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                                         <div class="form-floating form-floating-outline">
                                             <input type="text" class="form-control bg-body" 
                                             id="charNameInput" placeholder="Search here.."
-                                            onkeyup="filterCharacters()">
+                                            onkeyup="filterGrimoires()">
                                             <label for="searchInput">Search Character Names..</label>
                                         </div>
                                     </div>
@@ -150,7 +144,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                                 {% assign gUrl = gData[0] %}
                                 {% assign g = gData[1] %}
                                 <div class="char-card pb-3" 
-                                data-name="{{ g.name }}" data-rarity="{{ g.rarity }}" data-type="{{ g.type }}"
+                                data-name="{{ g.name | downcase | replace: ' ', '-' }}" data-rarity="{{ g.rarity }}" data-type="{{ g.type }}"
                                 {% if g.characterName %} 
                                     data-character="{{ g.characterName }}" 
                                 {% endif %}
@@ -210,17 +204,13 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     <!-- endbuild -->
 
     <!-- External JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.3/purify.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="./js/filterHelpers.js"></script>
+    <script src="./js/filterGrimoires.js"></script>
     <script>
         $(document).ready(function() {
-            $('#squadSelect').selectize({
-                onChange: filterCharacters
-            });
-            $("input[name=rarityRadio], input[name=typeRadio]").change(filterCharacters);
+            $("input[name=rarityRadio], input[name=typeRadio]").change(filterGrimoires);
 
             // Load navbar
             // NOTE IF YOU'RE CHANGING THIS, appConstants.js needs to be loaded before this for BASE_DIR to exist.
