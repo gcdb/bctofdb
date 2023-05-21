@@ -27,6 +27,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/bctofdb" # the subpath of your site, e.g. /blog
 profileurl: "/profile"
+grimoireurl: "/grimoire"
 
 twitter_username: gcdb
 github_username: gcdb

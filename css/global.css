@@ -24,7 +24,7 @@
     position: relative;
 }
 
-.char-cardContainer img:hover {
+.char-cardContainer .char-portrait:hover {
     box-shadow: 0 0 20px 3px inset white;
 }
 
@@ -45,19 +45,56 @@
     transform: translateY(-40%);
 }
 
+.card-rarity {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 35%;
+    z-index: 2;
+}
+
+.card-rarity-ssr {
+    transform: translate(0, 35%);
+}
+
+.card-rarity-sr {
+    transform: translate(12%, 35%);
+}
+
+.card-rarity-r {
+    transform: translate(25%, 35%);
+}
+
 .bg-opacity-10 {
     --bs-bg-opacity: 0.1 !important;
 }
 
-span.char-badge {
+span.card-badge {
     --bs-badge-font-size: 0.70em;
     position: absolute;
     bottom: 0;
     right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
     font-weight: bolder;
+    border-radius: 0.5rem 0 0.5rem 0;
+}
+
+span.card-badge-orange {
     color: #fdb528;
     background-color: rgba(81, 72, 72, 0.8);
     border-radius: 0 0 0.5rem 0.5rem;
+}
+
+span.card-badge-width-ssr {
+    width: 40%;
+}
+
+span.card-badge-width-sr {
+    width: 31%;
+}
+
+span.card-badge-width-r {
+    width: 22%;
 }
 
 .tooltip-inner {

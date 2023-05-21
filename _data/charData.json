@@ -18,8 +18,8 @@
         "squad": "Black Bulls",
         "rarity": "sr",
         "type": "tenacity",
-        "profileData": {
-            "grimoireName": "Five-Leaf Clover",
+        "profileData": { 
+            "grimoireName": "Five Leaf Clover",
             "passiveName": "I have a BBC, Big Black Cleaver",
             "atkName": "Big Smak",
             "skillName": "Longest Skill Shot You've Ever Seen: Longer than my boi Johnny Sin's dong",
@@ -185,6 +185,8 @@
     },
     "william": {
         "name": "william",
+        "fullName": "William Vangeance",
+        "title": "Idk Stylo Milo Maskman",
         "squad": "Golden Dawn",
         "rarity": "ssr",
         "type": "wisdom"
