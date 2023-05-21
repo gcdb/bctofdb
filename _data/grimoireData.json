@@ -1,14 +1,14 @@
 {
     "five_leaf_clover": {
         "name": "Five Leaf Clover",
-        "characterCode": "asta",
+        "characterName": "asta",
         "rarity": "sr",
         "type": "upgrade",
         "new": true
     },
     "the_captains_condemnation": {
         "name": "The Captain's Condemnation",
-        "characterCode": "william",
+        "characterName": "william",
         "rarity": "ssr",
         "type": "upgrade"
     }

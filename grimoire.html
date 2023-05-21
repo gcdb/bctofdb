@@ -151,13 +151,13 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                                 {% assign g = gData[1] %}
                                 <div class="char-card pb-3" 
                                 data-name="{{ g.name }}" data-rarity="{{ g.rarity }}" data-type="{{ g.type }}"
-                                {% if c.character %}
-                                    data-character="{{ g.characterCode }}"
+                                {% if g.characterName %} 
+                                    data-character="{{ g.characterName }}" 
                                 {% endif %}
                                 >
                                     <div class="char-cardContainer">
                                         <a href="{{ site.baseurl }}{{ site.grimoireurl }}/{{ gUrl }}.html">
-                                            <img class="char-portrait bg-dark rounded" src="{{ site.baseurl }}/img/grimoires/private_grimoire_{{ g.rarity }}_{{ g.imgPath | default: g.characterCode }}_01_item.png" loading="lazy" alt="{{ g.name }}"/>
+                                            <img class="char-portrait bg-dark rounded" src="{{ site.baseurl }}/img/grimoires/private_grimoire_{{ g.rarity }}_{{ g.characterCode | default: g.characterName }}_01_item.png" loading="lazy" alt="{{ g.name }}"/>
                                             <div class="char-title bg-body px-1">{{ g.name | truncate: 18 }}</div>
                                             {% if g.new %}
                                                 <span class="badge card-badge card-badge-orange w-100">NEW</span>
