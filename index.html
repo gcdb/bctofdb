@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed " dir="ltr" 
 data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-menu-template-starter">
@@ -148,7 +150,25 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                         </div>
                     </div>
                     <div class="card-body">
-                        <div id="char-cardDiv" class="row mb-4"></div>
+                        <div id="char-cardDiv" class="row mb-4">
+                            {% for cData in site.data.charData %}
+                                {% assign pUrl = cData[0] %}
+                                {% assign c = cData[1] %}
+                                <div class="char-card pb-3" 
+                                data-name="{{ c.name }}" data-squad="{{ c.squad | downcase | replace: ' ', '-' }}" 
+                                data-rarity="{{ c.rarity }}" data-type="{{ c.type }}">
+                                    <div class="char-cardContainer">
+                                        <a href="{{ site.baseurl }}{{ site.profileurl}}/{{ pUrl }}.html">
+                                            <img class="char-portrait bg-dark rounded" src="{{ site.baseurl }}/img/characters/UI_Portrait_H_S_{{ c.imgPath | default: c.name }}_01.png" loading="lazy" alt="{{ c.name }}"/>
+                                            <div class="char-title bg-body px-1">{{ c.name | capitalize }}</div>
+                                            {% if c.new %}
+                                                <span class="badge char-badge w-100">NEW</span>
+                                            {% endif %}
+                                        </a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -196,9 +216,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.3/purify.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="./js/appConstants.js"></script>
     <script src="./js/filterHelpers.js"></script>
-    <script src="./js/charDataHandler.js"></script>
     <script>
         $(document).ready(function() {
             $('#squadSelect').selectize({
@@ -208,20 +226,14 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
 
             // Load navbar
             // NOTE IF YOU'RE CHANGING THIS, appConstants.js needs to be loaded before this for BASE_DIR to exist.
-            $("#nav-placeholder").load(`/${BASE_DIR}/html/navbar.html`, () => {
+            $("#nav-placeholder").load(`./html/navbar.html`, () => {
                 // Set active tab
                 $('.navbar-nav .nav-link').each((idx, elem) => {
                     if (elem.text === 'Characters') elem.classList.add('fw-bold', 'active');
                 });
             })
 
-            $("#footer-placeholder").load(`/${BASE_DIR}/html/footer.html`)
-
-            // Set href for each card based on data-name attribute
-            $(".char-card").each((idx, elem) => {
-                let name = elem.getAttribute('data-name');
-                $(elem).find("a").attr("href", `/${BASE_DIR}/${PROFILES_DIRNAME}/${name}.html`);
-            });
+            $("#footer-placeholder").load(`./html/footer.html`)
         });
     </script>
 </body>
