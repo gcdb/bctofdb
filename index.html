@@ -168,7 +168,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                                             {% endif %}
                                         </a>
                                         <div class="card-rarity card-rarity-{{ c.rarity }}">
-                                            <img class="w-100" src="{{ site.baseurl }}/img/rarity/UI_Icon_Grade_{{ c.rarity }}.png" loading="lazy" alt="{{ c.rarity }}">
+                                            <img class="w-100" src="{{ site.baseurl }}/img/rarity/UI_Icon_Grade_{{ c.rarity | upcase }}.png" loading="lazy" alt="{{ c.rarity }}">
                                         </div>
                                     </div>
                                 </div>
