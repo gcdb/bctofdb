@@ -4,14 +4,13 @@
         "squad": "Golden Dawn",
         "rarity": "sr",
         "type": "wisdom",
-        "new": true
-    },
-    "asta_101": {
-        "name": "asta",
-        "squad": "Black Bulls",
-        "rarity": "ssr",
-        "type": "tenacity",
-        "imgPath": "asta_101"
+        "new": true,
+        "profileData": { 
+            "grimoireName": "Broken Oath",
+            "atkName": "Sand-Armored Guard",
+            "skillName": "Piercing Sand Spear",
+            "specialName": "Sand-Armored Heavy Guard"
+        }
     },
     "asta": {
         "name": "asta",
@@ -19,12 +18,18 @@
         "rarity": "sr",
         "type": "tenacity",
         "profileData": { 
-            "grimoireName": "Five Leaf Clover",
-            "passiveName": "I have a BBC, Big Black Cleaver",
-            "atkName": "Big Smak",
-            "skillName": "Longest Skill Shot You've Ever Seen: Longer than my boi Johnny Sin's dong",
-            "specialName": "Speshul 404 Face oAo"
+            "grimoireName": "Persevering Resolution",
+            "atkName": "Downward Strike",
+            "skillName": "Rampage",
+            "specialName": "Never giving up is my magic!"
         }
+    },
+    "asta2": {
+        "name": "asta",
+        "squad": "Black Bulls",
+        "rarity": "ssr",
+        "type": "tenacity",
+        "imgPath": "asta_101"
     },
     "cartherine": {
         "name": "cartherine",
@@ -95,8 +100,8 @@
     "mars": {
         "name": "mars",
         "squad": "Diamond Kingdom",
-        "rarity": "r",
-        "type": "wisdom"
+        "rarity": "ssr",
+        "type": "tenacity"
     },
     "mimosa": {
         "name": "mimosa",
@@ -104,7 +109,7 @@
         "rarity": "sr",
         "type": "tenacity"
     },
-    "mimosa_101": {
+    "mimosa2": {
         "name": "mimosa",
         "squad": "Golden Dawn",
         "rarity": "ssr",
@@ -207,6 +212,7 @@
         "name": "yuno",
         "squad": "Golden Dawn",
         "rarity": "ssr",
-        "type": "proficiency"
+        "type": "proficiency",
+        "imgPath": "yuno_101"
     }
 }

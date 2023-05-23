@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alecdora, Golden Dawn</title>
+    <title>Asta, The Iron Will</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.png" />
@@ -79,8 +79,8 @@
                                             <img id="portrait-image" class="char-portrait bg-dark rounded" src="../img/characters/UI_Portrait_H_Illust_{{ cName }}_01.png" loading="lazy" alt="char-portrait">
                                         </div>
                                         <div class="col-md-4 mb-4 mb-md-0 mt-md-3">
-                                            <h5 class="mb-1">Golden Dawn Magic Knight</h5>
-                                            <h3 class="fw-bold mb-2">Alecdora Longname Boy</h3>
+                                            <h5 class="mb-1">The Iron Will</h5>
+                                            <h3 class="fw-bold mb-2">Asta</h3>
                                             <div class="row">
                                                 <div class="col">
                                                     <div id="tag-squad" class="badge w-auto bg-primary me-2 mt-2 rounded">
@@ -102,7 +102,7 @@
                                                         <img id="portrait-image" class="w-100" src="../img/grimoires/private_grimoire_{{ cData.rarity }}_{{ cName }}_01_item.png" loading="lazy" alt="portrait-image">
                                                     </div>
                                                     <div class="col-8">
-                                                        <h6 class="mb-1 fw-light">Private Grimoire</h6>
+                                                        <h6 class="mb-1 fw-light">Skill Card</h6>
                                                         <h5 class="m-0 fw-bold">{{ pData.grimoireName | default: "The Captain's Condemnation"}}</h5>
                                                     </div>
                                                 </div>
@@ -119,9 +119,8 @@
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Passive</p>
-                                            <h4 id="passive-name" class="fw-bold">{{ pData.passiveName | default: "Resting Bij Face" }}</h3>
                                             <hr/>
-                                            <h5 class="fw-light">Applies 10% <b>[Received Healing Increase]</b> to all friendly targets</h5>
+                                            <h5 class="fw-light">Applies 10% <b>[Received Damage Reduction]</b>.</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -134,9 +133,10 @@
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Skill</p>
-                                            <h4 id="atk-name" class="fw-bold">{{ pData.atkName | default: "Short Skill Name" }} (Lv. 1)</h3>
+                                            <h4 id="atk-name" class="fw-bold">{{ pData.atkName | default: "Short Skill Name" }} (Lv. 1)</h4>
                                             <hr/>
-                                            <h5 class="fw-light"> Has a 40% chance to apply <b>[DEF Increase Lv. 1]</b> to all friendly targets for 1 turn.</h5>
+                                            <h5 class="fw-light">• Removes a maximum of 2 debuffs.</h5>
+                                            <h5 class="fw-light">• Applies <b style="color:#26c6f9" data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="tooltip-dark" title="Weapon Enhancement Lv.1/2/3: Increases damage by 10/20/30%">[Weapon Enhancement Lv. 1]</b> and then attacks the enemy target upon attacking them while they have an active debuff.</h5>
                                             <div id="tag-squad" class="badge w-auto bg-primary rounded">
                                                 <p class="m-1 text-white">ATK: 103% M.ATK: 103%</p>
                                             </div>
@@ -159,7 +159,7 @@
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Skill</p>
-                                            <h4 id="skill-name" class="fw-bold">{{ pData.skillName | default: "Long-ass Skill Name: Longer than my boi Johnny Sin's dong" }} (Lv. 1)</h3>
+                                            <h4 id="skill-name" class="fw-bold">{{ pData.skillName | default: "Long-ass Skill Name: Longer than my boi Johnny Sin's dong" }} (Lv. 1)</h4>
                                             <hr/>
                                             <h5 class="fw-light"> Has a 40% chance to apply <b>[DEF Increase Lv. 1]</b> to all friendly targets for 1 turn.</h5>
                                             <div id="tag-squad" class="badge w-auto bg-primary rounded">
@@ -184,7 +184,7 @@
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Special</p>
-                                            <h4 id="special-name" class="fw-bold">{{ pData.specialName | default: "Speshul" }} (Lv.1)</h3>
+                                            <h4 id="special-name" class="fw-bold">{{ pData.specialName | default: "Speshul" }} (Lv.1)</h4>
                                             <hr/>
                                             <h5 class="fw-light mb-2">Applies <b>[Recovery]</b> equal to 25% of M.ATK to a friendly target.</h5>
                                             <h5 class="fw-light mb-2">Has a 50% chance to apply <b>[Immortality]</b> to a friendly target for 1 turn.</h5>
@@ -204,7 +204,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_common_match_01.png" loading="lazy" alt="combined-atk">
+                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_common_joinatk_01.png" loading="lazy" alt="combined-atk">
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Combined Attack</p>
