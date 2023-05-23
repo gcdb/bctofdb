@@ -85,7 +85,32 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                                     </div>
                                 </div>
                                 <div class="row mb-2">
-                                    <div class="col">
+                                    <div class="col-4">
+                                        <p class="fw-semibold d-block mb-3">Type</p>
+                                        <div class="row m-0">
+                                            <div class="col col-md-4 mx-0 form-check form-check-md-inline">
+                                                <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-attacker" value="attacker" />
+                                                <label class="form-check-label" for="typeRadio-attacker">Attacker</label>
+                                            </div>
+                                            <div class="col col-md-4 mx-0 form-check form-check-md-inline">
+                                                <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-defender" value="defender" />
+                                                <label class="form-check-label" for="typeRadio-defender">Defender</label>
+                                            </div>
+                                            <div class="col col-md-4 mx-0 form-check form-check-md-inline">
+                                                <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-healer" value="healer" />
+                                                <label class="form-check-label" for="typeRadio-healer">Healer</label>
+                                            </div>
+                                            <div class="col col-md-4 mx-0 form-check form-check-md-inline">
+                                                <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-support" value="support" />
+                                                <label class="form-check-label" for="typeRadio-support">Support</label>
+                                            </div>
+                                            <div class="col col-md-4 mx-0 form-check form-check-md-inline">
+                                                <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-debuffer" value="debuffer" />
+                                                <label class="form-check-label" for="typeRadio-debuffer">Debuffer</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
                                         <p class="fw-semibold d-block mb-3">Rarity</p>
                                         <div class="form-check form-check-md-inline">
                                             <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-ssr" value="ssr" />
@@ -100,19 +125,19 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                                             <label class="form-check-label" for="rarityRadio-r">R</label>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-5">
                                         <p class="fw-semibold d-block mb-3">Class</p>
                                         <div class="form-check form-check-md-inline">
-                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-proficiency" value="proficiency" />
-                                            <label class="form-check-label" for="typeRadio-proficiency">Proficiency</label>
+                                            <input class="form-check-input" type="radio" name="classRadio" id="classRadio-proficiency" value="proficiency" />
+                                            <label class="form-check-label" for="classRadio-proficiency">Proficiency</label>
                                         </div>
                                         <div class="form-check form-check-md-inline">
-                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-tenacity" value="tenacity" />
-                                            <label class="form-check-label" for="typeRadio-tenacity">Tenacity</label>
+                                            <input class="form-check-input" type="radio" name="classRadio" id="classRadio-tenacity" value="tenacity" />
+                                            <label class="form-check-label" for="classRadio-tenacity">Tenacity</label>
                                         </div>
                                         <div class="form-check form-check-md-inline">
-                                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-wisdom" value="wisdom" />
-                                            <label class="form-check-label" for="typeRadio-wisdom">Wisdom</label>
+                                            <input class="form-check-input" type="radio" name="classRadio" id="classRadio-wisdom" value="wisdom" />
+                                            <label class="form-check-label" for="classRadio-wisdom">Wisdom</label>
                                         </div>
                                     </div>
                                 </div>
@@ -156,7 +181,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                                 {% assign c = cData[1] %}
                                 <div class="char-card pb-3" 
                                 data-name="{{ c.name }}" data-squad="{{ c.squad | downcase | replace: ' ', '-' }}" 
-                                data-rarity="{{ c.rarity }}" data-type="{{ c.type }}">
+                                data-type="{{ c.type }}" data-rarity="{{ c.rarity }}" data-class="{{ c.class }}">
                                     <div class="char-cardContainer">
                                         <a href="{{ site.baseurl }}{{ site.profileurl}}/{{ pUrl }}.html">
                                             <img class="char-portrait bg-dark rounded" src="{{ site.baseurl }}/img/characters/UI_Portrait_H_S_{{ c.imgPath | default: c.name }}_01.png" loading="lazy" alt="{{ c.name }}"/>
@@ -227,7 +252,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
             $('#squadSelect').selectize({
                 onChange: filterCharacters
             });
-            $("input[name=rarityRadio], input[name=typeRadio]").change(filterCharacters);
+            $("input[name=typeRadio], input[name=rarityRadio], input[name=classRadio]").change(filterCharacters);
 
             // Load navbar
             // NOTE IF YOU'RE CHANGING THIS, appConstants.js needs to be loaded before this for BASE_DIR to exist.

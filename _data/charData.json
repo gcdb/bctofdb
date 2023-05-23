@@ -2,8 +2,9 @@
     "alecdora": {
         "name": "alecdora",
         "squad": "Golden Dawn",
+        "type": "attacker",
         "rarity": "sr",
-        "type": "wisdom",
+        "class": "wisdom",
         "new": true,
         "profileData": { 
             "grimoireName": "Broken Oath",
@@ -15,8 +16,9 @@
     "asta": {
         "name": "asta",
         "squad": "Black Bulls",
+        "type": "attacker",
         "rarity": "sr",
-        "type": "tenacity",
+        "class": "tenacity",
         "profileData": { 
             "grimoireName": "Persevering Resolution",
             "atkName": "Downward Strike",
@@ -27,166 +29,169 @@
     "asta2": {
         "name": "asta",
         "squad": "Black Bulls",
+        "type": "attacker",
         "rarity": "ssr",
-        "type": "tenacity",
+        "class": "tenacity",
         "imgPath": "asta_101"
     },
     "cartherine": {
         "name": "cartherine",
         "squad": "The Eye of the Midnight Sun",
+        "type": "defender",
         "rarity": "r",
-        "type": "wisdom"
+        "class": "wisdom"
     },
     "charlotte": {
         "name": "charlotte",
         "squad": "Blue Rose",
+        "type": "debuffer",
         "rarity": "ssr",
-        "type": "tenacity"
+        "class": "tenacity"
     },
     "charmy": {
         "name": "charmy",
         "squad": "Black Bulls",
         "rarity": "r",
-        "type": "proficiency"
+        "class": "proficiency"
     },
     "fuegoleon": {
         "name": "fuegoleon",
         "squad": "Crimson Lion",
         "rarity": "ssr",
-        "type": "tenacity"
+        "class": "tenacity"
     },
     "georqe": {
         "name": "georqe",
         "squad": "The Eye of the Midnight Sun",
         "rarity": "r",
-        "type": "proficiency"
+        "class": "proficiency"
     },
     "heath": {
         "name": "heath",
         "squad": "The Eye of the Midnight Sun",
         "rarity": "sr",
-        "type": "proficiency"
+        "class": "proficiency"
     },
     "jack": {
         "name": "jack",
         "squad": "Green Mantis",
         "rarity": "ssr",
-        "type": "proficiency"
+        "class": "proficiency"
     },
     "leofold": {
         "name": "leofold",
         "squad": "Crimson Lion",
         "rarity": "sr",
-        "type": "tenacity"
+        "class": "tenacity"
     },
     "lotus": {
         "name": "lotus",
         "squad": "Diamond Kingdom",
         "rarity": "sr",
-        "type": "wisdom"
+        "class": "wisdom"
     },
     "luck": {
         "name": "luck",
         "squad": "Black Bulls",
         "rarity": "sr",
-        "type": "proficiency"
+        "class": "proficiency"
     },
     "magna": {
         "name": "magna",
         "squad": "Black Bulls",
         "rarity": "sr",
-        "type": "tenacity"
+        "class": "tenacity"
     },
     "mars": {
         "name": "mars",
         "squad": "Diamond Kingdom",
         "rarity": "ssr",
-        "type": "tenacity"
+        "class": "tenacity"
     },
     "mimosa": {
         "name": "mimosa",
         "squad": "Golden Dawn",
         "rarity": "sr",
-        "type": "tenacity"
+        "class": "tenacity"
     },
     "mimosa2": {
         "name": "mimosa",
         "squad": "Golden Dawn",
         "rarity": "ssr",
-        "type": "wisdom",
+        "class": "wisdom",
         "imgPath": "mimosa_101"
     },
     "nebra": {
         "name": "nebra",
         "squad": "Silver Eagle",
         "rarity": "sr",
-        "type": "wisdom"
+        "class": "wisdom"
     },
     "noelle": {
         "name": "noelle",
         "squad": "Black Bulls",
         "rarity": "sr",
-        "type": "tenacity"
+        "class": "tenacity"
     },
     "nozel": {
         "name": "nozel",
         "squad": "Silver Eagle",
         "rarity": "ssr",
-        "type": "proficiency"
+        "class": "proficiency"
     },
     "rades": {
         "name": "rades",
         "squad": "The Eye of the Midnight Sun",
         "rarity": "sr",
-        "type": "proficiency"
+        "class": "proficiency"
     },
     "revchi": {
         "name": "revchi",
         "squad": "Clover Kingdom",
         "rarity": "r",
-        "type": "proficiency"
+        "class": "proficiency"
     },
     "rill": {
         "name": "rill",
         "squad": "Aqua Deer",
         "rarity": "ssr",
-        "type": "proficiency"
+        "class": "proficiency"
     },
     "salim": {
         "name": "salim",
         "squad": "Clover Kingdom",
         "rarity": "r",
-        "type": "proficiency"
+        "class": "proficiency"
     },
     "sally": {
         "name": "sally",
         "squad": "The Eye of the Midnight Sun",
         "rarity": "ssr",
-        "type": "proficiency"
+        "class": "proficiency"
     },
     "sekke": {
         "name": "sekke",
         "squad": "Green Mantis",
         "rarity": "r",
-        "type": "proficiency"
+        "class": "proficiency"
     },
     "siren": {
         "name": "siren",
         "squad": "Golden Dawn",
         "rarity": "sr",
-        "type": "tenacity"
+        "class": "tenacity"
     },
     "solid": {
         "name": "solid",
         "squad": "Silver Eagle",
         "rarity": "sr",
-        "type": "wisdom"
+        "class": "wisdom"
     },
     "valtos": {
         "name": "valtos",
         "squad": "The Eye of the Midnight Sun",
         "rarity": "sr",
-        "type": "wisdom"
+        "class": "wisdom"
     },
     "william": {
         "name": "william",
@@ -194,25 +199,25 @@
         "title": "Idk Stylo Milo Maskman",
         "squad": "Golden Dawn",
         "rarity": "ssr",
-        "type": "wisdom"
+        "class": "wisdom"
     },
     "yami": {
         "name": "yami",
         "squad": "Black Bulls",
         "rarity": "ssr",
-        "type": "tenacity"
+        "class": "tenacity"
     },
     "yuno": {
         "name": "yuno",
         "squad": "Golden Dawn",
         "rarity": "sr",
-        "type": "proficiency"
+        "class": "proficiency"
     },
     "yuno2": {
         "name": "yuno",
         "squad": "Golden Dawn",
         "rarity": "ssr",
-        "type": "proficiency",
+        "class": "proficiency",
         "imgPath": "yuno_101"
     }
 }
