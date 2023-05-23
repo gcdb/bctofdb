@@ -86,11 +86,14 @@
                                                     <div id="tag-squad" class="badge w-auto bg-primary me-2 mt-2 rounded">
                                                         <p class="m-1 text-white">{{ cData.squad }}</p>
                                                     </div>
+                                                    <div id="tag-type" class="badge w-auto bg-primary me-2 mt-2 rounded">
+                                                        <p class="m-1 text-white">{{ cData.type | capitalize }}</p>
+                                                    </div>
                                                     <div id="tag-rarity" class="badge w-auto bg-primary me-2 mt-2 rounded">
                                                         <p class="m-1 text-white">{{ cData.rarity | upcase }}</p>
                                                     </div>
-                                                    <div id="tag-type" class="badge w-auto bg-primary me-2 mt-2 rounded">
-                                                        <p class="m-1 text-white">{{ cData.type | capitalize }}</p>
+                                                    <div id="tag-class" class="badge w-auto bg-primary me-2 mt-2 rounded">
+                                                        <p class="m-1 text-white">{{ cData.class | capitalize }}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -161,8 +164,8 @@
                                             <p class="mb-0">Skill</p>
                                             <h4 id="skill-name" class="fw-bold">{{ pData.skillName | default: "Long-ass Skill Name: Longer than my boi Johnny Sin's dong" }} (Lv. 1)</h4>
                                             <hr/>
-                                            <h5 class="fw-light">• <b>[Taunts]</b> an enemy target for 2 turns.</h5>
-                                            <h5 class="fw-light">• Goes into <b>[Counterattack]</b> stance for 2 turns.</h5>
+                                            <h5 class="fw-light">• <b class="dtt-indicator dtt-taunt">[Taunts]</b> an enemy target for 2 turns.</h5>
+                                            <h5 class="fw-light">• Goes into <b class="dtt-indicator dtt-counterattack">[Counterattack]</b> stance for 2 turns.</h5>
                                             <div id="tag-squad" class="badge w-auto bg-primary rounded">
                                                 <p class="m-1 text-white">ATK: 92% M.ATK: 92%</p>
                                             </div>
@@ -363,6 +366,7 @@
     <script src="../assets/js/main.js"></script>
 
     <!-- Custom JS -->
+    <script src="../js/tooltipHandler.js"></script>
     <script>
         $(document).ready(() => {
             const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
