@@ -255,7 +255,6 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
             $("input[name=typeRadio], input[name=rarityRadio], input[name=classRadio]").change(filterCharacters);
 
             // Load navbar
-            // NOTE IF YOU'RE CHANGING THIS, appConstants.js needs to be loaded before this for BASE_DIR to exist.
             $("#nav-placeholder").load(`./html/navbar.html`, () => {
                 // Set active tab
                 $('.navbar-nav .nav-link').each((idx, elem) => {

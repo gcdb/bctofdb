@@ -361,7 +361,6 @@
             const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
             // Load navbar
-            // NOTE IF YOU'RE CHANGING THIS, appConstants.js needs to be loaded before this for BASE_DIR to exist.
             $("#nav-placeholder").load(`../html/navbar.html`)
             $("#footer-placeholder").load(`../html/footer.html`)
         });
