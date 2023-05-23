@@ -8,5 +8,8 @@ $.getJSON('../js/json/tooltipData.json', (tooltipData) => {
         elem.dataset.bsCustomClass = 'tooltip-dark';
         elem.dataset.bsTitle = tooltipData[tag];
     });
+
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 });
 
