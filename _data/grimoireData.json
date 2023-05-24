@@ -46,7 +46,10 @@
         "name": "Witch's Wrath",
         "characterCode": "catherine",
         "rarity": "r",
-        "type": "upgrade"
+        "type": "upgrade",
+        "ovr": {
+            "gImgPath": "cartherine_01"
+        }
     },
     "blooming_talent": {
         "name": "Blooming Talent",
@@ -90,7 +93,7 @@
         "rarity": "ssr",
         "type": "upgrade"
     },
-    "thrill_of_the_hunt": {
+    "thrill_of_the_struggle": {
         "name": "Thrill of the Struggle",
         "characterCode": "jack",
         "rarity": "ssr",
@@ -110,8 +113,8 @@
     },
     "token_of_oath": {
         "name": "Token of Oath",
-        "characterCode": "yami",
-        "rarity": "sr",
+        "characterCode": "leopold",
+        "rarity": "ssr",
         "type": "upgrade"
     },
     "royals_confidence": {
@@ -159,7 +162,7 @@
     "cunning_commander": {
         "name": "Cunning Commander",
         "characterCode": "lotus",
-        "rarity": "sr",
+        "rarity": "ssr",
         "type": "upgrade"
     },
     "persevering_resolution": {
@@ -195,7 +198,7 @@
     "meat_enthusiast": {
         "name": "Meat Enthusiast",
         "characterCode": "charmy",
-        "rarity": "r",
+        "rarity": "sr",
         "type": "upgrade"
     },
     "false_confidence": {
@@ -226,6 +229,9 @@
         "name": "Keen Eye",
         "characterCode": "georg",
         "rarity": "r",
-        "type": "upgrade"
+        "type": "upgrade",
+        "ovr": {
+            "gImgPath": "georqe_01"
+        }
     }
 }
