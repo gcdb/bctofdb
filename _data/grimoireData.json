@@ -21,8 +21,10 @@
         "new": true
     },
     "broken_oath": {
-        "name": "Broken Oath Test Value",
-        "characterCode": "alecdora"
+        "name": "Broken Oath",
+        "characterCode": "alecdora",
+        "rarity": "sr",
+        "type": "upgrade"
     },    
     "chiefs_appearance": {
         "name": "Chief's Appearance",
@@ -41,7 +43,189 @@
         "type": "upgrade"
     },
     "witchs_wrath": {
-        "name": "Witch's Wrath Test Value",
-        "characterCode": "catherine"
+        "name": "Witch's Wrath",
+        "characterCode": "catherine",
+        "rarity": "r",
+        "type": "upgrade"
+    },
+    "blooming_talent": {
+        "name": "Blooming Talent",
+        "characterCode": "rill",
+        "rarity": "ssr",
+        "type": "upgrade"
+    },
+    "insatiable_quest": {
+        "name": "Insatiable Quest",
+        "characterCode": "sally",
+        "rarity": "ssr",
+        "type": "upgrade"
+    },
+    "roses_thorn": {
+        "name": "Rose's Thorn",
+        "characterCode": "charlotte",
+        "rarity": "ssr",
+        "type": "upgrade"
+    },
+    "dark_rage": {
+        "name": "Dark Rage",
+        "characterCode": "yami",
+        "rarity": "ssr",
+        "type": "upgrade"
+    },
+    "respectable_rival": {
+        "name": "Respectable Rival",
+        "characterCode": "fuegoleon",
+        "rarity": "ssr",
+        "type": "upgrade"
+    },
+    "royals_duty": {
+        "name": "Royal's Duty",
+        "characterCode": "nozel",
+        "rarity": "ssr",
+        "type": "upgrade"
+    },
+    "mysterious_transfer_student": {
+        "name": "Mysterios Transfer Student",
+        "characterCode": "yuno2",
+        "rarity": "ssr",
+        "type": "upgrade"
+    },
+    "thrill_of_the_hunt": {
+        "name": "Thrill of the Struggle",
+        "characterCode": "jack",
+        "rarity": "ssr",
+        "type": "upgrade"
+    },
+    "innocence_awareness": {
+        "name": "Innocence Awareness",
+        "characterCode": "mimosa2",
+        "rarity": "ssr",
+        "type": "upgrade"
+    },
+    "survival_of_the_fittest": {
+        "name": "Survival of the Fittest",
+        "characterCode": "mars",
+        "rarity": "ssr",
+        "type": "upgrade"
+    },
+    "token_of_oath": {
+        "name": "Token of Oath",
+        "characterCode": "yami",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "royals_confidence": {
+        "name": "Royal's Confidence",
+        "characterCode": "nebra",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "aesthetics_of_battle": {
+        "name": "Aesthetics of Battle",
+        "characterCode": "luck",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "sea_serpents_pride": {
+        "name": "Sea Serpent's Pride",
+        "characterCode": "nebra",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "cultists_rettribution": {
+        "name": "Cultist's Rettribution",
+        "characterCode": "valtos",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "twisted_creed": {
+        "name": "Twisted Creed",
+        "characterCode": "rades",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "cold_blooded_observer": {
+        "name": "Cold-Blooded Observer",
+        "characterCode": "heath",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "silent_stone": {
+        "name": "Silent Stone",
+        "characterCode": "shiren",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "cunning_commander": {
+        "name": "Cunning Commander",
+        "characterCode": "lotus",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "persevering_resolution": {
+        "name": "Persevering Resolution",
+        "characterCode": "asta",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "brilliant_endurance": {
+        "name": "Brilliant Endurance",
+        "characterCode": "yuno",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "maidens_determination": {
+        "name": "Maiden's Determination",
+        "characterCode": "noelle",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "seniors_nobility": {
+        "name": "Senior's Nobility",
+        "characterCode": "magna",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "royal_familys_respect": {
+        "name": "Royal Family's Respect",
+        "characterCode": "mimosa",
+        "rarity": "sr",
+        "type": "upgrade"
+    },
+    "meat_enthusiast": {
+        "name": "Meat Enthusiast",
+        "characterCode": "charmy",
+        "rarity": "r",
+        "type": "upgrade"
+    },
+    "false_confidence": {
+        "name": "False Confidence",
+        "characterCode": "sekke",
+        "rarity": "r",
+        "type": "upgrade"
+    },
+    "seniors_dignity": {
+        "name": "Senior's Dignity",
+        "characterCode": "klaus",
+        "rarity": "r",
+        "type": "upgrade"
+    },
+    "chain_thief": {
+        "name": "Chain Thief",
+        "characterCode": "revchi",
+        "rarity": "r",
+        "type": "upgrade"
+    },
+    "nobles_boast": {
+        "name": "Noble's Boast",
+        "characterCode": "salim",
+        "rarity": "r",
+        "type": "upgrade"
+    },
+    "keen_eye": {
+        "name": "Keen Eye",
+        "characterCode": "georg",
+        "rarity": "r",
+        "type": "upgrade"
     }
 }
