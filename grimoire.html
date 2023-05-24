@@ -141,17 +141,25 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
                     <div class="card-body">
                         <div id="char-cardDiv" class="row mb-4">
                             {% for gData in site.data.grimoireData %}
+                                {% if gData[0] == "documentation-do-not-use-as-data" %}
+                                    {% continue %}
+                                {% endif %}
+
                                 {% assign gUrl = gData[0] %}
                                 {% assign g = gData[1] %}
+                                {% if g.characterCode %}
+                                    {% assign gPrivate = "private" %}
+                                    {% assign defaultCode = g.characterCode | append: "_01" %}
+                                {% else %}
+                                    {% assign gPrivate = "public" %}
+                                    {% assign defaultCode = gName %}
+                                {% endif %}
                                 <div class="char-card pb-3" 
                                 data-name="{{ g.name | downcase | replace: ' ', '-' }}" data-rarity="{{ g.rarity }}" data-type="{{ g.type }}"
-                                {% if g.characterName %} 
-                                    data-character="{{ g.characterName }}" 
-                                {% endif %}
-                                >
+                                {% if g.characterCode %} data-character="{{ g.characterCode }}" {% endif %}>
                                     <div class="char-cardContainer">
                                         <a href="{{ site.baseurl }}{{ site.grimoireurl }}/{{ gUrl }}.html">
-                                            <img class="char-portrait bg-dark rounded" src="{{ site.baseurl }}/img/grimoires/private_grimoire_{{ g.rarity }}_{{ g.characterCode | default: g.characterName }}_01_item.png" loading="lazy" alt="{{ g.name }}"/>
+                                            <img class="char-portrait bg-dark rounded" src="{{ site.baseurl }}/img/grimoires/{{ gPrivate }}_grimoire_{{ g.rarity }}_{{ g.ovr.gImgPath | default: defaultCode }}_item.png" loading="lazy" alt="{{ g.name }}"/>
                                             <div class="char-title bg-body px-1">{{ g.name | truncate: 18 }}</div>
                                             {% if g.new %}
                                                 <span class="badge card-badge card-badge-orange w-100">NEW</span>

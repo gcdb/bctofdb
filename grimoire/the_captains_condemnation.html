@@ -6,19 +6,30 @@
 
 {% assign gName = page.path | remove: '.html' | split: '/' | last %}
 {% assign gData = site.data.grimoireData[gName] %}
+{% assign cData = site.data.charData[gData.characterCode] %}
+{% assign pData = cData.profileData %}
 {% if gData.characterCode %}
-    {% assign cData = site.data.charData[gData.characterCode] %}
+    {% assign gPrivate = "private" %}
+    {% assign defaultCode = gData.characterCode | append: "_01" %}
+    {% assign skillDefaultCode = gData.characterCode | append: "_001" %}
 {% else %}
-    {% assign cData = site.data.charData[gData.characterName] %}
+    {% assign gPrivate = "public" %}
+    {% assign defaultCode = gName %}
+    {% assign skillDefaultCode = gName %}
 {% endif %}
 
+{% assign charImgPath = cData.imgPath | default: cData.name %}
+{% assign gImgPath = gData.ovr.gImgPath | default: defaultCode %}
+{% assign gSkillImgPath = gData.ovr.gSkillPath | default: skillDefaultCode %}
+
 <script>
-    console.log({{ gData }});
+    {{ cData }}
 </script>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ gData.name }}</title>
+    <title>{{ g.name }}</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.png" />
@@ -82,11 +93,13 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-3 mb-4 mb-md-0">
-                                        <img id="grimoire-image" class="char-portrait bg-dark rounded" src="../img/grimoires/private_grimoire_{{ gData.rarity }}_{{ gData.characterCode | default: gData.characterName }}_01_item.png" loading="lazy" alt="grimoire-image">
+                                        <img id="grimoire-image" class="char-portrait bg-dark rounded" loading="lazy" alt="grimoire-image"
+                                        src="../img/grimoires/{{ gPrivate }}_grimoire_{{ gData.rarity }}_{{ gImgPath }}_item.png"
+                                        >
                                     </div>
                                     <div class="col mb-4 mb-md-0 mt-md-3">
                                         <h5 class="mb-1">
-                                            {% if gData.characterName %} Private {% else %} Public {% endif %} Grimoire
+                                            {{ gPrivate | capitalize }} Grimoire
                                         </h5>
                                         <h3 class="fw-bold mb-2">{{ gData.name | default: "The Captain's Condemnation" }}</h3>
                                         <div class="row">
@@ -100,18 +113,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {% if gData.characterName %}
+                                    {% if gData.characterCode %}
                                         <div class="col-md-5 d-flex">
-                                            <a href="../profile/{{ gData.characterCode | default: gData.characterName }}.html">
+                                            <a href="../profile/{{ g.characterCode }}.html">
                                                 <div id="grimoire-charContainer" class="row m-0 bg-body rounded align-items-center h-100">
                                                     <div class="col-4">
-                                                        <img id="portrait-image" class="w-100 bg-dark bg-opacity-10 rounded" src="../img/characters/UI_Portrait_H_S_{{ gData.characterCode | default: gData.characterName }}_01.png" loading="lazy" alt="portrait-image">
+                                                        <img id="portrait-image" class="w-100 my-3 bg-dark bg-opacity-10 rounded" src="../img/characters/UI_Portrait_H_S_{{ charImgPath }}_01.png" loading="lazy" alt="portrait-image">
                                                     </div>
                                                     <div class="col-8">
                                                         <h6 class="mb-1 fw-light">Character</h6>
                                                         <hr/>
-                                                        <h6 class="mb-1 fw-light">{{ cData.title }}</h6>
-                                                        <h5 class="m-0 fw-bold">{{ cData.fullName | default: "William Vangeance"}}</h5>
+                                                        <h6 class="mb-1 fw-light">{{ pData.title }}</h6>
+                                                        <h5 class="m-0 fw-bold">{{ pData.fullName | default: "William Vangeance"}}</h5>
                                                     </div>
                                                 </div>
                                             </a>
@@ -139,7 +152,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-3 col-md-2">
-                                        <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/grimoires/skills/UI_william_001_grimoireskill_01.png" loading="lazy" alt="atk01">
+                                        <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/grimoires/skills/UI_{{ gSkillImgPath }}_grimoireskill_01.png" loading="lazy" alt="atk01">
                                     </div>
                                     <div class="col">
                                         <p class="mb-0">Skill</p>
@@ -164,7 +177,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-3 col-md-2">
-                                        <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/grimoires/skills/UI_william_001_grimoireskill_02.png" loading="lazy" alt="atk01">
+                                        <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/grimoires/skills/UI_{{ gSkillImgPath }}_grimoireskill_02.png" loading="lazy" alt="atk01">
                                     </div>
                                     <div class="col">
                                         <p class="mb-0">Skill</p>

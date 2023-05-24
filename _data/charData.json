@@ -1,4 +1,20 @@
 {
+    "documentation-do-not-use-as-data": {
+        "0-href-key": "the key for each character is used as the profile page identifier, e.g. asta2.html",
+        
+        "1A-main-body": "Contains name, squad, type, rarity, class",
+        "1B-main-body": "These are all filter values, used as data-<value> in the search page",
+        "2-new": "new is the value that generates the NEW tag on the search page",
+
+        "3A-profileData": "Contains grimoireCode, fullName, title, atkName, skillName, specialName",
+        "3B-profileData": "Used to populate data in the indv profile page",
+        "3C-profileData": "grimoireCode should be the same as the corresponding private grimoire key in grimoireData.json, used to generate link to grimoire page",
+
+        "4A-ovr": "Contains pImgPath, sImgPath",
+        "4B-ovr-pImgPath": "Overwrites profile images (search page & portrait in indv profile page)",
+        "4C-ovr-sImgPath": "Overwrites skill images (atk, skill & special in indv profile page)"
+    },
+
     "alecdora": {
         "name": "alecdora",
         "squad": "Golden Dawn",
@@ -7,7 +23,9 @@
         "class": "wisdom",
         "new": true,
         "profileData": { 
-            "grimoireName": "Broken Oath",
+            "grimoireCode": "broken_oath",
+            "fullName": "Alecdora Sandler",
+            "title": "Golden Dawn Magic Knight",
             "atkName": "Sand-Armored Guard",
             "skillName": "Piercing Sand Spear",
             "specialName": "Sand-Armored Heavy Guard"
@@ -20,7 +38,9 @@
         "rarity": "sr",
         "class": "tenacity",
         "profileData": { 
-            "grimoireName": "Persevering Resolution",
+            "grimoireCode": "persevering_resolution",
+            "fullName": "Asta",
+            "title": "The Iron Will",
             "atkName": "Downward Strike",
             "skillName": "Rampage",
             "specialName": "Never giving up is my magic!"
@@ -32,9 +52,14 @@
         "type": "attacker",
         "rarity": "ssr",
         "class": "tenacity",
-        "imgPath": "asta_101",
+        "ovr": {
+            "pImgPath": "asta_101",
+            "sImgPath": "asta_101"
+        },
         "profileData": { 
-            "grimoireName": "Chief's Appearance",
+            "grimoireCode": "chiefs_appearance",
+            "fullName": "Asta",
+            "title": "The Iron Will",
             "atkName": "Cross Slash",
             "skillName": "Wild Dance",
             "specialName": "Accelerated Assault"
@@ -46,9 +71,13 @@
         "type": "debuffer",
         "rarity": "r",
         "class": "wisdom",
-        "imgPath": "cartherine",
+        "ovr": {
+            "pImgPath": "cartherine"
+        },
         "profileData": { 
-            "grimoireName": "Witch's Wrath",
+            "grimoireCode": "witchs_wrath",
+            "fullName": "Catherine",
+            "title": "The Eye of the Midnight Sun",
             "atkName": "Excruciating Bullet",
             "skillName": "Ash Absorbing Formation",
             "specialName": "Cheerful Ash Destruction"
@@ -61,7 +90,9 @@
         "rarity": "ssr",
         "class": "tenacity",
         "profileData": { 
-            "grimoireName": "Rose's Thorn",
+            "grimoireCode": "roses_thorn",
+            "fullName": "Charlotte Roselei",
+            "title": "Captain of the Blue Rose Knights",
             "atkName": "Thornvine Whip",
             "skillName": "Thorn Serpent",
             "specialName": "Corpse-Hunting Briar Trees"
@@ -74,7 +105,9 @@
         "rarity": "sr",
         "class": "proficiency",
         "profileData": { 
-            "grimoireName": "Meat Enthusiast",
+            "grimoireCode": "meat_enthusiast",
+            "fullName": "Charmy Pappitson",
+            "title": "Black Bulls",
             "atkName": "Devastating Strike of the Sleeping Sheep",
             "skillName": "Feast!",
             "specialName": "Triple Strike of Sleeping Sheep"
@@ -87,7 +120,9 @@
         "rarity": "ssr",
         "class": "tenacity",
         "profileData": { 
-            "grimoireName": "Respectable Rival",
+            "grimoireCode": "respectable_rival",
+            "fullName": "Fuegoleon Vermillion",
+            "title": "Captain of the Crimson Lion Kings",
             "atkName": "Ray of Extinction",
             "skillName": "Onslaught of the Flame Lion",
             "specialName": "Leo Rugiens"
@@ -99,9 +134,14 @@
         "type": "debuffer",
         "rarity": "r",
         "class": "proficiency",
-        "imgPath": "georqe",
+        "ovr": {
+            "pImgPath": "georqe",
+            "sImgPath": "georqe"
+        },
         "profileData": { 
-            "grimoireName": "Keen Eye",
+            "grimoireCode": "keen_eye",
+            "fullName": "Georg",
+            "title": "The Eye of the Midnight Sun",
             "atkName": "Wind Bullet",
             "skillName": "Wind Spear",
             "specialName": "Tornado Needles"
@@ -114,7 +154,9 @@
         "rarity": "sr",
         "class": "proficiency",
         "profileData": { 
-            "grimoireName": "Cold-Blooded Observer",
+            "grimoireCode": "cold_blooded_observer",
+            "fullName": "Heath Grice",
+            "title": "The Eye of the Midnight Sun",
             "atkName": "Ice Shard",
             "skillName": "Heavenly Ice Fang",
             "specialName": "Endless Ice Cage"
@@ -127,7 +169,9 @@
         "type": "attacker",
         "class": "proficiency",
         "profileData": { 
-            "grimoireName": "Thrill of the Struggle",
+            "grimoireCode": "thrill_of_the_struggle",
+            "fullName": "Jack the Ripper",
+            "title": "Captain of the Green Praying Mantises",
             "atkName": "Death Scythe",
             "skillName": "Manic Blade",
             "specialName": "Death Scythe: Lunatic Slash"
@@ -139,9 +183,14 @@
         "rarity": "ssr",
         "type": "attacker",
         "class": "tenacity",
-        "imgPath": "leofold",
+        "ovr": {
+            "pImgPath": "leofold",
+            "sImgPath": "leofold"
+        },
         "profileData": { 
-            "grimoireName": "Token of Oath",
+            "grimoireCode": "token_of_oath",
+            "fullName": "Leopold Vermillion",
+            "title": "Crimson Lion Kings",
             "atkName": "Crimson Flame",
             "skillName": "Flame Burst",
             "specialName": "Spiral Flame"
@@ -154,7 +203,9 @@
         "type": "debuffer",
         "class": "wisdom",
         "profileData": { 
-            "grimoireName": "Cunning Commander",
+            "grimoireCode": "cunning_commander",
+            "fullName": "Lotus Whomalt",
+            "title": "The Diamond Kingdom",
             "atkName": "Emit Smoke",
             "skillName": "Smoke Burst",
             "specialName": "Prison of the Fallen King"
@@ -167,7 +218,9 @@
         "type": "attacker",
         "class": "proficiency",
         "profileData": { 
-            "grimoireName": "Aesthetics of Battle",
+            "grimoireCode": "aesthetics_of_battle",
+            "fullName": "Luck Voltia",
+            "title": "Black Bulls",
             "atkName": "Thunder Fist",
             "skillName": "Fury of the Lightning God",
             "specialName": "Holy Lightning Boots"

@@ -1,21 +1,47 @@
 {
+    "documentation-do-not-use-as-data": {
+        "0-href-key": "the key for each character is used as the indv page identifier, e.g. broken_oath.html",
+        
+        "1A-main-body": "Contains name, characterCode, rarity, type",
+        "1B-main-body": "These are all filter values, used as data-<value> in the search page",
+        "1C-main-body": "Exception: characterCode translates to data-character",
+        "1D-main-body": "characterCode must be the same as the corresponding owner in charData.json, used to generate link to char page",
+        "2-new": "new is the value that generates the NEW tag on the search page",
+
+        "3A-ovr": "Contains gImgPath, gSkillPath",
+        "3B-ovr-gImgPath": "Overwrites grimoire images (search page & portrait in indv grimoire page)",
+        "3C-ovr-gSkillPath": "Overwrites skill images (skills in indv grimoire page)"
+    },
+
     "five_leaf_clover": {
         "name": "Five Leaf Clover",
-        "characterName": "asta",
+        "characterCode": "asta",
         "rarity": "sr",
         "type": "upgrade",
         "new": true
     },
+    "broken_oath": {
+        "name": "Broken Oath Test Value",
+        "characterCode": "alecdora"
+    },    
+    "chiefs_appearance": {
+        "name": "Chief's Appearance",
+        "characterCode": "asta2",
+        "rarity": "ssr",
+        "type": "upgrade",
+        "ovr": {
+            "gImgPath": "asta_04",
+            "gSkillPath": "asta_101"
+        }
+    },
     "the_captains_condemnation": {
         "name": "The Captain's Condemnation",
-        "characterName": "william",
+        "characterCode": "william",
         "rarity": "ssr",
         "type": "upgrade"
     },
-    "chiefs_appearance": {
-        "name": "Chief's Appearance",
-        "characterName": "asta2",
-        "rarity": "ssr",
-        "type": "upgrade"
+    "witchs_wrath": {
+        "name": "Witch's Wrath Test Value",
+        "characterCode": "catherine"
     }
 }

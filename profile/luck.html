@@ -47,10 +47,16 @@
 </head>
 
 <body>
-    {% assign cName = page.path | remove: '.html' | split: '/' | last %}
-    {% assign cData = site.data.charData[cName] %}
+    {% assign cCode = page.path | remove: '.html' | split: '/' | last %}
+    {% assign cData = site.data.charData[cCode] %}
     {% assign pData = cData.profileData %}
+    {% assign gData = site.data.grimoireData[pData.grimoireCode] %}
+    {% assign gDefaultCode = cCode | append: "_01" %}
 
+    {% assign grimoireImgPath = gData.ovr.gImgPath | default: gDefaultCode %}
+    {% assign profileImgPath = cData.ovr.pImgPath | default: cCode %}
+    {% assign skillImgPath = cData.ovr.sImgPath | default: cCode %}
+    
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar layout-without-menu">
 
@@ -76,11 +82,11 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-3 mb-4 mb-md-0">
-                                            <img id="portrait-image" class="char-portrait bg-dark rounded" src="../img/characters/UI_Portrait_H_Illust_{{ cName }}_01.png" loading="lazy" alt="char-portrait">
+                                            <img id="portrait-image" class="char-portrait bg-dark rounded" src="../img/characters/UI_Portrait_H_Illust_{{ profileImgPath }}_01.png" loading="lazy" alt="char-portrait">
                                         </div>
                                         <div class="col-md-4 mb-4 mb-md-0 mt-md-3">
-                                            <h5 class="mb-1">Black Bulls</h5>
-                                            <h3 class="fw-bold mb-2">Luck Voltia</h3>
+                                            <h5 class="mb-1">{{ pData.title }}</h5>
+                                            <h3 class="fw-bold mb-2">{{ pData.fullName }}</h3>
                                             <div class="row">
                                                 <div class="col">
                                                     <div id="tag-squad" class="badge w-auto bg-primary me-2 mt-2 rounded">
@@ -99,14 +105,14 @@
                                             </div>
                                         </div>
                                         <div class="col-md-5 d-flex">
-                                            <a href="..{{ site.grimoireurl}}/{{ pData.grimoireName | downcase | replace: ' ', '_' }}.html">
+                                            <a href="..{{ site.grimoireurl}}/{{ pData.grimoireCode }}.html">
                                                 <div id="grimoire-charContainer" class="row m-0 bg-body rounded align-items-center h-100">
                                                     <div class="col-4">
-                                                        <img id="portrait-image" class="w-100" src="../img/grimoires/private_grimoire_{{ cData.rarity }}_{{ cName }}_01_item.png" loading="lazy" alt="portrait-image">
+                                                        <img id="portrait-image" class="w-100" src="../img/grimoires/private_grimoire_{{ gData.rarity }}_{{ grimoireImgPath }}_item.png" loading="lazy" alt="portrait-image">
                                                     </div>
                                                     <div class="col-8">
                                                         <h6 class="mb-1 fw-light">Skill Card</h6>
-                                                        <h5 class="m-0 fw-bold">{{ pData.grimoireName | default: "The Captain's Condemnation"}}</h5>
+                                                        <h5 class="m-0 fw-bold">{{ gData.name | default: "WIP - Not yet available"}}</h5>
                                                     </div>
                                                 </div>
                                             </a>
@@ -132,7 +138,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img id="atk01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_{{ cName }}_01_atk_01.png" loading="lazy" alt="atk01">
+                                            <img id="atk01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_{{ skillImgPath }}_01_atk_01.png" loading="lazy" alt="atk01">
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Skill I</p>
@@ -158,7 +164,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img id="skill01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_{{ cName }}_01_skill_01.png" loading="lazy" alt="skill01">
+                                            <img id="skill01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_{{ skillImgPath }}_01_skill_01.png" loading="lazy" alt="skill01">
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Skill II</p>
@@ -183,7 +189,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img id="special01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_{{ cName }}_01_special_01.png" loading="lazy" alt="special01">
+                                            <img id="special01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_{{ skillImgPath }}_01_special_01.png" loading="lazy" alt="special01">
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Special Skill</p>
