@@ -56,6 +56,7 @@
     {% assign grimoireImgPath = gData.ovr.gImgPath | default: gDefaultCode %}
     {% assign profileImgPath = cData.ovr.pImgPath | default: cCode %}
     {% assign skillImgPath = cData.ovr.sImgPath | default: cCode %}
+    
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar layout-without-menu">
 
@@ -123,12 +124,12 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_asta_tuto_special_01.png" loading="lazy" alt="passive">
+                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/PassiveSkill/UI_Cp_Heal.png" loading="lazy" alt="passive">
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Passive</p>
                                             <hr/>
-                                            <h5 class="fw-light">Applies 10% <b>[Received Damage Reduction]</b>.</h5>
+                                            <h5 class="fw-light">Applies <b>[Recovery]</b> to all friendly targets, restoring HP equal to 30% of M. ATK upon using Skill II.</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -143,19 +144,17 @@
                                             <p class="mb-0">Skill I</p>
                                             <h4 id="atk-name" class="fw-bold">{{ pData.atkName | default: "Short Skill Name" }} (Lv. 1)</h4>
                                             <hr/>
-                                            <h5 class="fw-light">• Removes a maximum of 2 debuffs.</h5>
-                                            <h5 class="fw-light">• Applies <b class="dtt-indicator dtt-weaponenhancement" style="color:#26c6f9">[Weapon Enhancement Lv. 1]</b> and then attacks the enemy target upon attacking them while they have an active debuff.</h5>
-                                            <h5 class="fw-light">• Applies 5% <b>[ATK]</b> to self for 2 turns for every debuff removed.</h5>
+                                            <h5 class="fw-light">Applies <b>[Recovery]</b> to the friendly target with the lowest health, restoring 5% of their health for 2 turns.</h5>
                                             <div id="tag-squad" class="badge w-auto bg-primary rounded">
-                                                <p class="m-1 text-white">ATK: 103%</p>
+                                                <p class="m-1 text-white">ATK: 100% M. ATK: 100%</p>
                                             </div>
                                             <div class="divider text-start">
                                                 <div class="divider-text">Upgraded Effect</div>
                                             </div>
-                                            <h6 class="mb-1">Lv. 2 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 3 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 4 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 5 ATK +5%</h6>
+                                            <h6 class="mb-1">Lv. 2 ATK +5%, M. ATK +5%</h6>
+                                            <h6 class="mb-1">Lv. 3 ATK +5%, M. ATK +5%</h6>
+                                            <h6 class="mb-1">Lv. 4 ATK +5%, M. ATK +5%</h6>
+                                            <h6 class="mb-1">Lv. 5 ATK +5%, M. ATK +5%</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -170,17 +169,18 @@
                                             <p class="mb-0">Skill II</p>
                                             <h4 id="skill-name" class="fw-bold">{{ pData.skillName | default: "Long-ass Skill Name: Longer than my boi Johnny Sin's dong" }} (Lv. 1)</h4>
                                             <hr/>
-                                            <h5 class="fw-light">• Applies <b class="dtt-indicator dtt-weaponenhancement" style="color:#26c6f9">[Weapon Enhancement Lv. 2]</b> to self for 2 turns.</h5>
+                                            <h5 class="fw-light">• Has a 50% chance to apply <b class="dtt-indicator dtt-receivedhealingreduction" style="color:#26c6f9">[Received Healing Reduction Lv. 2]</b> to all enemy targets for 2 turns.</h5>
+                                            <h5 class="fw-light">• Applies <b>[Recovery]</b> to yourself and to the friendly target with the lowest health, restoring 45% of the health.</h5>
                                             <div id="tag-squad" class="badge w-auto bg-primary rounded">
-                                                <p class="m-1 text-white">ATK: 97%</p>
+                                                <p class="m-1 text-white">ATK: 121% M. ATK: 121%</p>
                                             </div>
                                             <div class="divider text-start">
                                                 <div class="divider-text">Upgraded Effect</div>
                                             </div>
-                                            <h6 class="mb-1">Lv. 2 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 3 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 4 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 5 ATK +5%</h6>
+                                            <h6 class="mb-1">Lv. 2 ATK +5%, M. ATK +5%</h6>
+                                            <h6 class="mb-1">Lv. 3 ATK +5%, M. ATK +5%</h6>
+                                            <h6 class="mb-1">Lv. 4 ATK +5%, M. ATK +5%</h6>
+                                            <h6 class="mb-1">Lv. 5 ATK +5%, M. ATK +5%</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -195,18 +195,18 @@
                                             <p class="mb-0">Special Skill</p>
                                             <h4 id="special-name" class="fw-bold">{{ pData.specialName | default: "Speshul" }} (Lv.1)</h4>
                                             <hr/>
-                                            <h5 class="fw-light mb-2">Removes all buffs from the enemy target.</h5>
-                                            <h5 class="fw-light mb-2">Applies <b class="dtt-indicator dtt-weaponenhancement" style="color:#26c6f9">[Weapon Enhancement Lv. 3]</b> and then attacks the enemy target if they have an active debuff.</h5>
+                                            <h5 class="fw-light">• Applies <b>[Recovery]</b> to the friendly target, restoring 30% of their health.</h5>
+                                            <h5 class="fw-light">•  A friendly target receives a <b>[Barrier]</b> equal to 55% of HP for 2 turns if their HP is restored to 100% by <b>[Recovery]</b>.</h5>
                                             <div id="tag-squad" class="badge w-auto bg-primary rounded">
-                                                <p class="m-1 text-white">ATK: 100%</p>
+                                                <p class="m-1 text-white">-</p>
                                             </div>
                                             <div class="divider text-start">
                                                 <div class="divider-text">Upgraded Effect</div>
                                             </div>
-                                            <h6 class="mb-1">Lv. 2 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 3 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 4 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 5 ATK +5%</h6>
+                                            <h6 class="mb-1">Lv. 2 Recovery Effect +5%</h6>
+                                            <h6 class="mb-1">Lv. 3 Recovery Effect +5%</h6>
+                                            <h6 class="mb-1">Lv. 4 Recovery Effect +5%</h6>
+                                            <h6 class="mb-1">Lv. 5 Recovery Effect +5%</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -220,45 +220,18 @@
                                         <div class="col">
                                             <p class="mb-0">Combined Attack (Lv.1)</p>
                                             <hr/>
-                                            <h5 class="fw-light mb-2">Applies a buff, granting <b class="dtt-indicator dtt-invulnerability" style="color:#26c6f9">[Invulnerability]</b> for 1 turn.</h5>
-                                            <h5 class="fw-light mb-2"><b class="dtt-indicator dtt-taunt" style="color:#26c6f9">[Taunts]</b> an enemy target if they do not have an active <b class="dtt-indicator dtt-taunt" style="color:#26c6f9">[Taunt]</b>.</h5>
-                                            <h5 class="fw-light mb-2"><b class="dtt-indicator dtt-stun" style="color: #26c6f9">[Stuns]</b> an enemy target for 1 turn if they do not have an active <b class="dtt-indicator dtt-taunt" style="color:#26c6f9">[Taunt]</b></h5>
+                                            <h5 class="fw-light">• Has a 20% chance to apply 30% <b class="dtt-indicator dtt-lifesteal" style="color:#26c6f9">[Lifesteal]</b> to a friendly target for 2 turns.</h5>
+                                            <h5 class="fw-light">• Applies <b class="dtt-indicator dtt-healingincrease" style="color:#26c6f9">[Healing Increase Lv. 1]</b> to a friendly target for 2 turns.</h5>
                                             <div id="tag-squad" class="badge w-auto bg-primary rounded">
-                                                <p class="m-1 text-white">ATK: 52%</p>
+                                                <p class="m-1 text-white">-</p>
                                             </div>
                                             <div class="divider text-start">
                                                 <div class="divider-text">Upgraded Effect</div>
                                             </div>
-                                            <h6 class="mb-1">Lv. 2 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 3 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 4 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 5 ATK +5%</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-3 col-md-2">
-                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_common_match_01.png" loading="lazy" alt="combined-atk">
-                                        </div>
-                                        <div class="col">
-                                            <p class="mb-0">United Attack (Lv.1)</p>
-                                            <h4 class="fw-bold">&#60;The Four-Leaf Clover&#62; Yuno</h3>
-                                            <hr/>
-                                            <h5 class="fw-light">All attacks are done as critical strikes.</h5>
-                                            <h5 class="fw-light"> Removes <b>[Barrier]</b> and <b class="dtt-indicator dtt-invulnerability" style="color: #26c6f9">[Invulnerability]</b> from an enemy target.</h5>
-                                            <div id="tag-squad" class="badge w-auto bg-primary rounded">
-                                                <p class="m-1 text-white">ATK: 59%</p>
-                                            </div>
-                                            <div class="divider text-start">
-                                                <div class="divider-text">Upgraded Effect</div>
-                                            </div>
-                                            <h6 class="mb-1">Lv. 2 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 3 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 4 ATK +5%</h6>
-                                            <h6 class="mb-1">Lv. 5 ATK +5%</h6>
+                                            <h6 class="mb-1">Lv. 2 Buff Chance +5%</h6>
+                                            <h6 class="mb-1">Lv. 3 Buff Chance +5%</h6>
+                                            <h6 class="mb-1">Lv. 4 Buff Chance +5%</h6>
+                                            <h6 class="mb-1">Lv. 5 Buff Chance +5%</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -275,23 +248,23 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td>Total Power</td>
-                                                                    <td>4447</td>
+                                                                    <td>4469</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>ATK</td>
-                                                                    <td>197</td>
+                                                                    <td>62</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>M. ATK</td>
-                                                                    <td>0</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>HP</td>
-                                                                    <td>2795</td>
+                                                                    <td>182</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>DEF</td>
-                                                                    <td>242</td>
+                                                                    <td>179</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>HP</td>
+                                                                    <td>2898</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>ACC</td>
@@ -315,7 +288,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td>SPD</td>
-                                                                    <td>100</td>
+                                                                    <td>90</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>DP</td>
@@ -328,26 +301,6 @@
                                                             </tbody>
                                                         </table>
                                                       </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col mx-3">
-                                                    <h3 class="fw-bold">Fate Links</h3>
-                                                    <div class="row">
-                                                        <div class="col-3 col-md-4">
-                                                            <a href="./yuno.html"><img class="char-portrait bg-dark rounded" src="../img/characters/UI_Portrait_H_S_yuno_01.png" loading="lazy" alt="char1"></a>
-                                                        </div>
-                                                        <div class="col-9 col-md-8">
-                                                            <a href="./yuno.html"><p class="mb-1">The Four-Leaf Clover</p>
-                                                            <h4 class="mb-1">Yuno</h4></a>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

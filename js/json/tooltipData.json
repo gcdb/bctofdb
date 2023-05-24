@@ -24,5 +24,8 @@
     "bleed": "TBA",
     "freeze": "TBA",
     "spdincrease": "TBA",
-    "paralyze": "TBA"
+    "paralyze": "TBA",
+    "receivedhealingreduction": "TBA",
+    "lifesteal": "TBA",
+    "healingincrease": "TBA"
 }

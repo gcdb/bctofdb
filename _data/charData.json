@@ -21,11 +21,10 @@
         "type": "attacker",
         "rarity": "sr",
         "class": "wisdom",
-        "new": true,
         "profileData": { 
             "grimoireCode": "broken_oath",
             "fullName": "Alecdora Sandler",
-            "title": "Golden Dawn Magic Knight",
+            "title": "Golden Dawn",
             "atkName": "Sand-Armored Guard",
             "skillName": "Piercing Sand Spear",
             "specialName": "Sand-Armored Heavy Guard"
@@ -104,6 +103,7 @@
         "type": "healer",
         "rarity": "sr",
         "class": "proficiency",
+        "new": true,
         "profileData": { 
             "grimoireCode": "meat_enthusiast",
             "fullName": "Charmy Pappitson",
@@ -183,6 +183,7 @@
         "rarity": "ssr",
         "type": "attacker",
         "class": "tenacity",
+        "new": true,
         "ovr": {
             "pImgPath": "leofold",
             "sImgPath": "leofold"
@@ -230,19 +231,46 @@
         "name": "magna",
         "squad": "Black Bulls",
         "rarity": "sr",
-        "class": "tenacity"
+        "type": "debuffer",
+        "class": "tenacity",
+        "profileData": { 
+            "grimoireCode": "seniors_nobility",
+            "fullName": "Magna Swing",
+            "title": "Black Bulls",
+            "atkName": "Punch",
+            "skillName": "Perfect Swing",
+            "specialName": "Explosive Scattershot"
+        }
     },
     "mars": {
         "name": "mars",
         "squad": "Diamond Kingdom",
         "rarity": "ssr",
-        "class": "tenacity"
+        "type": "defender",
+        "class": "tenacity",
+        "profileData": { 
+            "grimoireCode": "survival_of_the_fittest",
+            "fullName": "Mars",
+            "title": "The Diamond Kingdom",
+            "atkName": "Mineral Fragment",
+            "skillName": "Mineral Assault",
+            "specialName": "Laevateinn"
+        }
     },
     "mimosa": {
         "name": "mimosa",
         "squad": "Golden Dawn",
         "rarity": "sr",
-        "class": "tenacity"
+        "type": "healer",
+        "class": "tenacity",
+        "profileData": { 
+            "grimoireCode": "royal_familys_respect",
+            "fullName": "Mimosa Vermillion",
+            "title": "Golden Dawn",
+            "atkName": "Magic Cannon Flower",
+            "skillName": "Princess-Healing Flower",
+            "specialName": "Dream-Healing Flower Cradle"
+        }
     },
     "mimosa2": {
         "name": "mimosa",
