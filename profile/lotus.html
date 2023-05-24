@@ -351,9 +351,6 @@
     <script src="../js/tooltipHandler.js"></script>
     <script>
         $(document).ready(() => {
-            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
             // Load navbar
             $("#nav-placeholder").load(`../html/navbar.html`)
             $("#footer-placeholder").load(`../html/footer.html`)
