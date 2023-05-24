@@ -1,4 +1,28 @@
-{
-    "taunt": "Get angy and fite me skrub",
-    "counterattack": "Bij, u slap me? Imma show you how to slap BOIIIIIIIII."
+{   
+    "matkreduction": "TBA",
+    "atkreduction": "TBA",
+    "atkincrease": "TBA",
+    "critrateincrease": "TBA",
+    "critratereduction": "TBA",
+    "staminareduction": "TBA",
+    "healingreduction": "TBA",
+    "defincrease": "TBA",
+    "defreduction": "TBA",
+    "dp": "TBA",
+    "cdmgincrease": "TBA",
+    "poison": "TBA",
+    "totalsilence": "TBA",
+    "taunt": "Attacks the target with the effect.",
+    "counterattack": "TBA",
+    "weaponenhancement": "Weapon Enhancement Lv. 1/2/3: Increases damage by 10/20/30%",
+    "stun": "You will be disabled and will lose your turn",
+    "invulnerability": "Cannot take damage",
+    "incapacitate": "TBA",
+    "cursedbuff": "TBA",
+    "burn": "TBA",
+    "spdreduction": "TBA",
+    "bleed": "TBA",
+    "freeze": "TBA",
+    "spdincrease": "TBA",
+    "paralyze": "TBA"
 }

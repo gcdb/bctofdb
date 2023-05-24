@@ -16,7 +16,7 @@
     "asta": {
         "name": "asta",
         "squad": "Black Bulls",
-        "type": "attacker",
+        "type": "defender",
         "rarity": "sr",
         "class": "tenacity",
         "profileData": { 
@@ -32,69 +32,146 @@
         "type": "attacker",
         "rarity": "ssr",
         "class": "tenacity",
-        "imgPath": "asta_101"
+        "imgPath": "asta_101",
+        "profileData": { 
+            "grimoireName": "Chief's Appearance",
+            "atkName": "Cross Slash",
+            "skillName": "Wild Dance",
+            "specialName": "Accelerated Assault"
+        }
     },
-    "cartherine": {
-        "name": "cartherine",
+    "catherine": {
+        "name": "catherine",
         "squad": "The Eye of the Midnight Sun",
-        "type": "defender",
+        "type": "debuffer",
         "rarity": "r",
-        "class": "wisdom"
+        "class": "wisdom",
+        "imgPath": "cartherine",
+        "profileData": { 
+            "grimoireName": "Witch's Wrath",
+            "atkName": "Excruciating Bullet",
+            "skillName": "Ash Absorbing Formation",
+            "specialName": "Cheerful Ash Destruction"
+        }
     },
     "charlotte": {
         "name": "charlotte",
-        "squad": "Blue Rose",
+        "squad": "Blue Rose Knights",
         "type": "debuffer",
         "rarity": "ssr",
-        "class": "tenacity"
+        "class": "tenacity",
+        "profileData": { 
+            "grimoireName": "Rose's Thorn",
+            "atkName": "Thornvine Whip",
+            "skillName": "Thorn Serpent",
+            "specialName": "Corpse-Hunting Briar Trees"
+        }
     },
     "charmy": {
         "name": "charmy",
         "squad": "Black Bulls",
-        "rarity": "r",
-        "class": "proficiency"
+        "type": "healer",
+        "rarity": "sr",
+        "class": "proficiency",
+        "profileData": { 
+            "grimoireName": "Meat Enthusiast",
+            "atkName": "Devastating Strike of the Sleeping Sheep",
+            "skillName": "Feast!",
+            "specialName": "Triple Strike of Sleeping Sheep"
+        }
     },
     "fuegoleon": {
         "name": "fuegoleon",
-        "squad": "Crimson Lion",
+        "squad": "Crimson Lion Kings",
+        "type": "attacker",
         "rarity": "ssr",
-        "class": "tenacity"
+        "class": "tenacity",
+        "profileData": { 
+            "grimoireName": "Respectable Rival",
+            "atkName": "Ray of Extinction",
+            "skillName": "Onslaught of the Flame Lion",
+            "specialName": "Leo Rugiens"
+        }
     },
-    "georqe": {
-        "name": "georqe",
+    "georg": {
+        "name": "georg",
         "squad": "The Eye of the Midnight Sun",
+        "type": "debuffer",
         "rarity": "r",
-        "class": "proficiency"
+        "class": "proficiency",
+        "imgPath": "georqe",
+        "profileData": { 
+            "grimoireName": "Keen Eye",
+            "atkName": "Wind Bullet",
+            "skillName": "Wind Spear",
+            "specialName": "Tornado Needles"
+        }
     },
     "heath": {
         "name": "heath",
         "squad": "The Eye of the Midnight Sun",
+        "type": "debuffer",
         "rarity": "sr",
-        "class": "proficiency"
+        "class": "proficiency",
+        "profileData": { 
+            "grimoireName": "Cold-Blooded Observer",
+            "atkName": "Ice Shard",
+            "skillName": "Heavenly Ice Fang",
+            "specialName": "Endless Ice Cage"
+        }
     },
     "jack": {
         "name": "jack",
-        "squad": "Green Mantis",
+        "squad": "Green Praying Mantises",
         "rarity": "ssr",
-        "class": "proficiency"
+        "type": "attacker",
+        "class": "proficiency",
+        "profileData": { 
+            "grimoireName": "Thrill of the Struggle",
+            "atkName": "Death Scythe",
+            "skillName": "Manic Blade",
+            "specialName": "Death Scythe: Lunatic Slash"
+        }
     },
-    "leofold": {
-        "name": "leofold",
-        "squad": "Crimson Lion",
-        "rarity": "sr",
-        "class": "tenacity"
+    "leopold": {
+        "name": "leopold",
+        "squad": "Crimson Lion Kings",
+        "rarity": "ssr",
+        "type": "attacker",
+        "class": "tenacity",
+        "imgPath": "leofold",
+        "profileData": { 
+            "grimoireName": "Token of Oath",
+            "atkName": "Crimson Flame",
+            "skillName": "Flame Burst",
+            "specialName": "Spiral Flame"
+        }
     },
     "lotus": {
         "name": "lotus",
         "squad": "Diamond Kingdom",
-        "rarity": "sr",
-        "class": "wisdom"
+        "rarity": "ssr",
+        "type": "debuffer",
+        "class": "wisdom",
+        "profileData": { 
+            "grimoireName": "Cunning Commander",
+            "atkName": "Emit Smoke",
+            "skillName": "Smoke Burst",
+            "specialName": "Prison of the Fallen King"
+        }
     },
     "luck": {
         "name": "luck",
         "squad": "Black Bulls",
         "rarity": "sr",
-        "class": "proficiency"
+        "type": "attacker",
+        "class": "proficiency",
+        "profileData": { 
+            "grimoireName": "Aesthetics of Battle",
+            "atkName": "Thunder Fist",
+            "skillName": "Fury of the Lightning God",
+            "specialName": "Holy Lightning Boots"
+        }
     },
     "magna": {
         "name": "magna",
@@ -123,7 +200,7 @@
     },
     "nebra": {
         "name": "nebra",
-        "squad": "Silver Eagle",
+        "squad": "Silver Eagles",
         "rarity": "sr",
         "class": "wisdom"
     },
@@ -135,7 +212,7 @@
     },
     "nozel": {
         "name": "nozel",
-        "squad": "Silver Eagle",
+        "squad": "Silver Eagles",
         "rarity": "ssr",
         "class": "proficiency"
     },
@@ -171,7 +248,7 @@
     },
     "sekke": {
         "name": "sekke",
-        "squad": "Green Mantis",
+        "squad": "Green Praying Mantises",
         "rarity": "r",
         "class": "proficiency"
     },
@@ -183,7 +260,7 @@
     },
     "solid": {
         "name": "solid",
-        "squad": "Silver Eagle",
+        "squad": "Silver Eagles",
         "rarity": "sr",
         "class": "wisdom"
     },

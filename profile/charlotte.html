@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alecdora, Golden Dawn</title>
+    <title>Charlotte Roselei, Captain of the Blue Rose Knights</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.png" />
@@ -79,8 +79,8 @@
                                             <img id="portrait-image" class="char-portrait bg-dark rounded" src="../img/characters/UI_Portrait_H_Illust_{{ cName }}_01.png" loading="lazy" alt="char-portrait">
                                         </div>
                                         <div class="col-md-4 mb-4 mb-md-0 mt-md-3">
-                                            <h5 class="mb-1">Golden Dawn Magic Knight</h5>
-                                            <h3 class="fw-bold mb-2">Alecdora Sandler</h3>
+                                            <h5 class="mb-1">Captain of the Blue Rose Knights</h5>
+                                            <h3 class="fw-bold mb-2">Charlotte Roselei</h3>
                                             <div class="row">
                                                 <div class="col">
                                                     <div id="tag-squad" class="badge w-auto bg-primary me-2 mt-2 rounded">
@@ -106,7 +106,7 @@
                                                     </div>
                                                     <div class="col-8">
                                                         <h6 class="mb-1 fw-light">Skill Card</h6>
-                                                        <h5 class="m-0 fw-bold">{{ pData.grimoireName | default: "Three Four Five Leaves Clover"}}</h5>
+                                                        <h5 class="m-0 fw-bold">{{ pData.grimoireName | default: "The Captain's Condemnation"}}</h5>
                                                     </div>
                                                 </div>
                                             </a>
@@ -118,13 +118,12 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/PassiveSkill/UI_Cp_Attack.png" loading="lazy" alt="passive">
+                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/PassiveSkill/UI_Cp_Debuffer.png" loading="lazy" alt="passive">
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Passive</p>
-                                            <!--<h4 id="passive-name" class="fw-bold">{{ pData.passiveName | default: "Resting Bij Face" }}</h4>-->
                                             <hr/>
-                                            <h5 class="fw-light">Applies 10% <b>[DEF Increase]</b> to self for 2 turns upon successfully landing a CRIT.</h5>
+                                            <h5 class="fw-light">Applies <b class="dtt-indicator dtt-poison" style="color:#26c6f9">[Poison]</b> to an enemy target for 2 turns upon successfully landing a CRIT.</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -133,15 +132,16 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img id="atk01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_alecdora_001_skill01_01.png" loading="lazy" alt="atk01">
+                                            <img id="atk01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_{{ cName }}_01_atk_01.png" loading="lazy" alt="atk01">
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Skill I</p>
                                             <h4 id="atk-name" class="fw-bold">{{ pData.atkName | default: "Short Skill Name" }} (Lv. 1)</h4>
                                             <hr/>
-                                            <h5 class="fw-light">Has a 65% chance to <b class="dtt-indicator dtt-stun" style="color: #26c6f9">[Stun]</b> the enemy target for 1 turn.</h5>
+                                            <h5 class="fw-light">• Has a 25% chance to apply <b class="dtt-indicator dtt-incapacitate" style="color:#26c6f9">[Incapacitate]</b> to an enemy target for 2 turns upon every attack.</h5>
+                                            <h5 class="fw-light">• Applies 5% <b>[ATK]</b> to self for 2 turns for every debuff removed.</h5>
                                             <div id="tag-squad" class="badge w-auto bg-primary rounded">
-                                                <p class="m-1 text-white">ATK: 103% M. ATK: 103%</p>
+                                                <p class="m-1 text-white">ATK: 103% M. ATK 103%</p>
                                             </div>
                                             <div class="divider text-start">
                                                 <div class="divider-text">Upgraded Effect</div>
@@ -158,16 +158,16 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img id="skill01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_alecdora_001_skill02_01.png" loading="lazy" alt="skill01">
+                                            <img id="skill01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_{{ cName }}_01_skill_01.png" loading="lazy" alt="skill01">
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Skill II</p>
                                             <h4 id="skill-name" class="fw-bold">{{ pData.skillName | default: "Long-ass Skill Name: Longer than my boi Johnny Sin's dong" }} (Lv. 1)</h4>
                                             <hr/>
-                                            <h5 class="fw-light">• <b class="dtt-indicator dtt-taunt" style="color: #26c6f9">[Taunts]</b> an enemy target for 2 turns.</h5>
-                                            <h5 class="fw-light">• Goes into <b class="dtt-indicator dtt-counterattack" style="color: #26c6f9">[Counterattack]</b> stance for 2 turns.</h5>
+                                            <h5 class="fw-light">• Has a 20% chance to gain an extra turn.</h5>
+                                            <h5 class="fw-light">• Applies 10% <b>[Stamina Increase]</b> for every enemy target alive if you did not gain an extra turn.</h5>
                                             <div id="tag-squad" class="badge w-auto bg-primary rounded">
-                                                <p class="m-1 text-white">ATK: 92% M. ATK: 92%</p>
+                                                <p class="m-1 text-white">ATK: 100% M. ATK 100%</p>
                                             </div>
                                             <div class="divider text-start">
                                                 <div class="divider-text">Upgraded Effect</div>
@@ -184,16 +184,16 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img id="special01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_alecdora_001_special_01.png" loading="lazy" alt="special01">
+                                            <img id="special01" class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_{{ cName }}_01_special_01.png" loading="lazy" alt="special01">
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Special Skill</p>
                                             <h4 id="special-name" class="fw-bold">{{ pData.specialName | default: "Speshul" }} (Lv.1)</h4>
                                             <hr/>
-                                            <h5 class="fw-light">Applies <b class="dtt-indicator dtt-critrateincrease" style="color: #26c6f9">[CRIT. % Increase Lv. 3]</b> and then attacks the enemy target.</h5>
-                                            <h5 class="fw-light">Extends the duration of a stun on an enemy target by 1 turn if they are currently stunned.</h5>
+                                            <h5 class="fw-light">• Has a 40% chance to apply <b class="dtt-indicator dtt-totalsilence" style="color:#26c6f9">[Total Silence]</b> to an enemy target for 2 turns.</h5>
+                                            <h5 class="fw-light">• Has a 60% chance to apply <b class="dtt-indicator dtt-defreduction" style="color:#26c6f9">[DEF Reduction Lv. 3]</b> to an enemy target for 2 turns.</h5>
                                             <div id="tag-squad" class="badge w-auto bg-primary rounded">
-                                                <p class="m-1 text-white">ATK: 132% M. ATK: 132%</p>
+                                                <p class="m-1 text-white">ATK: 98% M. ATK: 98%</p>
                                             </div>
                                             <div class="divider text-start">
                                                 <div class="divider-text">Upgraded Effect</div>
@@ -210,15 +210,15 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-3 col-md-2">
-                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_common_match_01.png" loading="lazy" alt="combined-atk">
+                                            <img class="w-100 bg-opacity-10 bg-dark rounded" src="../img/skills/UI_common_joinatk_01.png" loading="lazy" alt="combined-atk">
                                         </div>
                                         <div class="col">
                                             <p class="mb-0">Combined Attack (Lv.1)</p>
                                             <hr/>
-                                            <h5 class="fw-light">Applies <b class="dtt-indicator dtt-matkreduction" style="color: #26c6f9">[M. ATK Reduction Lv. 1]</b> to an enemy target if they are not <b class="dtt-indicator dtt-taunt" style="color: #26c6f9">[Taunted]</b>.</h5>
-                                            <h5 class="fw-light">Applies 30% <b>[Stamina Reduction]</b> to an enemy target if they are currently <b class="dtt-indicator dtt-stun" style="color: #26c6f9">[Stunned]</b>.</h5>
+                                            <h5 class="fw-light">• Has a 80% chance to remove all buffs from an enemy target.</h5>
+                                            <h5 class="fw-light">• Applies <b class="dtt-indicator dtt-atkreduction" style="color:#26c6f9">[ATK Reduction Lv. 1]</b> to an enemy target for 2 turns if they have an active <b class="dtt-indicator dtt-incapacitate" style="color:#26c6f9">[Incapacitate]</b> debuff.</h5>
                                             <div id="tag-squad" class="badge w-auto bg-primary rounded">
-                                                <p class="m-1 text-white">ATK: 60% M. ATK: 60%</p>
+                                                <p class="m-1 text-white">ATK: 58% M. ATK: 58%</p>
                                             </div>
                                             <div class="divider text-start">
                                                 <div class="divider-text">Upgraded Effect</div>
@@ -243,55 +243,55 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td>Total Power</td>
-                                                                    <td>4464</td>
+                                                                    <td>5341</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>ATK</td>
-                                                                    <td>155</td>
+                                                                    <td>324</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>M. ATK</td>
-                                                                    <td>155</td>
+                                                                    <td>108</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>DEF</td>
-                                                                    <td>179</td>
+                                                                    <td>262</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>HP</td>
-                                                                    <td>2070</td>
+                                                                    <td>3360</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>ACC</td>
-                                                                    <td>19</td>
+                                                                    <td>27</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>DMG. RES.</td>
-                                                                    <td>0.2%</td>
+                                                                    <td>0.4%</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CRIT. %</td>
-                                                                    <td>8.5%</td>
+                                                                    <td>8.6%</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CRIT. DMG</td>
-                                                                    <td>21.2%</td>
+                                                                    <td>21.6%</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CRIT. RES</td>
-                                                                    <td>0.2%</td>
+                                                                    <td>0.4%</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>SPD</td>
-                                                                    <td>102</td>
+                                                                    <td>105</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>DP</td>
-                                                                    <td>85</td>
+                                                                    <td>90</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>DP. RES</td>
-                                                                    <td>51</td>
+                                                                    <td>54</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
@@ -349,6 +349,9 @@
     <script src="../js/tooltipHandler.js"></script>
     <script>
         $(document).ready(() => {
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
             // Load navbar
             $("#nav-placeholder").load(`../html/navbar.html`)
             $("#footer-placeholder").load(`../html/footer.html`)

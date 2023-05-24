@@ -11,5 +11,11 @@
         "characterName": "william",
         "rarity": "ssr",
         "type": "upgrade"
+    },
+    "chiefs_appearance": {
+        "name": "Chief's Appearance",
+        "characterName": "asta2",
+        "rarity": "ssr",
+        "type": "upgrade"
     }
 }
