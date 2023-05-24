@@ -67,6 +67,7 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     
             <!-- Content -->
             <div class="container-xl flex-grow-1 container-p-y">
+                <div id="wip-placeholder"></div>
                 <div class="row mb-4">
                     <div class="col">
                         <div class="card">
@@ -219,16 +220,18 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     <script>
         $(document).ready(function() {
             $("input[name=rarityRadio], input[name=typeRadio]").change(filterGrimoires);
-
             // Load navbar
             $("#nav-placeholder").load(`./html/navbar.html`, () => {
                 // Set active tab
                 $('.navbar-nav .nav-link').each((idx, elem) => {
                     if (elem.text === 'Grimoires') elem.classList.add('fw-bold', 'active');
                 });
-            })
+            });
 
-            $("#footer-placeholder").load(`./html/footer.html`)
+            $("#footer-placeholder").load(`./html/footer.html`);
+
+            $("#wip-placeholder").load(`./html/wipHeader.html`);
+
         });
     </script>
 </body>
