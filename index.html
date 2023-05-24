@@ -67,103 +67,99 @@ data-theme="theme-default" data-assets-path="./assets/" data-template="vertical-
     
             <!-- Content -->
             <div class="container-xl flex-grow-1 container-p-y">
-                <div class="row mb-4">
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-header pb-0">
-                                <div class="divider">
-                                    <div class="divider-text">Filters</div>
+                <div class="card mb-4">
+                    <div class="card-header pb-0">
+                        <div class="divider">
+                            <div class="divider-text">Filters</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <div class="form-floating form-floating-outline">
+                                <input type="text" class="form-control bg-body"
+                                id="nameInput" placeholder="Search here.."
+                                onkeyup="filterCharacters()">
+                                <label for="searchInput">Search Names..</label>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-4">
+                                <p class="fw-semibold d-block mb-3">Type</p>
+                                <div class="row m-0">
+                                    <div class="col col-md-4 mx-0 form-check form-check-md-inline">
+                                        <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-attacker" value="attacker" />
+                                        <label class="form-check-label" for="typeRadio-attacker">Attacker</label>
+                                    </div>
+                                    <div class="col col-md-4 mx-0 form-check form-check-md-inline">
+                                        <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-defender" value="defender" />
+                                        <label class="form-check-label" for="typeRadio-defender">Defender</label>
+                                    </div>
+                                    <div class="col col-md-4 mx-0 form-check form-check-md-inline">
+                                        <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-healer" value="healer" />
+                                        <label class="form-check-label" for="typeRadio-healer">Healer</label>
+                                    </div>
+                                    <div class="col col-md-4 mx-0 form-check form-check-md-inline">
+                                        <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-support" value="support" />
+                                        <label class="form-check-label" for="typeRadio-support">Support</label>
+                                    </div>
+                                    <div class="col col-md-4 mx-0 form-check form-check-md-inline">
+                                        <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-debuffer" value="debuffer" />
+                                        <label class="form-check-label" for="typeRadio-debuffer">Debuffer</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <div class="form-floating form-floating-outline">
-                                        <input type="text" class="form-control bg-body" 
-                                        id="nameInput" placeholder="Search here.."
-                                        onkeyup="filterCharacters()">
-                                        <label for="searchInput">Search Names..</label>
-                                    </div>
+                            <div class="col-3">
+                                <p class="fw-semibold d-block mb-3">Rarity</p>
+                                <div class="form-check form-check-md-inline">
+                                    <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-ssr" value="ssr" />
+                                    <label class="form-check-label" for="rarityRadio-ssr">SSR</label>
                                 </div>
-                                <div class="row mb-2">
-                                    <div class="col-4">
-                                        <p class="fw-semibold d-block mb-3">Type</p>
-                                        <div class="row m-0">
-                                            <div class="col col-md-4 mx-0 form-check form-check-md-inline">
-                                                <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-attacker" value="attacker" />
-                                                <label class="form-check-label" for="typeRadio-attacker">Attacker</label>
-                                            </div>
-                                            <div class="col col-md-4 mx-0 form-check form-check-md-inline">
-                                                <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-defender" value="defender" />
-                                                <label class="form-check-label" for="typeRadio-defender">Defender</label>
-                                            </div>
-                                            <div class="col col-md-4 mx-0 form-check form-check-md-inline">
-                                                <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-healer" value="healer" />
-                                                <label class="form-check-label" for="typeRadio-healer">Healer</label>
-                                            </div>
-                                            <div class="col col-md-4 mx-0 form-check form-check-md-inline">
-                                                <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-support" value="support" />
-                                                <label class="form-check-label" for="typeRadio-support">Support</label>
-                                            </div>
-                                            <div class="col col-md-4 mx-0 form-check form-check-md-inline">
-                                                <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-debuffer" value="debuffer" />
-                                                <label class="form-check-label" for="typeRadio-debuffer">Debuffer</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <p class="fw-semibold d-block mb-3">Rarity</p>
-                                        <div class="form-check form-check-md-inline">
-                                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-ssr" value="ssr" />
-                                            <label class="form-check-label" for="rarityRadio-ssr">SSR</label>
-                                        </div>
-                                        <div class="form-check form-check-md-inline">
-                                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-sr" value="sr" />
-                                            <label class="form-check-label" for="rarityRadio-sr">SR</label>
-                                        </div>
-                                        <div class="form-check form-check-md-inline">
-                                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-r" value="r" />
-                                            <label class="form-check-label" for="rarityRadio-r">R</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <p class="fw-semibold d-block mb-3">Class</p>
-                                        <div class="form-check form-check-md-inline">
-                                            <input class="form-check-input" type="radio" name="classRadio" id="classRadio-proficiency" value="proficiency" />
-                                            <label class="form-check-label" for="classRadio-proficiency">Proficiency</label>
-                                        </div>
-                                        <div class="form-check form-check-md-inline">
-                                            <input class="form-check-input" type="radio" name="classRadio" id="classRadio-tenacity" value="tenacity" />
-                                            <label class="form-check-label" for="classRadio-tenacity">Tenacity</label>
-                                        </div>
-                                        <div class="form-check form-check-md-inline">
-                                            <input class="form-check-input" type="radio" name="classRadio" id="classRadio-wisdom" value="wisdom" />
-                                            <label class="form-check-label" for="classRadio-wisdom">Wisdom</label>
-                                        </div>
-                                    </div>
+                                <div class="form-check form-check-md-inline">
+                                    <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-sr" value="sr" />
+                                    <label class="form-check-label" for="rarityRadio-sr">SR</label>
                                 </div>
-                                <div class="row">
-                                    <div class="col-9">
-                                        <select id="squadSelect" placeholder="Search Squads..">
-                                            <option value=""></option>
-                                            <option value="aqua-deer">Aqua Deer</option>
-                                            <option value="black-bulls">Black Bulls</option>
-                                            <option value="blue-rose-knights">Blue Rose Knights</option>
-                                            <option value="clover-kingdom">Clover Kingdom</option>
-                                            <option value="crimson-lion-kings">Crimson Lion Kings</option>
-                                            <option value="diamond-kingdom">Diamond Kingdom</option>
-                                            <option value="golden-dawn">Golden Dawn</option>
-                                            <option value="green-praying-mantises">Green Praying Mantises</option>
-                                            <option value="silver-eagles">Silver Eagles</option>
-                                            <option value="the-eye-of-the-midnight-sun">The Eye of the Midnight Sun</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-3">
-                                        <button class="btn btn-label-warning h-100 w-100" onclick="clearFields()">
-                                            <span class="fs-4 mdi mdi-filter-variant-remove me-1"></span>
-                                            <span class="d-none d-md-inline-flex">CLEAR</span>
-                                        </button>
-                                    </div>
+                                <div class="form-check form-check-md-inline">
+                                    <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-r" value="r" />
+                                    <label class="form-check-label" for="rarityRadio-r">R</label>
                                 </div>
+                            </div>
+                            <div class="col-5">
+                                <p class="fw-semibold d-block mb-3">Class</p>
+                                <div class="form-check form-check-md-inline">
+                                    <input class="form-check-input" type="radio" name="classRadio" id="classRadio-proficiency" value="proficiency" />
+                                    <label class="form-check-label" for="classRadio-proficiency">Proficiency</label>
+                                </div>
+                                <div class="form-check form-check-md-inline">
+                                    <input class="form-check-input" type="radio" name="classRadio" id="classRadio-tenacity" value="tenacity" />
+                                    <label class="form-check-label" for="classRadio-tenacity">Tenacity</label>
+                                </div>
+                                <div class="form-check form-check-md-inline">
+                                    <input class="form-check-input" type="radio" name="classRadio" id="classRadio-wisdom" value="wisdom" />
+                                    <label class="form-check-label" for="classRadio-wisdom">Wisdom</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-9">
+                                <select id="squadSelect" placeholder="Search Squads..">
+                                    <option value=""></option>
+                                    <option value="aqua-deer">Aqua Deer</option>
+                                    <option value="black-bulls">Black Bulls</option>
+                                    <option value="blue-rose-knights">Blue Rose Knights</option>
+                                    <option value="clover-kingdom">Clover Kingdom</option>
+                                    <option value="crimson-lion-kings">Crimson Lion Kings</option>
+                                    <option value="diamond-kingdom">Diamond Kingdom</option>
+                                    <option value="golden-dawn">Golden Dawn</option>
+                                    <option value="green-praying-mantises">Green Praying Mantises</option>
+                                    <option value="silver-eagles">Silver Eagles</option>
+                                    <option value="the-eye-of-the-midnight-sun">The Eye of the Midnight Sun</option>
+                                </select>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-label-warning h-100 w-100" onclick="clearFields()">
+                                    <span class="fs-4 mdi mdi-filter-variant-remove me-1"></span>
+                                    <span class="d-none d-md-inline-flex">CLEAR</span>
+                                </button>
                             </div>
                         </div>
                     </div>
