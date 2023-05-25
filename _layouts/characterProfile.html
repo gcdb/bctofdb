@@ -64,7 +64,7 @@ layout: default
 {% assign header = card.header | default: defaultHeader %}
 
 {% unless card.imgPath %}
-    {% if header == 'Skill' %}{% assign iPath = 'atk' %} 
+    {% if header == 'Skill I' %}{% assign iPath = 'atk' %} 
     {% elsif header == 'Skill II' %}{% assign iPath = 'skill' %}
     {% elsif header == 'Special' %}{% assign iPath = 'special' %}
     {% endif %} 

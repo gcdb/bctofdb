@@ -1,12 +1,12 @@
 {   
     "matkreduction": "TBA",
     "atkreduction": "TBA",
-    "atkincrease": "TBA",
+    "atkincrease": "ATK Increase: Lv. 1/2/3: Increases by ATK 42/x/x%",
     "critrateincrease": "TBA",
     "critratereduction": "TBA",
     "staminareduction": "TBA",
     "healingreduction": "TBA",
-    "defincrease": "TBA",
+    "defincrease": "DEF Increase Lv. 1/2/3: Increases DEF by x/x/175%",
     "defreduction": "TBA",
     "dp": "TBA",
     "cdmgincrease": "TBA",
@@ -17,7 +17,7 @@
     "weaponenhancement": "Weapon Enhancement Lv. 1/2/3: Increases damage by 10/20/30%",
     "stun": "You will be disabled and will lose your turn",
     "invulnerability": "Cannot take damage",
-    "incapacitate": "TBA",
+    "incapacitate": "Incapacitate Lv. 1/2/3: Increases damage taken by 20/40/60%",
     "cursedbuff": "TBA",
     "burn": "TBA",
     "spdreduction": "TBA",
@@ -27,5 +27,6 @@
     "paralyze": "TBA",
     "receivedhealingreduction": "TBA",
     "lifesteal": "TBA",
-    "healingincrease": "TBA"
+    "healingincrease": "TBA",
+    "defensivestance": "Reduces damage taken by 50%."
 }

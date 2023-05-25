@@ -13,75 +13,115 @@ ovr:
 profile:
     grimoireCode: chiefs_appearance
     fullName: Asta
-    title: The Iron Will
+    title: Clover Academy
     cards:
         passive:
+            header: 'Awakened Passive'
             layoutTags: 
                 - 'no-name'
                 - 'no-pill'
                 - 'no-upgrades'
+                - 'no-img'
             desc: 
-                - Applies 5% <b>[ATK Increase]</b> every turn. (Stacks up to 10 times)
-            ovrImgPath: combat/UI_asta_tuto_special_01
+                - Applies 12% <b>[ATK Increase]</b> to self at the start of the WAVE for 1 turn.
+        passive2:
+            header: 'Unique Passive'
+            layoutTags: 
+                - 'no-name'
+                - 'no-pill'
+                - 'no-upgrades'
+                - 'no-img'
+            desc: 
+                - Applies 4% <b>[ATK Increase]</b> to self at the start of the turn. (Stacks up to 3 times, cannot be removed)
         skill:
-            name: Cross Slash
-            desc: 
-                - • Applies <b class="dtt-indicator dtt-weaponenhancement">[Weapon Enhancement Lv. 1]</b> to and then attacks the enemy target if they have an active buff.
-                - • Removes a <b>[Barrier]</b> from the enemy target.
-            pills: 'ATK: 113%'
+            header: 'Skill I'
+            name: Downward Strike
+            desc:
+                - • Removes a maximum of 3 debuffs on self.
+                - • Applies 30% <b>[DEF Increase]</b> for 3 turns to self for every debuff removed.
+            pills:
+                - 'ATK: 103%'
+                - 'Single-Target'
             upgrades:
                 - Lv. 2 ATK +5%
                 - Lv. 3 ATK +5%
                 - Lv. 4 ATK +5%
                 - Lv. 5 ATK +5%
         skill2:
-            header: "Skill II"
-            name: Wild Dance
-            desc:
-                - • Has a 80% chance to apply <b class="dtt-indicator dtt-defreduction">[DEF Reduction Lv. 2]</b> to an enemy target for 2 turns.</h5>
-            pills: 'ATK: 149%'
+            header: 'Skill II'
+            name: Rampage
+            desc: 
+                - • Has a 30% chance to <b class="dtt-indicator dtt-stun">[Stun]</b> an enemy target for 1 turn if they have an active <b class="dtt-indicator dtt-incapacitate">[Incapacitate]</b> debuff.
+                - • Has a 30% chance to remove 2 buffs from an enemy target.
+            pills:
+            - 'ATK: 55%'
+            - 'AOE'
+            - '3 turns'
+
             upgrades:
-                - Lv. 2 ATK +5%
+                - Lv. 2 Remove Buff Chance +10%
                 - Lv. 3 ATK +5%
-                - Lv. 4 ATK +5%
+                - Lv. 4 Remove Buff Chance +10%
                 - Lv. 5 ATK +5%
         special:
-            name: Accelerated Assault
-            desc:
-                - Removes <b>[Barrier]</b> and <b class="dtt-indicator dtt-invulnerability">[Invulnerability]</b> from the enemy target.
-                - Applies <b class="dtt-indicator dtt-dp">[DP Lv.3]</b> and then attacks the enemy target if their Stamina is above 50%.
-            pills: 'ATK: 185%'
+            name: Never giving up is my magic!
+            desc: 
+                - Applies <b class="dtt-indicator dtt-defensivestance">[Defensive Stance] on self for 2 turns.</b>
+                - Has a 40% chance to <b class="dtt-indicator dtt-taunt">[Taunt]</b> the enemy targets for 1 turn.
+            pills:
+                - 'ATK: 65%'
+                - 'AOE'
             upgrades:
-                - Lv. 2 ATK +5%
+                - Lv. 2 Taunt Chance +10%
                 - Lv. 3 ATK +5%
-                - Lv. 4 ATK +5%
+                - Lv. 4 Taunt Chance +10%
                 - Lv. 5 ATK +5%
         combined:
             layoutTags:
-                - 'no-name'
+                - no-name
             header: Combined Attack (Lv. 1)
-            desc:
-                - Deals CRIT. DMG with skills if the enemy target has an active <b>[DEF Reduction]</b> debuff.
-                - Applies <b class="dtt-indicator dtt-cdmgincrease">[CRIT. DMG Increase Lv. 1]</b> and then attacks the enemy target upon landing a successful CRIT with a skill.
-            pills: 'ATK: 52%'
-            upgrades:
-                - Lv. 2 ATK +5%
-                - Lv. 3 ATK +5%
-                - Lv. 4 ATK +5%
-                - Lv. 5 ATK +5%
+            desc: 
+                - Applies <b class="dtt-indicator dtt-atkincrease" style="color:#26c6f9">[ATK Increase Lv. 1]</b> on self and then attacks the enemy targets.
+            pills:
+                - 'ATK: 43%'
+                - 'AOE'
+                - '15 turns'
+            upgrades: 
+                - Lv. 2 ATK +3%
+                - Lv. 3 ATK +3%
+                - Lv. 4 ATK +3%
+                - Lv. 5 ATK +3%
             ovrImgPath: combat/UI_common_joinatk_01
+        united:
+            header: United Attack (Lv. 1)
+            name: '&#60;The Four-Leaf Clover&#62; Yuno'
+            desc: 
+                - Applies <b class="dtt-indicator dtt-defincrease" style="color:#26c6f9">[DEF Increase Lv. 1]</b> on self for 2 turns.
+                - Has a 40% chance to <b class="dtt-indicator dtt-taunt">[Taunt]</b> the enemy targets for 1 turn.
+            pills:
+                - 'ATK: 30%'
+                - 'AOE'
+                - '15 turns'
+            upgrades: 
+                - Lv. 2 ATK +4%
+                - Lv. 3 ATK +4%
+                - Lv. 4 ATK +4%
+                - Lv. 5 ATK +4%
+            ovrImgPath: combat/UI_common_match_01
     stats:
-        Total Power: 5397
-        ATK: 480
+        Total Power: 7619
+        ATK: 691
         M. ATK: 0
-        DEF: 250
-        HP: 3200
-        ACC: 290
-        DMG. RES.: 0.3%
-        CRIT. %: 9%
-        CRIT. DMG: 22.5%
-        CRIT. RES: 0.3%
-        SPD: 104
-        DP: 90
-        DP. RES: 54
+        HP: 341
+        DEF: 5313
+        ACC: 201
+        DMG. RES.: 210
+        CRIT. %: 12.15%
+        CRIT. DMG: 50%
+        CRIT. RES: 0%
+        SPD: 96
+        DP: 96
+        DP. RES: 63
+    fateLinks:
+        - yuno
 ---
