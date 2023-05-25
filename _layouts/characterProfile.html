@@ -77,7 +77,9 @@ layout: default
             <div class="card-body">
                 <div class="row">
                     <div class="col-3 col-md-2">
+                        {% unless card.layoutTags contains 'no-img' %}
                         <img class="w-100" src="../img/skills/{{ card.ovrImgPath | default: imgPath }}.png" loading="lazy" alt="01">
+                        {% endunless %}
                     </div>
                     <div class="col">
                         {% if card.layoutTags contains 'no-name' %}
