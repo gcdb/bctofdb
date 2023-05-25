@@ -5,7 +5,13 @@ data-theme="theme-default" data-assets-path="../assets/" data-template="vertical
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-    <title>{{ page.name | capitalize }}, {{ page.profile.title }}</title>
+    <title>
+        {% if page.layout == 'characterProfile' %}
+            {{ page.name | capitalize }}, {{ page.profile.title }}
+        {% elsif page.layout == 'grimoireProfile' %}
+            Grimoire: {{ page.name }}
+        {% endif %}
+    </title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.png" />

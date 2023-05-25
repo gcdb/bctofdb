@@ -1,0 +1,102 @@
+---
+layout: default
+---
+{% include wipHeader.html %}
+<div class="row mb-4">
+    <div class="col">
+        <div class="card">
+            <div class="card-header pb-0">
+                <div class="divider">
+                    <div class="divider-text">Filters</div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <div class="form-floating form-floating-outline">
+                        <input type="text" class="form-control bg-body" 
+                        id="grimoireNameInput" placeholder="Search here.."
+                        onkeyup="filterGrimoires()">
+                        <label for="searchInput">Search Grimoire Names..</label>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col">
+                        <p class="fw-semibold d-block mb-3">Rarity</p>
+                        <div class="form-check form-check-md-inline">
+                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-ssr" value="ssr" />
+                            <label class="form-check-label" for="rarityRadio-ssr">SSR</label>
+                        </div>
+                        <div class="form-check form-check-md-inline">
+                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-sr" value="sr" />
+                            <label class="form-check-label" for="rarityRadio-sr">SR</label>
+                        </div>
+                        <div class="form-check form-check-md-inline">
+                            <input class="form-check-input" type="radio" name="rarityRadio" id="rarityRadio-r" value="r" />
+                            <label class="form-check-label" for="rarityRadio-r">R</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <p class="fw-semibold d-block mb-3">Type</p>
+                        <div class="form-check form-check-md-inline">
+                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-normal" value="normal" />
+                            <label class="form-check-label" for="typeRadio-normal">Normal</label>
+                        </div>
+                        <div class="form-check form-check-md-inline">
+                            <input class="form-check-input" type="radio" name="typeRadio" id="typeRadio-upgrade" value="upgrade" />
+                            <label class="form-check-label" for="typeRadio-upgrade">Upgrade</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-9">
+                        <div class="form-floating form-floating-outline">
+                            <input type="text" class="form-control bg-body" 
+                            id="charNameInput" placeholder="Search here.."
+                            onkeyup="filterGrimoires()">
+                            <label for="searchInput">Search Character Names..</label>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-label-warning h-100 w-100" onclick="clearFields()">
+                            <span class="fs-4 mdi mdi-filter-variant-remove me-1"></span>
+                            <span class="d-none d-md-inline-flex">CLEAR</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header pb-0">
+        <div class="divider">
+            <div class="divider-text">Grimoires</div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div id="char-cardDiv" class="row mb-4">
+            {% for g in site.grimoires %}
+                {% if g.characterCode %}
+                    {% assign gPrivate = "private" %}
+                    {% assign defaultCode = g.characterCode | append: "_01" %}
+                {% else %}
+                    {% assign gPrivate = "public" %}
+                    {% assign defaultCode = gName %}
+                {% endif %}
+                <div class="char-card pb-3" 
+                data-name="{{ g.name | downcase | replace: ' ', '-' }}" data-rarity="{{ g.rarity }}" data-type="{{ g.type }}"
+                {% if g.characterCode %} data-character="{{ g.characterCode }}" {% endif %}>
+                    <div class="char-cardContainer">
+                        <a href="{{ g.url }}">
+                            <img class="char-portrait bg-dark rounded" src="{{ site.baseurl }}/img/grimoires/{{ gPrivate }}_grimoire_{{ g.rarity }}_{{ g.ovr.gImgPath | default: defaultCode }}_item.png" loading="lazy" alt="{{ g.name }}"/>
+                            <div class="char-title bg-body px-1">{{ g.name | truncate: 18 }}</div>
+                            {% if g.new %}
+                                <span class="badge card-badge card-badge-orange w-100">NEW</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
