@@ -94,7 +94,7 @@ layout: default
                 
                 {% unless card.layoutTags contains 'no-pill' %}
                 {% for p in card.pills %}
-                    <div class="badge w-auto bg-label-warning rounded me-3">
+                    <div class="badge w-auto bg-label-warning rounded me-1 me-md-2 mt-2 mt-md-0">
                         <p class="m-1">{{ p | default: "-" }}</p>
                     </div>
                 {% endfor %}
