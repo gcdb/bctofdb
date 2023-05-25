@@ -13,67 +13,78 @@ profile:
     title: Golden Dawn Magic Knight
     cards:
         passive:
+            header: 'Awakened Passive'
             layoutTags: 
                 - 'no-name'
                 - 'no-pill'
                 - 'no-upgrades'
+                - 'no-img'
             desc: 
-                - Applies 10% <b>[DEF Increase]</b> to self for 2 turns upon successfully landing a CRIT.
-            ovrImgPath: passive/UI_Cp_Attack
+                - Applies 5% <b>[Damage Increase]</b> when attacking a Defender Class enemy.
         skill:
-            name: Sand-Armored Guard
-            desc: 
-            pill:
+            name: Piercing Sand Spear
+            desc: Applies <b class="dtt-indicator dtt-weaponenhancement">[Weapon Enhancement Lv. 1]</b> and attacks the enemy target if the target has <b class="dtt-indicator dtt-statusailment">Status Ailment</b>.
+            pills:
+                - 'ATK: 90%, M. ATK: 90%'
+                - 'Single-Target'
             upgrades:
-                - Lv. 2 ATK +5%
-                - Lv. 3 ATK +5%
-                - Lv. 4 ATK +5%
-                - Lv. 5 ATK +5%
+                - Lv. 2 ATK +5%, M. ATK +5%
+                - Lv. 3 ATK +5%, M. ATK +5%
+                - Lv. 4 ATK +5%, M. ATK +5%
+                - Lv. 5 ATK +5%, M. ATK +5%
             ovrImgPath: combat/UI_alecdora_001_skill01_01
         skill2:
-            name: Piercing Sand Spear
-            desc: 
-            pill:
+            name: Sand-Armored Guard
+            desc: Has a 50% chance to <b class="dtt-indicator dtt-stun">[Stun]</b> the enemy target for 1 turn.
+            pills:
+                - 'ATK: 110%, M. ATK: 110%'
+                - 'Single-Target'
+                - '3 turns'
             upgrades:
-                - Lv. 2 ATK +5%
-                - Lv. 3 ATK +5%
-                - Lv. 4 ATK +5%
-                - Lv. 5 ATK +5%
+                - Lv. 2 ATK +10%, M. ATK +10%
+                - Lv. 3 ATK +10%, M. ATK +10%
+                - Lv. 4 ATK +10%, M. ATK +10%
+                - Lv. 5 ATK +10%, M. ATK +10%
             ovrImgPath: combat/UI_alecdora_001_skill02_01
         special:
             name: Sand-Armored Heavy Guard
-            desc: 
-            pill:
+            desc: Has a 40% chance to <b class="dtt-indicator dtt-stun">[Stun]</b> all enemy targets for 1 turn.
+            pills:
+                - 'ATK: 60%, M. ATK: 60%'
+                - 'AOE'
             upgrades:
-                - Lv. 2 ATK +5%
-                - Lv. 3 ATK +5%
-                - Lv. 4 ATK +5%
-                - Lv. 5 ATK +5%
+                - Lv. 2 ATK +10%, M. ATK +10%
+                - Lv. 3 ATK +10%, M. ATK +10%
+                - Lv. 4 ATK +10%, M. ATK +10%
+                - Lv. 5 ATK +10%, M. ATK +10%
             ovrImgPath: combat/UI_alecdora_001_special_01
         combined:
             layoutTags:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
-            desc:
-            pill:
+            desc: Applies 30% <b>[Damage Increase]</b> on self and attacks the enemy target if they have an active debuff.
+            pills:
+                - 'ATK: 60%, M. ATK: 60%'
+                - 'AOE'
+                - '15 turns'
             upgrades:
-                - Lv. 2 Remove Debuff Chance +5%
-                - Lv. 3 Remove Debuff Chance +5%
-                - Lv. 4 Remove Debuff Chance +5%
-                - Lv. 5 Remove Debuff Chance +5%
+                - Lv. 2 ATK +8%, M. ATK +8%
+                - Lv. 3 Damage Increase +8%
+                - Lv. 4 ATK +8%, M. ATK +8%
+                - Lv. 5 Damage Increase +8%
             ovrImgPath: combat/UI_common_match_01
     stats:
-        Total Power: 4464
-        ATK: 155
-        M. ATK: 155
-        DEF: 179
-        HP: 2070
-        ACC: 19
-        DMG. RES.: 0.2%
-        CRIT. %: 8.5%
-        CRIT. DMG: 21.2%
-        CRIT. RES: 0.2%
-        SPD: 102
-        DP: 85
-        DP. RES: 51
+        Total Power: 7525
+        ATK: 518
+        M. ATK: 518
+        DEF: 202
+        HP: 3240
+        ACC: 210
+        DMG. RES.: 201
+        CRIT. %: 15%
+        CRIT. DMG: 50%
+        CRIT. RES: 0%
+        SPD: 99
+        DP: 106
+        DP. RES: 57
 ---

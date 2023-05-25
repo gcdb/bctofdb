@@ -22,8 +22,7 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
                 - 'no-img'
-            desc: 
-                - Applies 12% <b>[ATK Increase]</b> to self at the start of the WAVE for 1 turn.
+            desc: Applies 12% <b>[ATK Increase]</b> to self at the start of the WAVE for 1 turn.
         passive2:
             header: 'Unique Passive'
             layoutTags: 
@@ -35,12 +34,12 @@ profile:
                 - Applies 4% <b>[ATK Increase]</b> to self at the start of the turn. (Stacks up to 3 times, cannot be removed)
         skill:
             header: 'Skill I'
-            name: Downward Strike
+            name: Cross Slash
             desc:
-                - • Removes a maximum of 3 debuffs on self.
-                - • Applies 30% <b>[DEF Increase]</b> for 3 turns to self for every debuff removed.
+                - • Has 50% chance to launch <b>[Additional Attack]</b> equal to 70% of ATK if you have an active buff.
+                - • Applies 2% <b>[Damage Increase]</b> for 3 turns to self. (Stacks up to 5 times)
             pills:
-                - 'ATK: 103%'
+                - 'ATK: 100%'
                 - 'Single-Target'
             upgrades:
                 - Lv. 2 ATK +5%
@@ -49,79 +48,59 @@ profile:
                 - Lv. 5 ATK +5%
         skill2:
             header: 'Skill II'
-            name: Rampage
+            name: Wild Dance
             desc: 
-                - • Has a 30% chance to <b class="dtt-indicator dtt-stun">[Stun]</b> an enemy target for 1 turn if they have an active <b class="dtt-indicator dtt-incapacitate">[Incapacitate]</b> debuff.
-                - • Has a 30% chance to remove 2 buffs from an enemy target.
+            - • Applies <b class="dtt-indicator dtt-atkincrease">[ATK Increase Lv. 1]</b> on self and then attacks the enemy target.
+            - • Has a 80% chance to gain 20% <b class="dtt-indicator dtt-taunt">[Stamina]</b>.
             pills:
-            - 'ATK: 55%'
-            - 'AOE'
+            - 'ATK: 100%'
+            - 'Single-Target'
             - '3 turns'
-
             upgrades:
-                - Lv. 2 Remove Buff Chance +10%
+                - Lv. 2 ATK +5%
                 - Lv. 3 ATK +5%
-                - Lv. 4 Remove Buff Chance +10%
+                - Lv. 4 ATK +5%
                 - Lv. 5 ATK +5%
         special:
-            name: Never giving up is my magic!
+            name: Accelerated Assault
             desc: 
-                - Applies <b class="dtt-indicator dtt-defensivestance">[Defensive Stance] on self for 2 turns.</b>
-                - Has a 40% chance to <b class="dtt-indicator dtt-taunt">[Taunt]</b> the enemy targets for 1 turn.
+                - • Gains an extra turn when attacking enemy with above 80% HP.
+                - • When attacking Boss enemy, applies 30% <b>[Damage Increase]</b> on self and then attacks the enemy target.
             pills:
-                - 'ATK: 65%'
-                - 'AOE'
+                - 'ATK: 155%'
+                - 'Single-Target'
             upgrades:
-                - Lv. 2 Taunt Chance +10%
-                - Lv. 3 ATK +5%
-                - Lv. 4 Taunt Chance +10%
-                - Lv. 5 ATK +5%
+            - Lv. 2 ATK +20%
+            - Lv. 3 ATK +20%
+            - Lv. 4 ATK +20%
+            - Lv. 5 ATK +20%
         combined:
             layoutTags:
                 - no-name
             header: Combined Attack (Lv. 1)
-            desc: 
-                - Applies <b class="dtt-indicator dtt-atkincrease" style="color:#26c6f9">[ATK Increase Lv. 1]</b> on self and then attacks the enemy targets.
+            desc: Removes <b>[Barrier]</b> from an enemy and then attack the enemy target.
             pills:
-                - 'ATK: 43%'
-                - 'AOE'
+                - 'ATK: 75%'
+                - 'Single-Target'
                 - '15 turns'
             upgrades: 
-                - Lv. 2 ATK +3%
-                - Lv. 3 ATK +3%
-                - Lv. 4 ATK +3%
-                - Lv. 5 ATK +3%
+                - Lv. 2 ATK +10%
+                - Lv. 3 ATK +10%
+                - Lv. 4 ATK +10%
+                - Lv. 5 ATK +10%
             ovrImgPath: combat/UI_common_joinatk_01
-        united:
-            header: United Attack (Lv. 1)
-            name: '&#60;The Four-Leaf Clover&#62; Yuno'
-            desc: 
-                - Applies <b class="dtt-indicator dtt-defincrease" style="color:#26c6f9">[DEF Increase Lv. 1]</b> on self for 2 turns.
-                - Has a 40% chance to <b class="dtt-indicator dtt-taunt">[Taunt]</b> the enemy targets for 1 turn.
-            pills:
-                - 'ATK: 30%'
-                - 'AOE'
-                - '15 turns'
-            upgrades: 
-                - Lv. 2 ATK +4%
-                - Lv. 3 ATK +4%
-                - Lv. 4 ATK +4%
-                - Lv. 5 ATK +4%
-            ovrImgPath: combat/UI_common_match_01
     stats:
-        Total Power: 7619
-        ATK: 691
+        Total Power: 7664
+        ATK: 1267
         M. ATK: 0
-        HP: 341
-        DEF: 5313
-        ACC: 201
-        DMG. RES.: 210
-        CRIT. %: 12.15%
+        DEF: 224
+        HP: 3240
+        ACC: 210
+        DMG. RES.: 201
+        CRIT. %: 15%
         CRIT. DMG: 50%
         CRIT. RES: 0%
-        SPD: 96
-        DP: 96
-        DP. RES: 63
-    fateLinks:
-        - yuno
+        SPD: 99
+        DP: 106
+        DP. RES: 57
 ---
