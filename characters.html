@@ -107,7 +107,8 @@ layout: default
     </div>
     <div class="card-body">
         <div id="char-cardDiv" class="row mb-4">
-            {% for c in site.characters %}
+            {% assign sortedCharacters = site.characters | sort_natural: "new" %}
+            {% for c in sortedCharacters %}
                 <div class="char-card pb-3"
                 data-name="{{ c.name }}" data-squad="{{ c.squad | downcase | replace: ' ', '-' }}"
                 data-type="{{ c.type }}" data-rarity="{{ c.rarity }}" data-class="{{ c.class }}">
