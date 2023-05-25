@@ -93,9 +93,11 @@ layout: default
                 {% endfor %}
                 
                 {% unless card.layoutTags contains 'no-pill' %}
-                    <div id="tag-squad" class="badge w-auto bg-primary rounded">
-                        <p class="m-1 text-white">{{ card.pill | default: "-" }}</p>
+                {% for p in card.pills %}
+                    <div class="badge w-auto bg-label-warning rounded me-3">
+                        <p class="m-1">{{ p | default: "-" }}</p>
                     </div>
+                {% endfor %}
                 {% endunless %}
 
                 {% unless card.layoutTags contains 'no-pill' %}

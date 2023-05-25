@@ -19,14 +19,19 @@ layout: characterProfile
 
 #       cards: 
 #           The key should follow the title of each card, can be overwritten by 'header'
-#           Contains layoutTags, header, name, desc, pill, upgrades, ovrImgPath
-#           layoutTags can be: no-name, no-pill & no-upgrades. Remember to include the single-quotes!
+#           Contains layoutTags, header, name, desc, pills, upgrades, ovrImgPath
+#           layoutTags can be: no-name, no-pill, no-upgrades & no-img. Remember to include the single-quotes!
 #           ovrImgPath should contain the path to the file except the extension. e.g. combat/Asta_skill_01
+
+#           desc, upgrades: Each - indicates one line in the page
+#           pills: Each - indicates one pill to be displayed
 
 #   ovr: 
 #       Contains pImgPath, sImgPath.
 #       pImgPath overwrites profile images (search page & portrait in indv profile page)
 #       sImgPath overwrites skill images (atk, skill & special in indv profile page)
+#           - Note: ovrImgPath has a higher priority than these 2 as it is specific to a card
+
 
 code: asta
 name: asta
@@ -53,7 +58,7 @@ profile:
                 - • Removes a maximum of 2 debuffs.
                 - • Applies <b class="dtt-indicator dtt-weaponenhancement">[Weapon Enhancement Lv. 1]</b> and then attacks the enemy target upon attacking them while they have an active debuff.
                 - • Applies 5% <b>[ATK]</b> to self for 2 turns for every debuff removed.
-            pill: 'ATK: 103%'
+            pills: 'ATK: 103%'
             upgrades:
                 - Lv. 2 ATK +5%
                 - Lv. 3 ATK +5%
@@ -64,7 +69,7 @@ profile:
             name: Rampage
             desc: 
                 - • Applies <b class="dtt-indicator dtt-weaponenhancement">[Weapon Enhancement Lv. 2]</b> to self for 2 turns.
-            pill: 'ATK: 97%'
+            pills: 'ATK: 97%'
             upgrades:
                 - Lv. 2 ATK +5%
                 - Lv. 3 ATK +5%
@@ -75,7 +80,7 @@ profile:
             desc: 
                 - Removes all buffs from the enemy target.
                 - Applies <b class="dtt-indicator dtt-weaponenhancement">[Weapon Enhancement Lv. 3]</b> and then attacks the enemy target if they have an active debuff.
-            pill: 'ATK: 100%'
+            pills: 'ATK: 100%'
             upgrades:
                 - Lv. 2 ATK +5%
                 - Lv. 3 ATK +5%
@@ -89,7 +94,7 @@ profile:
                 - Applies a buff, granting <b class="dtt-indicator dtt-invulnerability">[Invulnerability]</b> for 1 turn.
                 - <b class="dtt-indicator dtt-taunt">[Taunts]</b> an enemy target if they do not have an active <b class="dtt-indicator dtt-taunt">[Taunt]</b>.
                 - <b class="dtt-indicator dtt-stun">[Stuns]</b> an enemy target for 1 turn if they do not have an active <b class="dtt-indicator dtt-taunt">[Taunt]</b>
-            pill: 'ATK: 100%'
+            pills: 'ATK: 100%'
             upgrades: 
                 - Lv. 2 ATK +5%
                 - Lv. 3 ATK +5%
@@ -102,7 +107,7 @@ profile:
             desc: 
                 - All attacks are done as critical strikes.</h5>
                 - Removes <b>[Barrier]</b> and <b class="dtt-indicator dtt-invulnerability">[Invulnerability]</b> from an enemy target.
-            pill: 'ATK: 59%'
+            pills: 'ATK: 59%'
             upgrades: 
                 - Lv. 2 ATK +5%
                 - Lv. 3 ATK +5%
