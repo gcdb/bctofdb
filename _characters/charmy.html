@@ -1,0 +1,82 @@
+---
+layout: characterProfile
+
+code: charmy
+name: charmy
+squad: Black Bulls
+type: healer
+rarity: sr
+class: proficiency
+profile:
+    grimoireCode: meat_enthusiast
+    fullName: Charmy Pappitson
+    title: Black Bulls
+    cards:
+        passive:
+            layoutTags: 
+                - 'no-name'
+                - 'no-pill'
+                - 'no-upgrades'
+            desc: 
+                - Applies 10% <b>[Barrier]</b> to all friendly targets with HP below 20% for 2 turns upon using a skill on them. (Combined Attack doesn't count)
+            ovrImgPath: passive/UI_Cp_Heal
+        skill:
+            name: Devastating Strike of the Sleeping Sheep
+            desc: 
+                - Deals 100% additional damage to an enemy target if they have no active buffs.
+            pill: 'ATK: 103% M. ATK: 103%'
+            upgrades:
+                - Lv. 2 ATK +5%
+                - Lv. 3 ATK +5%
+                - Lv. 4 ATK +5%
+                - Lv. 5 ATK +5%
+        skill2:
+            header: "Skill II"
+            name: Feast!
+            desc:
+                - • Restores the HP of a friendly target equal to 20% of their maximum HP.
+                - • Restores the HP of a friendly target equal to 60% of their maximum HP upon their HP falling below 50%.
+            upgrades:
+                - Lv. 2 Recovery Effect +5%
+                - Lv. 3 Recovery Effect +5%
+                - Lv. 4 Recovery Effect +5%
+                - Lv. 5 Recovery Effect +5%
+        special:
+            name: Triple Strike of Sleeping Sheep
+            desc:
+                - • Has a 50% chance to remove all buffs from the enemy target.
+                - • Applies <b class="dtt-indicator dtt-cursedbuff">[Cursed Buff]</b> to an enemy target for 2 turns.
+            pill: 'ATK: 97% M. ATK: 97%'
+            upgrades:
+                - Lv. 2 Recovery Effect +5%
+                - Lv. 3 Recovery Effect +5%
+                - Lv. 4 Recovery Effect +5%
+                - Lv. 5 Recovery Effect +5%
+        combined:
+            layoutTags:
+                - 'no-name'
+            header: Combined Attack (Lv. 1)
+            desc:
+                - • Has a 20% chance to remove all debuffs from a friendly target.
+                - • Applies <b class="dtt-indicator dtt-critrateincrease">[CRIT. % Increase Lv. 1]</b> to a friendly target for 2 turns.
+            upgrades:
+                - Lv. 2 Remove Debuff Chance +5%
+                - Lv. 3 Remove Debuff Chance +5%
+                - Lv. 4 Remove Debuff Chance +5%
+                - Lv. 5 Remove Debuff Chance +5%
+            ovrImgPath: combat/UI_common_joinatk_01
+    stats:
+        Total Power: 3515
+        ATK: 67
+        M. ATK: 67
+        DEF: 109
+        HP: 1568
+        ACC: 9
+        DMG. RES.: 0.2%
+        CRIT. %: 7%
+        CRIT. DMG: 17.6%
+        CRIT. RES: 0.2%
+        SPD: 90
+        DP: 90
+        DP. RES: 48
+---

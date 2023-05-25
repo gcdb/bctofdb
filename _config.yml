@@ -37,6 +37,13 @@ github_username: gcdb
 plugins:
   - jekyll-feed
 
+collections:
+  characters:
+    output: true
+  grimoires:
+    output: true
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
