@@ -119,11 +119,10 @@ data-theme="theme-default" data-assets-path="../assets/" data-template="vertical
                 onChange: filterCharacters
             });
             $("input[name=typeRadio], input[name=rarityRadio], input[name=classRadio]").change(filterCharacters);
-
         
             // Set active tab
             $('.navbar-nav .nav-link').each((idx, elem) => {
-                if (elem.text === 'Characters') elem.classList.add('fw-bold', 'active');
+                if (elem.text === '{{ page.navHighlight }}') elem.classList.add('fw-bold', 'active');
             });
         });
     </script>

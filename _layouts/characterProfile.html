@@ -12,161 +12,157 @@ layout: default
 {% assign sImgPathDefault = cCode | append: '_01' %}
 {% assign skillImgPath = page.ovr.sImgPath | default: sImgPathDefault %}
 
-<div class="row mb-4">
-    <div class="col">
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-3 mb-4 mb-md-0">
+                <img id="portrait-image" class="char-portrait bg-dark rounded" src="../img/characters/UI_Portrait_H_Illust_{{ profileImgPath }}_01.png" loading="lazy" alt="char-portrait">
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0 mt-md-3">
+                <h5 class="mb-1">{{ pData.title }}</h5>
+                <h3 class="fw-bold mb-2">{{ pData.fullName }}</h3>
+                <div class="row">
+                    <div class="col">
+                        <div id="tag-squad" class="badge w-auto bg-primary me-2 mt-2 rounded">
+                            <p class="m-1 text-white">{{ page.squad }}</p>
+                        </div>
+                        <div id="tag-type" class="badge w-auto bg-primary me-2 mt-2 rounded">
+                            <p class="m-1 text-white">{{ page.type | capitalize }}</p>
+                        </div>
+                        <div id="tag-rarity" class="badge w-auto bg-primary me-2 mt-2 rounded">
+                            <p class="m-1 text-white">{{ page.rarity | upcase }}</p>
+                        </div>
+                        <div id="tag-class" class="badge w-auto bg-primary me-2 mt-2 rounded">
+                            <p class="m-1 text-white">{{ page.class | capitalize }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 d-flex">
+                <a href="..{{ site.grimoireurl}}/{{ pData.grimoireCode }}.html">
+                    <div id="grimoire-charContainer" class="row m-0 bg-body rounded align-items-center h-100">
+                        <div class="col-4">
+                            <img id="portrait-image" class="w-100" src="../img/grimoires/private_grimoire_{{ gData.rarity }}_{{ grimoireImgPath }}_item.png" loading="lazy" alt="portrait-image">
+                        </div>
+                        <div class="col-8">
+                            <h6 class="mb-1 fw-light">Skill Card</h6>
+                            <h5 class="m-0 fw-bold">{{ gData.name | default: "WIP - Not yet available"}}</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Loop to generate cards -->
+{% for cardEntry in pData.cards %}
+{% assign defaultHeader = cardEntry[0] | capitalize %}
+{% assign card = cardEntry[1] %}
+
+{% assign defaultHeader = cardEntry[0] | capitalize %}
+{% assign header = card.header | default: defaultHeader %}
+
+{% unless card.imgPath %}
+    {% if header == 'Skill' %}{% assign iPath = 'atk' %} 
+    {% elsif header == 'Skill II' %}{% assign iPath = 'skill' %}
+    {% elsif header == 'Special' %}{% assign iPath = 'special' %}
+    {% endif %} 
+    <script>{{ iPath }}</script>
+    {% capture imgPath %}combat/UI_{{ skillImgPath }}_{{ iPath }}_01{% endcapture %}
+{% endunless %}
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-3 col-md-2">
+                {% unless card.layoutTags contains 'no-img' %}
+                <img class="w-100" src="../img/skills/{{ card.ovrImgPath | default: imgPath }}.png" loading="lazy" alt="01">
+                {% endunless %}
+            </div>
+            <div class="col">
+                {% if card.layoutTags contains 'no-name' %}
+                    <h4 class="fw-bold">{{ card.header | default: defaultHeader }}</h4>
+                {% else %}
+                    <p class="mb-0">{{ card.header | default: defaultHeader }}</p>
+                    <h4 class="fw-bold">{{ card.name | default: "WIP - Data unavailable" }} (Lv. 1)</h4>
+                {% endif %}
+                <hr/>
+
+                {% for line in card.desc %}
+                    <h5 class="fw-light">{{ line }}</h5>
+                {% endfor %}
+                
+                {% unless card.layoutTags contains 'no-pill' %}
+                    <div id="tag-squad" class="badge w-auto bg-primary rounded">
+                        <p class="m-1 text-white">{{ card.pill | default: "-" }}</p>
+                    </div>
+                {% endunless %}
+
+                {% unless card.layoutTags contains 'no-pill' %}
+                    <div class="divider text-start">
+                        <div class="divider-text">Upgraded Effect</div>
+                    </div>
+
+                    {% for line in card.upgrades %}
+                    <h6 class="mb-1">{{ line }}</h5>
+                    {% endfor %}
+                {% endunless %}
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+<div class="row">
+    <div class="col-12 col-md-6">
         <div class="card mb-4">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-3 mb-4 mb-md-0">
-                        <img id="portrait-image" class="char-portrait bg-dark rounded" src="../img/characters/UI_Portrait_H_Illust_{{ profileImgPath }}_01.png" loading="lazy" alt="char-portrait">
-                    </div>
-                    <div class="col-md-4 mb-4 mb-md-0 mt-md-3">
-                        <h5 class="mb-1">{{ pData.title }}</h5>
-                        <h3 class="fw-bold mb-2">{{ pData.fullName }}</h3>
-                        <div class="row">
-                            <div class="col">
-                                <div id="tag-squad" class="badge w-auto bg-primary me-2 mt-2 rounded">
-                                    <p class="m-1 text-white">{{ page.squad }}</p>
-                                </div>
-                                <div id="tag-type" class="badge w-auto bg-primary me-2 mt-2 rounded">
-                                    <p class="m-1 text-white">{{ page.type | capitalize }}</p>
-                                </div>
-                                <div id="tag-rarity" class="badge w-auto bg-primary me-2 mt-2 rounded">
-                                    <p class="m-1 text-white">{{ page.rarity | upcase }}</p>
-                                </div>
-                                <div id="tag-class" class="badge w-auto bg-primary me-2 mt-2 rounded">
-                                    <p class="m-1 text-white">{{ page.class | capitalize }}</p>
-                                </div>
+                    <div class="col mx-3">
+                        <h3 class="fw-bold">Base Stats</h3>
+                        <div class="table-responsive rounded">
+                            <table class="table">
+                                <tbody>
+                                    {% for stat in pData.stats %}
+                                    <tr>
+                                        <td>{{ stat[0] }}</td>
+                                        <td>{{ stat[1] }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
                             </div>
-                        </div>
                     </div>
-                    <div class="col-md-5 d-flex">
-                        <a href="..{{ site.grimoireurl}}/{{ pData.grimoireCode }}.html">
-                            <div id="grimoire-charContainer" class="row m-0 bg-body rounded align-items-center h-100">
-                                <div class="col-4">
-                                    <img id="portrait-image" class="w-100" src="../img/grimoires/private_grimoire_{{ gData.rarity }}_{{ grimoireImgPath }}_item.png" loading="lazy" alt="portrait-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if pData.fateLinks %}
+    <div class="col-12 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col mx-3">
+                        <h3 class="fw-bold">Fate Links</h3>
+                        {% for linkCode in pData.fateLinks %}
+                        {% assign linkData = site.characters | where: "code", linkCode | first %}
+                        {% assign linkImgPath = linkData.ovr.pImgPath | default: linkCode %}
+                        <a href="{{ linkData.url }}"> 
+                            <div class="row">
+                                <div class="col-3 col-md-4">
+                                    <img class="char-portrait bg-dark rounded" src="../img/characters/UI_Portrait_H_S_{{ linkImgPath }}_01.png" loading="lazy" alt="fatelink-image">
                                 </div>
-                                <div class="col-8">
-                                    <h6 class="mb-1 fw-light">Skill Card</h6>
-                                    <h5 class="m-0 fw-bold">{{ gData.name | default: "WIP - Not yet available"}}</h5>
+                                <div class="col-9 col-md-8">
+                                    <p class="mb-1">{{ linkData.profile.title | default: 'WIP - Data not available' }}</p>
+                                    <h4 class="mb-1">{{ linkData.profile.fullName | default: 'WIP - Data not available' }}</h4>
                                 </div>
                             </div>
                         </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Loop to generate cards -->
-        {% for cardEntry in pData.cards %}
-        {% assign defaultHeader = cardEntry[0] | capitalize %}
-        {% assign card = cardEntry[1] %}
-
-        {% assign defaultHeader = cardEntry[0] | capitalize %}
-        {% assign header = card.header | default: defaultHeader %}
-
-        {% unless card.imgPath %}
-            {% if header == 'Skill' %}{% assign iPath = 'atk' %} 
-            {% elsif header == 'Skill II' %}{% assign iPath = 'skill' %}
-            {% elsif header == 'Special' %}{% assign iPath = 'special' %}
-            {% endif %} 
-            <script>{{ iPath }}</script>
-            {% capture imgPath %}combat/UI_{{ skillImgPath }}_{{ iPath }}_01{% endcapture %}
-        {% endunless %}
-        <div class="card mb-4">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-3 col-md-2">
-                        {% unless card.layoutTags contains 'no-img' %}
-                        <img class="w-100" src="../img/skills/{{ card.ovrImgPath | default: imgPath }}.png" loading="lazy" alt="01">
-                        {% endunless %}
-                    </div>
-                    <div class="col">
-                        {% if card.layoutTags contains 'no-name' %}
-                            <h4 class="fw-bold">{{ card.header | default: defaultHeader }}</h4>
-                        {% else %}
-                            <p class="mb-0">{{ card.header | default: defaultHeader }}</p>
-                            <h4 class="fw-bold">{{ card.name | default: "WIP - Data unavailable" }} (Lv. 1)</h4>
-                        {% endif %}
-                        <hr/>
-
-                        {% for line in card.desc %}
-                            <h5 class="fw-light">{{ line }}</h5>
                         {% endfor %}
-                        
-                        {% unless card.layoutTags contains 'no-pill' %}
-                            <div id="tag-squad" class="badge w-auto bg-primary rounded">
-                                <p class="m-1 text-white">{{ card.pill | default: "-" }}</p>
-                            </div>
-                        {% endunless %}
-
-                        {% unless card.layoutTags contains 'no-pill' %}
-                            <div class="divider text-start">
-                                <div class="divider-text">Upgraded Effect</div>
-                            </div>
-
-                            {% for line in card.upgrades %}
-                            <h6 class="mb-1">{{ line }}</h5>
-                            {% endfor %}
-                        {% endunless %}
-
                     </div>
                 </div>
             </div>
-        </div>
-        {% endfor %}
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col mx-3">
-                                <h3 class="fw-bold">Base Stats</h3>
-                                <div class="table-responsive rounded">
-                                    <table class="table">
-                                        <tbody>
-                                            {% for stat in pData.stats %}
-                                            <tr>
-                                                <td>{{ stat[0] }}</td>
-                                                <td>{{ stat[1] }}</td>
-                                            </tr>
-                                            {% endfor %}
-                                        </tbody>
-                                    </table>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% if pData.fateLinks %}
-            <div class="col-12 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col mx-3">
-                                <h3 class="fw-bold">Fate Links</h3>
-                                {% for linkCode in pData.fateLinks %}
-                                {% assign linkData = site.characters | where: "code", linkCode | first %}
-                                {% assign linkImgPath = linkData.ovr.pImgPath | default: linkCode %}
-                                <a href="{{ linkData.url }}"> 
-                                    <div class="row">
-                                        <div class="col-3 col-md-4">
-                                            <img class="char-portrait bg-dark rounded" src="../img/characters/UI_Portrait_H_S_{{ linkImgPath }}_01.png" loading="lazy" alt="fatelink-image">
-                                        </div>
-                                        <div class="col-9 col-md-8">
-                                            <p class="mb-1">{{ linkData.profile.title | default: 'WIP - Data not available' }}</p>
-                                            <h4 class="mb-1">{{ linkData.profile.fullName | default: 'WIP - Data not available' }}</h4>
-                                        </div>
-                                    </div>
-                                </a>
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endif %}
         </div>
     </div>
+    {% endif %}
 </div>
