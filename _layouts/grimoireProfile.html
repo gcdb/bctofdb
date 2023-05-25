@@ -8,7 +8,7 @@ layout: default
     {% assign gPrivate = "private" %}
     {% assign defaultCode = page.characterCode | append: "_01" %}
     {% assign skillDefaultCode = page.characterCode | append: "_001" %}
-    {% assign charImgPath = cData.imgPath | default: cData.code %}
+    {% assign charImgPath = cData.ovr.pImgPath | default: page.characterCode %}
 {% else %}
     {% assign gPrivate = "public" %}
     {% assign defaultCode = gCode %}
