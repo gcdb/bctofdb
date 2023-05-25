@@ -68,7 +68,6 @@ layout: default
     {% elsif header == 'Skill II' %}{% assign iPath = 'skill' %}
     {% elsif header == 'Special' %}{% assign iPath = 'special' %}
     {% endif %} 
-    <script>{{ iPath }}</script>
     {% capture imgPath %}combat/UI_{{ skillImgPath }}_{{ iPath }}_01{% endcapture %}
 {% endunless %}
 <div class="card mb-4">
