@@ -17,66 +17,77 @@ profile:
                 - 'no-name'
                 - 'no-pill'
                 - 'no-upgrades'
+                - 'no-img'
             desc: 
-                - Applies 10% <b>[Barrier]</b> to all friendly targets with HP below 20% for 2 turns upon using a skill on them. (Combined Attack doesn't count)
-            ovrImgPath: passive/UI_Cp_Heal
+                - Applies 4% <b>[HP Recovery Increase]</b>.
         skill:
+            header: "Skill I"
             name: Devastating Strike of the Sleeping Sheep
             desc: 
-                - Deals 100% additional damage to an enemy target if they have no active buffs.
-            pills: 'ATK: 103% M. ATK: 103%'
+                - • Applies <b>[Recovery]</b> to the friendly target with the lowest health, restoring their health equal to 120% of M. ATK.
+                - • Has a 50% chance to perform <b>[Additional Attack]</b> equal to 60% of ATK and M. ATK on one enemy target.
+                - • Applies <b>[Recovery]</b> to all friendly targets, restoring their health equal to 30% of damage done upon performing an <b>[Additional Attack]</b>.
+            pills: 'ATK: 85% M. ATK: 85%'
             upgrades:
-                - Lv. 2 ATK +5%
-                - Lv. 3 ATK +5%
-                - Lv. 4 ATK +5%
-                - Lv. 5 ATK +5%
+                - Lv. 2 Recovery +7.5%
+                - Lv. 3 Recovery +7.5%
+                - Lv. 4 Recovery +7.5%
+                - Lv. 5 Recovery +7.5%
         skill2:
             header: "Skill II"
             name: Feast!
             desc:
-                - • Restores the HP of a friendly target equal to 20% of their maximum HP.
-                - • Restores the HP of a friendly target equal to 60% of their maximum HP upon their HP falling below 50%.
+                - • Applies <b>[Recovery]</b> to a friendly target, restoring health equal to 240% of M. ATK.
+                - • Has a 60% chance to apply [SP +1] to a friendly target.
             upgrades:
-                - Lv. 2 Recovery Effect +5%
-                - Lv. 3 Recovery Effect +5%
+                - Lv. 2 HP Recovery +45%
+                - Lv. 3 Chance to apply SP +20%
                 - Lv. 4 Recovery Effect +5%
-                - Lv. 5 Recovery Effect +5%
+                - Lv. 5 Chance to apply SP +20%
+            pills:
+                - 'Ally'
+                - '2 turns'
         special:
-            name: Triple Strike of Sleeping Sheep
+            name: Strike of the Sleeping Sheep
             desc:
-                - • Has a 50% chance to remove all buffs from the enemy target.
-                - • Applies <b class="dtt-indicator dtt-cursedbuff">[Cursed Buff]</b> to an enemy target for 2 turns.
-            pills: 'ATK: 97% M. ATK: 97%'
+                - • Removes 1 buff from the enemy target.
+                - • Has a 50% chance to remove 1 buff on the enemy targets.
+            pills:
+                - 'ATK: 85% M. ATK: 85%'
+                - 'AOE'
             upgrades:
-                - Lv. 2 Recovery Effect +5%
-                - Lv. 3 Recovery Effect +5%
-                - Lv. 4 Recovery Effect +5%
-                - Lv. 5 Recovery Effect +5%
+                - Lv. 2 ATK +5%, M. ATK +5%
+                - Lv. 3 ATK +5%, M. ATK +5%
+                - Lv. 4 ATK +5%, M. ATK +5%
+                - Lv. 5 ATK +5%, M. ATK +5%
         combined:
             layoutTags:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
             desc:
-                - • Has a 20% chance to remove all debuffs from a friendly target.
-                - • Applies <b class="dtt-indicator dtt-critrateincrease">[CRIT. % Increase Lv. 1]</b> to a friendly target for 2 turns.
+                - • Applies <b class="dtt-indicator dtt-matkincrease">[M. ATK Increase Lv. 4]</b> to your partner's attack.
+                - • Has a 60% chance to apply [SP +1] to a your partner.
             upgrades:
-                - Lv. 2 Remove Debuff Chance +5%
-                - Lv. 3 Remove Debuff Chance +5%
-                - Lv. 4 Remove Debuff Chance +5%
-                - Lv. 5 Remove Debuff Chance +5%
+                - Lv. 2 Chance to apply SP +8%
+                - Lv. 3 Chance to apply SP +8%
+                - Lv. 4 Chance to apply SP +8%
+                - Lv. 5 SP +1
+            pills:
+                - 'Ally'
+                - '15 turns'
             ovrImgPath: combat/UI_common_joinatk_01
     stats:
-        Total Power: 3515
-        ATK: 67
-        M. ATK: 67
-        DEF: 109
-        HP: 1568
-        ACC: 9
-        DMG. RES.: 0.2%
-        CRIT. %: 7%
-        CRIT. DMG: 17.6%
-        CRIT. RES: 0.2%
-        SPD: 90
-        DP: 90
-        DP. RES: 48
+        Total Power: 21297
+        ATK: 3704
+        M. ATK: 3704
+        DEF: 3103
+        HP: 49199
+        ACC: 205
+        DMG. RES.: 205
+        CRIT. %: 8.1%
+        CRIT. DMG: 50%
+        CRIT. RES: 0%
+        SPD: 93
+        DP: 101
+        DP. RES: 60
 ---
