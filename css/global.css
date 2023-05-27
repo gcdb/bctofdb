@@ -24,6 +24,11 @@
     position: relative;
 }
 
+.char-cardContainer.disabled {
+    filter: grayscale(1);
+    pointer-events: none;
+}
+
 .char-cardContainer .char-portrait:hover {
     box-shadow: 0 0 20px 3px inset white;
 }
@@ -77,6 +82,11 @@ span.card-badge {
     background-color: rgba(0, 0, 0, 0.4);
     font-weight: bolder;
     border-radius: 0.5rem 0 0.5rem 0;
+}
+
+span.card-badge-middle {
+    bottom: 40%;
+    border-radius: 0
 }
 
 span.card-badge-orange {
