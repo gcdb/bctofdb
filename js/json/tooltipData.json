@@ -19,7 +19,7 @@
     "invulnerability": "Cannot take damage",
     "incapacitate": "Incapacitate Lv. 1/2/3/4/5: Increases damage taken by x/x/x/x/70%",
     "cursedbuff": "TBA",
-    "burn": "TBA",
+    "burn": "At the start of the turn, receive damage equal to [ATK: 15%, M. ATK: 15%], up to 3 times",
     "spdreduction": "TBA",
     "bleed": "TBA",
     "freeze": "TBA",
@@ -29,6 +29,8 @@
     "lifesteal": "TBA",
     "healingincrease": "TBA",
     "defensivestance": "Reduces damage taken by 50%.",
-    "statusailment": "Stun, Freeze etc.",
-    "mark": "Gains an additional turn after defeating a Marked enemy"
+    "statusailment": "Types of Status Ailment: Stun, Freeze, Mutation",
+    "mark": "Gains an additional turn after defeating a Marked enemy",
+    "continuousdamage": "Types of Continuous Damage: Burn, Bleed, Poison, Shock",
+    "dpresreduction": "DP Res. Reduction Lv. 1/2/3: Reduces DP Res. by x/x/35%"
 }

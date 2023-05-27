@@ -22,12 +22,15 @@ profile:
                 - Applies 4% <b>[HP Recovery Increase]</b>.
         skill:
             header: "Skill I"
-            name: Devastating Strike of the Sleeping Sheep
+            name: Cotton Ball Attack
             desc: 
+                - Summons a bunch of cotton balls, dealing damage to one enemy.
                 - • Applies <b>[Recovery]</b> to the friendly target with the lowest health, restoring their health equal to 120% of M. ATK.
-                - • Has a 50% chance to perform <b>[Additional Attack]</b> equal to 60% of ATK and M. ATK on one enemy target.
+                - • Has a 50% chance to perform <b>[Additional Attack]</b> equal to 60% of ATK and M. ATK on the enemy target.
                 - • Applies <b>[Recovery]</b> to all friendly targets, restoring their health equal to 30% of damage done upon performing an <b>[Additional Attack]</b>.
-            pills: 'ATK: 85% M. ATK: 85%'
+            pills: 
+                - 'ATK: 85% M. ATK: 85%'
+                - 'Single-Target'
             upgrades:
                 - Lv. 2 Recovery +7.5%
                 - Lv. 3 Recovery +7.5%
@@ -37,6 +40,7 @@ profile:
             header: "Skill II"
             name: Feast!
             desc:
+                - The sheep cooks prepare a feast, restoring the HP of an friendly target.
                 - • Applies <b>[Recovery]</b> to a friendly target, restoring health equal to 240% of M. ATK.
                 - • Has a 60% chance to apply [SP +1] to a friendly target.
             upgrades:
@@ -50,8 +54,9 @@ profile:
         special:
             name: Strike of the Sleeping Sheep
             desc:
-                - • Removes 1 buff from the enemy target.
-                - • Has a 50% chance to remove 1 buff on the enemy targets.
+                - The Giant Sheep strikes and deals damage to all enemies targets.
+                - • Removes 1 buff from each enemy target.
+                - • Has a 50% chance to remove 1 buff on each enemy target.
             pills:
                 - 'ATK: 85% M. ATK: 85%'
                 - 'AOE'
@@ -65,6 +70,7 @@ profile:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
             desc:
+                - Applies a buff to your partner.
                 - • Applies <b class="dtt-indicator dtt-matkincrease">[M. ATK Increase Lv. 4]</b> to your partner's attack.
                 - • Has a 60% chance to apply [SP +1] to a your partner.
             upgrades:
