@@ -73,11 +73,12 @@ layout: default
 <div class="card mb-4">
     <div class="card-body">
         <div class="row">
+            {% unless card.layoutTags contains 'no-img' %}
             <div class="col-3 col-md-2">
-                {% unless card.layoutTags contains 'no-img' %}
                 <img class="w-100" src="../img/skills/{{ card.ovrImgPath | default: imgPath }}.png" loading="lazy" alt="01">
-                {% endunless %}
             </div>
+            {% endunless %}
+
             <div class="col">
                 {% if card.layoutTags contains 'no-name' %}
                     <h4 class="fw-bold">{{ card.header | default: defaultHeader }}</h4>
