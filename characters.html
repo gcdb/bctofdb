@@ -107,7 +107,9 @@ layout: default
     </div>
     <div class="card-body">
         <div id="char-cardDiv" class="row mb-4">
-            {% assign sortedCharacters = site.characters | sort_natural: "new" %}
+            {% assign charGroupByNew = site.characters | group_by: "new" | sort: "name" | reverse %}
+            {% for charGroup in charGroupByNew %}
+            {% assign sortedCharacters = charGroup.items | sort_natural: "name" %}
             {% for c in sortedCharacters %}
                 <div class="char-card pb-3"
                 data-name="{{ c.name }}" data-squad="{{ c.squad | downcase | replace: ' ', '-' }}"
@@ -130,6 +132,7 @@ layout: default
                         </div>
                     </div>
                 </div>
+            {% endfor %}
             {% endfor %}
         </div>
     </div>

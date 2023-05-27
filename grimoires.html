@@ -75,7 +75,9 @@ layout: default
     </div>
     <div class="card-body">
         <div id="char-cardDiv" class="row mb-4">
-            {% assign sortedGrimoires = site.grimoires | sort_natural: "new" %}
+            {% assign grimoiresGroupByNew = site.grimoires | group_by: "new" | sort: "name" | reverse %}
+            {% for grimoireGroup in grimoiresGroupByNew %}
+            {% assign sortedGrimoires = grimoireGroup.items | sort_natural: "name" %}
             {% for g in sortedGrimoires %}
                 {% if g.characterCode %}
                     {% assign gPrivate = "private" %}
@@ -100,6 +102,7 @@ layout: default
                         </a>
                     </div>
                 </div>
+            {% endfor %}
             {% endfor %}
         </div>
     </div>
