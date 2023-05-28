@@ -117,7 +117,7 @@ layout: default
                     <div class="char-cardContainer {% if c.disabled %}disabled{% endif %}">
                         <a href="{{ c.url }}">
                             <img class="char-portrait bg-dark rounded" src="{{ site.baseurl }}/img/characters/UI_Portrait_H_S_{{ c.ovr.pImgPath | default: c.name }}_01.png" loading="lazy" alt="{{ c.name }}"/>
-                            <div class="char-title bg-body px-1">{{ c.name | capitalize }}</div>
+                            <div class="char-title bg-body px-1 text-nowrap">{{ c.name | capitalize | truncate: 14 }}</div>
                             {% if c.new %}
                                 <span class="badge card-badge card-badge-orange w-100">NEW</span>
                             {% else %}

@@ -92,7 +92,7 @@ layout: default
                     <div class="char-cardContainer {% if g.disabled %}disabled{% endif %}">
                         <a href="{{ g.url }}">
                             <img class="char-portrait bg-dark rounded" src="{{ site.baseurl }}/img/grimoires/{{ gPrivate }}_grimoire_{{ g.rarity }}_{{ g.ovr.gImgPath | default: defaultCode }}_item.png" loading="lazy" alt="{{ g.name }}"/>
-                            <div class="char-title bg-body px-1">{{ g.name | truncate: 18 }}</div>
+                            <div class="char-title bg-body px-1 text-nowrap">{{ g.name | truncate: 14 }}</div>
                             {% if g.new %}
                                 <span class="badge card-badge card-badge-orange w-100">NEW</span>
                             {% endif %}
