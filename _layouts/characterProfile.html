@@ -150,14 +150,20 @@ layout: default
                         {% for linkCode in pData.fateLinks %}
                         {% assign linkData = site.characters | where: "code", linkCode | first %}
                         {% assign linkImgPath = linkData.ovr.pImgPath | default: linkCode %}
-                        <a href="{{ linkData.url }}"> 
+                        <a href="{{ linkData.url }}" {% if linkData.disabled %}style="pointer-events: none"{% endif %}> 
                             <div class="row">
-                                <div class="col-3 col-md-4">
+                                <div class="char-cardContainer col-3 col-md-4 {% if linkData.disabled %}disabled{% endif %}">
                                     <img class="char-portrait bg-dark rounded" src="../img/characters/UI_Portrait_H_S_{{ linkImgPath }}_01.png" loading="lazy" alt="fatelink-image">
+                                    <span class="badge card-badge card-badge-middle w-100">{{ linkData.disabled }}</span>
                                 </div>
                                 <div class="col-9 col-md-8">
-                                    <p class="mb-1">{{ linkData.profile.title | default: 'WIP - Data not available' }}</p>
-                                    <h4 class="mb-1">{{ linkData.profile.fullName | default: 'WIP - Data not available' }}</h4>
+                                    {% if linkData.disabled %}
+                                        <p class="mb-1">WIP - Data not available</p>
+                                        <h4 class="mb-1">WIP - Data not available</h4>
+                                    {% else %}
+                                        <p class="mb-1">{{ linkData.profile.title | default: 'WIP - Data not available' }}</p>
+                                        <h4 class="mb-1">{{ linkData.profile.fullName | default: 'WIP - Data not available' }}</h4>
+                                    {% endif %}
                                 </div>
                             </div>
                         </a>
