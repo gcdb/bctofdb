@@ -45,13 +45,11 @@ layout: default
             {% if page.characterCode %}
                 <div class="col-md-5 d-flex">
                     <a href="{{ cData.url }}">
-                        <div id="grimoire-charContainer" class="row m-0 bg-body rounded align-items-center h-100">
-                            <div class="col-4">
+                        <div id="grimoire-charContainer" class="row py-3 px-1 px-md-2 m-0 bg-body rounded align-items-center h-100">
+                            <div class="col-5 col-md-4">
                                 <img id="portrait-image" class="w-100 my-3 bg-dark bg-opacity-10 rounded" src="../img/characters/UI_Portrait_H_S_{{ charImgPath }}_01.png" loading="lazy" alt="portrait-image">
                             </div>
-                            <div class="col-8">
-                                <h6 class="mb-1 fw-light">Character</h6>
-                                <hr/>
+                            <div class="col-7 col-md-8 ps-2">
                                 <h6 class="mb-1 fw-light">{{ cData.profile.title | default: "WIP - No data available" }}</h6>
                                 <h5 class="m-0 fw-bold">{{ cData.profile.fullName | default: "WIP - No data available" }}</h5>
                             </div>

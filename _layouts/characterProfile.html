@@ -41,11 +41,11 @@ layout: default
             <div class="col-md-5 d-flex">
                 <a href="/404.html">
                 <!-- Fix back when grimoire data is done:{{ gData.url }} -->
-                    <div id="grimoire-charContainer" class="row m-0 bg-body rounded align-items-center h-100">
-                        <div class="col-4">
+                    <div id="grimoire-charContainer" class="row py-3 m-0 bg-body rounded align-items-center h-100">
+                        <div class="col-5 pe-0">
                             <img id="portrait-image" class="w-100" src="../img/grimoires/private_grimoire_{{ gData.rarity }}_{{ grimoireImgPath }}_item.png" loading="lazy" alt="portrait-image">
                         </div>
-                        <div class="col-8">
+                        <div class="col-7 ps-0">
                             <h6 class="mb-1 fw-light">Skill Card</h6>
                             <h5 class="m-0 fw-bold">{{ gData.name | default: "WIP - Not yet available"}}</h5>
                         </div>
