@@ -1,8 +1,6 @@
 ---
 layout: characterProfile
 
-disabled: WIP
-
 code: gordon
 name: gordon
 squad: Black Bulls
@@ -10,7 +8,7 @@ type: debuffer
 rarity: r
 class: proficiency
 profile:
-    grimoireCode: for_marie
+    grimoireCode: lonely_friendship
     fullName: gordon_agrippa
     title: Black Bulls
     cards:
@@ -21,13 +19,12 @@ profile:
                 - 'no-upgrades'
                 - 'no-img'
             desc: 
-                - Applies 4% <b>[Damage Increase] when attacking a Healer Class enemy.</b>.
+                - Applies 5% <b>[ACC Increase]</b>.
         skill:
             header: "Skill I"
-            name: Reflect Ray
+            name: Poison Bullet
             desc: 
-                - Fires a ray of light from a mirror, dealing damage to one enemy target.
-                - • Has a 50% chance to perform <b>[Additional Attack]</b> equal to 30% of ATK and M. ATK on the enemy target.
+                - Summons an orb made of poison magic, dealing damage to one enemy target.
             pills:
                 - 'ATK: 95% M. ATK: 95%'
                 - 'Single-Target'
@@ -38,27 +35,27 @@ profile:
                 - Lv. 5 ATK +5%, M. ATK +5%
         skill2:
             header: "Skill II"
-            name: Reflect Refrain
+            name: Poison Arrow
             desc:
-                - Fires multiple rays of light from several mirrors, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 50% of ATK and M. ATK on the enemy target if there is an active buff on self.
-            pills:
-                - 'ATK: 95% M. ATK: 95%'
+                - Fires a poisonous magic bullet, dealing damage to one enemy target.
+                - • Has a 40% chance to apply continuous <b class="dtt-indicator dtt-poison">Poison</b> to one enemy for 2 turns. 
             upgrades:
-                - Lv. 2 ATK +10%, M. ATK +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. 5 ATK +10%, M. ATK +10%
+                - Lv. 2 ATK +5%, M. ATK +5%
+                - Lv. 3 [Poison] Chance +10%
+                - Lv. 4 ATK +5%, M. ATK +5%
+                - Lv. 5 [Poison] Chance +10%
             pills:
+                - 'ATK: 40% M. ATK: 40%'
                 - 'Single-Target'
-                - '3 turns'
+                - '2 turns'
         special:
-            name: Strike of the Sleeping Sheep
+            name: Poison Room
             desc:
-                - Fires a powerful ray of light from a giant mirror, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 90% of ATK and M. ATK on the enemy target if a Critical Strike occured.
+                - Imprisons and deals damage to one enemy in a prison of poison magic.
+                - • Has a 60% chance to apply continuous <b class="dtt-indicator dtt-poison">Poison</b> to one enemy for 2 turns.
+                - • Has a 40% chance to apply <b class="dtt-indicator dtt-healingreduction">Healing Reduction Lv. 3</b> to one enemy for 2 turns. 
             pills:
-                - 'ATK: 150% M. ATK: 150%'
+                - 'ATK: 140% M. ATK: 140%'
                 - 'Single-Target'
             upgrades:
             - Lv. 2 ATK +15%, M. ATK +15%
@@ -71,28 +68,29 @@ profile:
             header: Combined Attack (Lv. 1)
             desc:
                 - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">Continuous Damage</b>.
+                - • Applies continuous <b class="dtt-indicator dtt-poison">Poison</b> to one enemy for 2 turns.
             upgrades:
-            - Lv. 2 ATK +15%, M. ATK +15%
-            - Lv. 3 ATK +15%, M. ATK +15%
-            - Lv. 4 ATK +15%, M. ATK +15%
-            - Lv. 5 ATK +15%, M. ATK +15%
+            - Lv. 2 ATK +5%, M. ATK +5%
+            - Lv. 3 ATK +5%, M. ATK +5%
+            - Lv. 4 ATK +5%, M. ATK +5%
+            - Lv. 5 ATK +5%, M. ATK +5%
             pills:
-                - 'Ally'
+                - 'ATK: 60% M. ATK: 60%'
+                - 'Single-Target'
                 - '15 turns'
             ovrImgPath: combat/UI_common_joinatk_01
     stats:
-        Total Power: 21297
-        ATK: 3704
-        M. ATK: 3704
-        DEF: 3103
-        HP: 49199
-        ACC: 205
-        DMG. RES.: 205
-        CRIT. %: 8.1%
+        Total Power: 20421
+        ATK: 2204
+        M. ATK: 6612
+        DEF: 3175
+        HP: 37583
+        ACC: 207
+        DMG. RES.: 221
+        CRIT. %: 13.5%
         CRIT. DMG: 50%
         CRIT. RES: 0%
-        SPD: 93
-        DP: 101
-        DP. RES: 60
+        SPD: 112
+        DP: 104
+        DP. RES: 47
 ---

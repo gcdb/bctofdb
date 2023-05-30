@@ -1,8 +1,6 @@
 ---
 layout: characterProfile
 
-disabled: RIP
-
 code: geork
 name: geork
 squad: The Eye of the Midnight Sun
@@ -13,9 +11,9 @@ ovr:
     pImgPath: georqe
     sImgPath: georqe_01
 profile:
-    grimoireCode: for_marie
-    fullName: Gauche Adlai
-    title: Black Bulls
+    grimoireCode: keen_eye
+    fullName: Geork
+    title: The Eye of the Midnight Sun
     cards:
         passive:
             layoutTags: 
@@ -24,13 +22,12 @@ profile:
                 - 'no-upgrades'
                 - 'no-img'
             desc: 
-                - Applies 4% <b>[Damage Increase] when attacking a Healer Class enemy.</b>.
+                - Applies 5% <b>[Damage Increase]</b> when attacking a Supporter Class enemy.
         skill:
             header: "Skill I"
-            name: Reflect Ray
+            name: Wind Bullet
             desc: 
-                - Fires a ray of light from a mirror, dealing damage to one enemy target.
-                - • Has a 50% chance to perform <b>[Additional Attack]</b> equal to 30% of ATK and M. ATK on the enemy target.
+                - Fires a magical wind bullet, dealing damage to one enemy target.
             pills:
                 - 'ATK: 95% M. ATK: 95%'
                 - 'Single-Target'
@@ -41,12 +38,14 @@ profile:
                 - Lv. 5 ATK +5%, M. ATK +5%
         skill2:
             header: "Skill II"
-            name: Reflect Refrain
+            name: Wind Spear
             desc:
-                - Fires multiple rays of light from several mirrors, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 50% of ATK and M. ATK on the enemy target if there is an active buff on self.
+                - Hurls a wind-infused spear, dealing damage to one enemy target.
+                - • Applies <b class="dtt-indicator dtt-dpincrease">[DP Increase Lv. 2]</b> on self then attacks one enemy target.
             pills:
-                - 'ATK: 95% M. ATK: 95%'
+                - 'ATK: 120% M. ATK: 120%'
+                - 'Single-Target'
+                - ' 3 turns'
             upgrades:
                 - Lv. 2 ATK +10%, M. ATK +10%
                 - Lv. 3 ATK +10%, M. ATK +10%
@@ -56,46 +55,47 @@ profile:
                 - 'Single-Target'
                 - '3 turns'
         special:
-            name: Strike of the Sleeping Sheep
+            name: Tornado Needles
             desc:
-                - Fires a powerful ray of light from a giant mirror, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 90% of ATK and M. ATK on the enemy target if a Critical Strike occured.
+                - Creates wind needles that can pierce through flesh, dealing damage to all enemies target.
+                - • Has a 50% chance to apply <b class="dtt-indicator dtt-bleed">[Bleed]</b> to each enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">Continuous Damage</b> for 2 turns.
             pills:
-                - 'ATK: 150% M. ATK: 150%'
-                - 'Single-Target'
+                - 'ATK: 60% M. ATK: 60%'
+                - 'AOE'
             upgrades:
-            - Lv. 2 ATK +15%, M. ATK +15%
-            - Lv. 3 ATK +15%, M. ATK +15%
-            - Lv. 4 ATK +15%, M. ATK +15%
-            - Lv. 5 ATK +15%, M. ATK +15%
+            - Lv. 2 ATK +10%, M. ATK +10%
+            - Lv. 3 ATK +10%, M. ATK +10%
+            - Lv. 4 ATK +10%, M. ATK +10%
+            - Lv. 5 ATK +10%, M. ATK +10%
         combined:
             layoutTags:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
             desc:
-                - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">Continuous Damage</b>.
+                - Performs a combined attack with your partner, dealing damage to all enemy targets.
+                - • Applies 15% <b>[Damage Increase]</b> then attacks all enemy targets if there is at lesat 1 inflicted with <b class="dtt-indicator dtt-continuousdamage">Continuous Damage</b>.
             upgrades:
-            - Lv. 2 ATK +15%, M. ATK +15%
-            - Lv. 3 ATK +15%, M. ATK +15%
-            - Lv. 4 ATK +15%, M. ATK +15%
-            - Lv. 5 ATK +15%, M. ATK +15%
+            - Lv. 2 ATK +4%, M. ATK +4%
+            - Lv. 3 [Damage Increase] +4%
+            - Lv. 4 ATK +14%, M. ATK +4%
+            - Lv. 5 [Damage Increase] +4%
             pills:
-                - 'Ally'
+                - 'ATK: 30% M. ATK: 30%'
+                - 'AOE'
                 - '15 turns'
             ovrImgPath: combat/UI_common_joinatk_01
     stats:
-        Total Power: 21297
-        ATK: 3704
-        M. ATK: 3704
-        DEF: 3103
-        HP: 49199
-        ACC: 205
-        DMG. RES.: 205
-        CRIT. %: 8.1%
+        Total Power: 21048
+        ATK: 2879
+        M. ATK: 8640
+        DEF: 2566
+        HP: 35999
+        ACC: 210
+        DMG. RES.: 201
+        CRIT. %: 15%
         CRIT. DMG: 50%
         CRIT. RES: 0%
-        SPD: 93
-        DP: 101
-        DP. RES: 60
+        SPD: 103
+        DP: 106
+        DP. RES: 57
 ---
