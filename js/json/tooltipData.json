@@ -3,12 +3,12 @@
     "atkreduction": "ATK Reduction: Lv 1/2/3: Reduces ATK by x/x/52%",
     "atkincrease": "ATK Increase Lv. 1/2/3: Increases by ATK 42/55/84%",
     "matkincrease": "M. ATK Reduction Lv 1/2/3/4: Reduces ATK by x/x/x/84%",
-    "critrateincrease": "Crit % Increase Lv. 1/2/3: Increase Crit % by x/18/22%",
+    "critrateincrease": "Crit % Increase Lv. 1/2/3/4: Increase Crit % by x/18/22/26%",
     "critratereduction": "TBA",
     "healingreduction": "Healing Reduction Lv. 1/2/3: x/x/40%",
     "defincrease": "DEF Increase Lv. 1/2/3: Increases DEF by x/x/175%",
     "defreduction": "DEF Reduction Lv. 1/2/3: Reduces DEF by x/50/x%",
-    "dpincrease": "DP Increase Lv. 1/2/3: Increases DP by x/40/x%",
+    "dpincrease": "DP Increase Lv. 1/2/3/4: Increases DP by x/40/75%",
     "cdmgincrease": "TBA",
     "poison": "Poison: Takes damage equal to 5% of max HP at the start of the turn, up to 1 time",
     "totalsilence": "TBA",
@@ -23,7 +23,7 @@
     "spdreduction": "TBA",
     "bleed": "Bleed: Takes damage equal to 5% of max HP at the start of the turn, up to 1 time",
     "freeze": "Freeze: Target will be disabled and will lose their next turn",
-    "spdincrease": "SPD Increase Lv. 1/2/3: c35/45/55%",
+    "spdincrease": "SPD Increase Lv. 1/2/3: 35/45/55%",
     "paralyze": "TBA",
     "receivedhealingreduction": "TBA",
     "lifesteal": "TBA",
@@ -32,5 +32,6 @@
     "statusailment": "Status Ailment: Types of Status Ailment: Stun, Freeze, Mutation",
     "mark": "Mark: Gains an additional turn after defeating a Marked enemy",
     "continuousdamage": "Continuous Damage: Types of Continuous Damage: Burn, Bleed, Poison, Shock",
-    "dpresreduction": "DP Res. Reduction Lv. 1/2/3: Reduces DP Res. by x/x/35%"
+    "dpresreduction": "DP Res. Reduction Lv. 1/2/3: Reduces DP Res. by x/x/35%",
+    "sever": "Applies [Damage Increase] to self proportionate to your remaining HP (max 30%)"
 }

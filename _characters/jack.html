@@ -1,18 +1,16 @@
 ---
 layout: characterProfile
 
-disabled: WIP
-
 code: jack
 name: jack
-squad: Green Praying Mantis
+squad: Green Praying Mantises
 type: attacker
 rarity: ssr
 class: proficiency
 profile:
-    grimoireCode: respectable_rival
-    fullName: Fuegoleon Vermillion
-    title: Captain of the Crimson Lion Kings
+    grimoireCode: thrill_of_the_struggle
+    fullName: Jack the Ripper
+    title: Captain of the Green Praying Mantises
     cards:
         passive:
             header: 'Awakened Passive'
@@ -21,7 +19,7 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
                 - 'no-img'
-            desc: Applies 5% <b>[DP Increase]</b>; 3.5% <b>[Damage Increase]</b> when attacking enemy target with <b class="dtt-indicator dtt-burn">Burn</b>.
+            desc: Applies 7% <b>[Damage Increase]</b> when attacking enemy target inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
         passive2:
             header: 'Unique Passive'
             layoutTags: 
@@ -29,15 +27,15 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
                 - 'no-img'
-            desc: Applies 1 <b class="dtt-indicator dtt-burn">Burn</b> damage to enemy targets when using Skill II for 2 turns.
+            desc: Applies <b class="dtt-indicator dtt-sever">Sever</b> for 1 turn when using Skill II.
         skill:
             header: 'Skill I'
-            name: Ray of Extinction
+            name: Blade Rampage
             desc:
-                - Casts a Flame Ray, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks an enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">Continuous Damage</b>.
+                - Slashes the enemy with blades, dealing damage to one enemy.
+                - • Has a 60% chance to apply <b class="dtt-indicator dtt-bleed">[Bleed]</b> to each enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
             pills:
-                - 'ATK: 105%, M. ATK: 105%'
+                - 'ATK: 90%, M. ATK: 90%'
                 - 'Single-Target'
             upgrades:
                 - Lv. 2 ATK +5%, M. ATK +5%
@@ -46,25 +44,26 @@ profile:
                 - Lv. 5 ATK +5%, M. ATK +5%
         skill2:
             header: 'Skill II'
-            name: Onslaught of the Flame Lion
+            name: Enhance Physical Ability
             desc: 
-                - Creates a Flame Lion that charges at all enemies targets, dealing damage to the tragets.
-                - • Has a 50% chance to apply continuous <b class="dtt-indicator dtt-burn">[Burn]</b> damage to each enemy target for 2 turns.
+                - Rapidly enhances your physical ability.
+                - • Applies <b class="dtt-indicator dtt-dpincrease">[DP Increase Lv. 4]</b> on self for 2 turns.
+                - • Applies <b class="dtt-indicator dtt-critrateincrease">[Crit Rate Increase Lv. 4]</b> on self for 1 turns.
+                - • Has a 60% chance to apply <b class="dtt-indicator dtt-spdincrease">[SPD Increase Lv. 1]</b> on self for 2 turns.
             pills:
-                - 'ATK: 65%, M. ATK: 65%'
-                - 'AOE'
+                - 'Self'
                 - '2 turns'
             upgrades:
-                - Lv. 2 ATK +5%, M. ATK +5%
-                - Lv. 3 ATK +5%, M. ATK +5%
-                - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 ATK +5%, M. ATK +5%
+                - Lv. 2 [SPD Increase] Chance +10%
+                - Lv. 3 [SPD Increase] Chance +10%
+                - Lv. 4 [SPD Increase] Chance +10%
+                - Lv. 5 [SPD Increase] Chance +10%
         special:
-            name: Leo Rugiens
+            name: Death Scythe
             desc: 
-                - Creates a Giant Flame Lion that breathes fire, dealing damage to one enemy target.
-                - • Applies 40% <b>[Damage Increase]</b> then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">Continuous Damage</b>.
-                - • Applies continuous <b class="dtt-indicator dtt-burn">[Burn]</b> damage to an enemy target for 2 turns.
+                - Slashes and deepens inflicted wound, dealing damage to one enemy.
+                - • Has a 80% chance to apply <b class="dtt-indicator dtt-bleed">[Bleed]</b> to each enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
+                - • Increases <b>[Crit Damage]</b> by 10% for every active buff on self and then attacks one enemy target.
             pills:
                 - 'ATK: 150%, M. ATK: 150%'
                 - 'Single-Target'
@@ -72,7 +71,7 @@ profile:
                 - Lv. 2 ATK +20%, M. ATK +20%
                 - Lv. 3 ATK +20%, M. ATK +20%
                 - Lv. 4 ATK +20%, M. ATK +20%
-                - Lv. 5 [Damage Increase] +20%
+                - Lv. 5 ATK +20%, M. ATK +20%
         combined:
             layoutTags:
                 - no-name
@@ -81,22 +80,21 @@ profile:
                 - Performs a combined attack with your partner, dealing damage to one enemy target.
                 - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target has an active debuff.
             pills:
-                - 'ATK: 60%, M. ATK: 60%'
+                - 'ATK: 65%, M. ATK: 65%'
                 - 'Single-Target'
                 - '15 turns'
             upgrades: 
-                - Lv. 2 [Damage Increase] +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 [Damage Increase] +20%
-                - Lv. 5 ATK +10%, M. ATK +10%
+                - Lv. 2 ATK +10%, M. ATK +10%
+                - Lv. 3 [Damage Increase] +10%
+                - Lv. 4 ATK +10%, M. ATK +10%
+                - Lv. 5 [Damage Increase] +10%
             ovrImgPath: combat/UI_common_joinatk_01
         united:
             header: United Attack (Lv. 1)
-            name: '&#60;Captain of the Silver Eagles&#62; Nozel Silva'
+            name: '&#60;Captain of the Black Bulls&#62; Yami Sukehiro'
             desc: 
                 - Pierces with Mercury Thorns and burns everything with a Flame Lion's explosion, dealing damage to all enemies targets.
-                - • Applies continuous <b class="dtt-indicator dtt-burn">[Burn]</b> damage to each enemy target for 2 turns if a Critical Strike occured.
-                - • Applies <b>[DP Res. Reduction Lv. 3]</b> on all enemy targets for 2 turns.
+                - • Applies <b class="dtt-indicator dtt-critrateincrease">[Crit Rate Increase Lv. 2]</b> on partner and self and then attacks all enemy targets.
             pills:
                 - 'ATK: 40%, M. ATK: 40%'
                 - 'AOE'
@@ -109,8 +107,8 @@ profile:
             ovrImgPath: combat/UI_common_match_01
     stats:
         Total Power: 25259
-        ATK: 3420
-        M. ATK: 10260
+        ATK: 10260
+        M. ATK: 3240
         DEF: 3207
         HP: 49500
         ACC: 210
@@ -122,5 +120,5 @@ profile:
         DP: 122
         DP. RES: 57
     fateLinks:
-        - nozel
+        - yami
 ---
