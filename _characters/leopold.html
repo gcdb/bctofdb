@@ -11,12 +11,10 @@ ovr:
     pImgPath: leofold
     sImgPath: leofold_01
 
-disabled: WIP
-
 profile:
-    grimoireCode: respectable_rival
-    fullName: Fuegoleon Vermillion
-    title: Captain of the Crimson Lion Kings
+    grimoireCode: token_of_oath
+    fullName: Leopold Vermillion
+    title: Crimson Lion Kings
     cards:
         passive:
             header: 'Awakened Passive'
@@ -25,7 +23,7 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
                 - 'no-img'
-            desc: Applies 5% <b>[DP Increase]</b>; 3.5% <b>[Damage Increase]</b> when attacking enemy target with <b class="dtt-indicator dtt-burn">Burn</b>.
+            desc: Applies 5% <b>[Damage Increase]</b>.
         passive2:
             header: 'Unique Passive'
             layoutTags: 
@@ -33,13 +31,13 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
                 - 'no-img'
-            desc: dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>
+            desc: Applies 2% <b>[Damage Increase]</b> to self when attacking enemies with an active <b class="dtt-indicator dtt-burn">[Burn]</b> debuff.
         skill:
             header: 'Skill I'
-            name: Ray of Extinction
+            name: Crimson Flame
             desc:
-                - Casts a Flame Ray, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks an enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
+                - Throws a magical flame ball, dealing damage to one enemy target.
+                - • Applies 50% <b class="dtt-indicator dtt-lifesteal">[Lifesteal]</b> on self and then attacks one enemy target.
             pills:
                 - 'ATK: 105%, M. ATK: 105%'
                 - 'Single-Target'
@@ -47,28 +45,29 @@ profile:
                 - Lv. 2 ATK +5%, M. ATK +5%
                 - Lv. 3 ATK +5%, M. ATK +5%
                 - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 ATK +5%, M. ATK +5%
+                - Lv. 5 ATK +5%, M. ATK +15%
         skill2:
             header: 'Skill II'
-            name: Onslaught of the Flame Lion
+            name: Flame Burst
             desc: 
-                - Creates a Flame Lion that charges at all enemies targets, dealing damage to the tragets.
-                - • Has a 50% chance to apply continuous <b class="dtt-indicator dtt-burn">[Burn]</b> damage to each enemy target for 2 turns.
+                - Causes a pillar of flame to rise from the ground, dealing damage to 3 enemy targets.
+                - • Applies <b>[M. ATK Increase]</b> proportionate to self's current HP on self and then attacks one enemy and the adjacent targets for 2 turns.
+                - • Has a 50% chance to apply <b class="dtt-indicator dtt-burn">[Burn]</b> damage to one enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
             pills:
                 - 'ATK: 65%, M. ATK: 65%'
                 - 'AOE'
-                - '2 turns'
+                - '3 turns'
             upgrades:
                 - Lv. 2 ATK +5%, M. ATK +5%
                 - Lv. 3 ATK +5%, M. ATK +5%
                 - Lv. 4 ATK +5%, M. ATK +5%
                 - Lv. 5 ATK +5%, M. ATK +5%
         special:
-            name: Leo Rugiens
+            name: Spiral Flame
             desc: 
-                - Creates a Giant Flame Lion that breathes fire, dealing damage to one enemy target.
-                - • Applies 40% <b>[Damage Increase]</b> then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
-                - • Applies continuous <b class="dtt-indicator dtt-burn">[Burn]</b> damage to an enemy target for 2 turns.
+                - Casts a spinning flame tornado, dealing damage to one enemy.
+                - • Applies 50% <b>[Damage Increase]</b> and then attacks the enemy target if the target is inflicted with an active <b class="dtt-indicator dtt-burn">[Burn]</b> debuff.
+                - • Applies 30% <b class="dtt-indicator dtt-lifesteal">[Lifesteal]</b> on self and then attacks one enemy target.
             pills:
                 - 'ATK: 150%, M. ATK: 150%'
                 - 'Single-Target'
@@ -76,16 +75,16 @@ profile:
                 - Lv. 2 ATK +20%, M. ATK +20%
                 - Lv. 3 ATK +20%, M. ATK +20%
                 - Lv. 4 ATK +20%, M. ATK +20%
-                - Lv. 5 [Damage Increase] +20%
+                - Lv. 5 ATK +20%, M. ATK +20%
         combined:
             layoutTags:
                 - no-name
             header: Combined Attack (Lv. 1)
             desc: 
                 - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target has an active debuff.
+                - • Applies 30% <b>[Damage Increase]</b> and then attacks one enemy target if the target has <b class="dtt-indicator dtt-statusailment">[Status Ailment]</b>.
             pills:
-                - 'ATK: 60%, M. ATK: 60%'
+                - 'ATK: 65%, M. ATK: 65%'
                 - 'Single-Target'
                 - '15 turns'
             upgrades: 
@@ -94,37 +93,18 @@ profile:
                 - Lv. 4 [Damage Increase] +20%
                 - Lv. 5 ATK +10%, M. ATK +10%
             ovrImgPath: combat/UI_common_joinatk_01
-        united:
-            header: United Attack (Lv. 1)
-            name: '&#60;Captain of the Silver Eagles&#62; Nozel Silva'
-            desc: 
-                - Pierces with Mercury Thorns and burns everything with a Flame Lion's explosion, dealing damage to all enemies targets.
-                - • Applies continuous <b class="dtt-indicator dtt-burn">[Burn]</b> damage to each enemy target for 2 turns if a Critical Strike occured.
-                - • Applies <b>[DP Res. Reduction Lv. 3]</b> on all enemy targets for 2 turns.
-            pills:
-                - 'ATK: 40%, M. ATK: 40%'
-                - 'AOE'
-                - '15 turns'
-            upgrades: 
-                - Lv. 2 ATK +5%, M. ATK +5%
-                - Lv. 3 ATK +5%, M. ATK +5%
-                - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 ATK +5%, M. ATK +5%
-            ovrImgPath: combat/UI_common_match_01
     stats:
-        Total Power: 25259
-        ATK: 3420
-        M. ATK: 10260
+        Total Power: 24659
+        ATK: 3959
+        M. ATK: 11879
         DEF: 3207
-        HP: 49500
+        HP: 40500
         ACC: 210
         DMG. RES.: 201
         CRIT. %: 15%
-        CRIT. DMG: 40%
+        CRIT. DMG: 50%
         CRIT. RES: 0%
         SPD: 103
-        DP: 122
+        DP: 106
         DP. RES: 57
-    fateLinks:
-        - nozel
 ---

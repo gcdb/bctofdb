@@ -1,8 +1,6 @@
 ---
 layout: characterProfile
 
-disabled: WIP
-
 code: klaus
 name: klaus
 squad: Golden Dawn
@@ -10,9 +8,9 @@ type: defender
 rarity: r
 class: wisdom
 profile:
-    grimoireCode: for_marie
-    fullName: gordon_agrippa
-    title: Black Bulls
+    grimoireCode: seniors_dignity
+    fullName: klaus_lunettes
+    title: Golden Dawn
     cards:
         passive:
             layoutTags: 
@@ -21,15 +19,14 @@ profile:
                 - 'no-upgrades'
                 - 'no-img'
             desc: 
-                - Applies 4% <b>[Damage Increase]</b> when attacking a Healer Class enemy.
+                - Applies a <b>[Barrier]</b> equal to 5% of Max HP to a friendly target with the lowest HP at the start of your turn. The <b>[Barrier]</b> lasts for 2 turns.
         skill:
             header: "Skill I"
-            name: Reflect Ray
+            name: Steel Strike
             desc: 
-                - Fires a ray of light from a mirror, dealing damage to one enemy target.
-                - • Has a 50% chance to perform <b>[Additional Attack]</b> equal to 30% of ATK and M. ATK on the enemy target.
+                - Fires a spear of steel spinning at high speed, dealing damage to an one enemy target.
             pills:
-                - 'ATK: 95% M. ATK: 95%'
+                - 'ATK: 90% M. ATK: 90%'
                 - 'Single-Target'
             upgrades:
                 - Lv. 2 ATK +5%, M. ATK +5%
@@ -38,59 +35,61 @@ profile:
                 - Lv. 5 ATK +5%, M. ATK +5%
         skill2:
             header: "Skill II"
-            name: Reflect Refrain
+            name: Full Metal Fortress
             desc:
-                - Fires multiple rays of light from several mirrors, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 50% of ATK and M. ATK on the enemy target if there is an active buff on self.
+                - Erects a wall of steel from the ground, protecting 1 ally.
+                - • Applies <b class="dtt-indicator dtt-dmgresincrease">[DMG RES. Increase Lv. 3]</b> to a friendly target for 2 turns.
+                - • Has a 40% chance to apply <b class="dtt-indicator dtt-protection">[Protection]</b> buff to one friendly target for 2 turns.
             pills:
-                - 'Single-Target'
-                - '3 turns'
+                - 'Allies'
+                - '2 turns'
             upgrades:
-                - Lv. 2 ATK +10%, M. ATK +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. 5 ATK +10%, M. ATK +10%
+                - Lv. 2 Protection Chance 10%
+                - Lv. 3 Protection Chance 10%
+                - Lv. 4 Protection Chance 10%
+                - Lv. 5 Protection Chance 10%
         special:
-            name: Strike of the Sleeping Sheep
+            name: Fierce Spiral Lance
             desc:
                 - Fires a powerful ray of light from a giant mirror, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 90% of ATK and M. ATK on the enemy target if a Critical Strike occured.
+                - • Has a 50% chance to apply <b class="dtt-indicator dtt-dpreduction">[DP Reduction Lv. 2]</b> debuff to each enemy target for 2 turns.
             pills:
-                - 'ATK: 150% M. ATK: 150%'
-                - 'Single-Target'
+                - 'ATK: 65% M. ATK: 65%'
+                - 'AOE'
             upgrades:
-                - Lv. 2 ATK +15%, M. ATK +15%
-                - Lv. 3 ATK +15%, M. ATK +15%
-                - Lv. 4 ATK +15%, M. ATK +15%
-                - Lv. 5 ATK +15%, M. ATK +15%
+                - Lv. 2 ATK +7%, M. ATK +7%
+                - Lv. 3 ATK +7%, M. ATK +7%
+                - Lv. 4 ATK +7%, M. ATK +7%
+                - Lv. 5 ATK +7%, M. ATK +7%
         combined:
             layoutTags:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
             desc:
-                - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
+                - Performs a combined attack with your partner, dealing damage to all enemy targets.
+                - • Applies <b class="dtt-indicator dtt-defincrease">[DEF Increase Lv. 2]</b> on self for 2 turns.
             pills:
-                - 'Ally'
+                - 'ATK: 55% M. ATK: 55%'
+                - 'Self'
                 - '15 turns'
             upgrades:
-                - Lv. 2 ATK +15%, M. ATK +15%
-                - Lv. 3 ATK +15%, M. ATK +15%
-                - Lv. 4 ATK +15%, M. ATK +15%
-                - Lv. 5 ATK +15%, M. ATK +15%
+                - Lv. 2 ATK +5%, M. ATK +5%
+                - Lv. 3 ATK +5%, M. ATK +5%
+                - Lv. 4 ATK +5%, M. ATK +5%
+                - Lv. 5 ATK +5%, M. ATK +5%
             ovrImgPath: combat/UI_common_joinatk_01
     stats:
-        Total Power: 21297
-        ATK: 3704
-        M. ATK: 3704
-        DEF: 3103
-        HP: 49199
-        ACC: 205
-        DMG. RES.: 205
-        CRIT. %: 8.1%
+        Total Power: 21243
+        ATK: 4916
+        M. ATK: 1638
+        DEF: 3017
+        HP: 48106
+        ACC: 201
+        DMG. RES.: 210
+        CRIT. %: 12.15%
         CRIT. DMG: 50%
         CRIT. RES: 0%
-        SPD: 93
-        DP: 101
-        DP. RES: 60
+        SPD: 98
+        DP: 96
+        DP. RES: 82
 ---

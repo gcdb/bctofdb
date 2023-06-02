@@ -33,5 +33,8 @@
     "mark": "Mark: Gains an additional turn after defeating a Marked enemy",
     "continuousdamage": "Continuous Damage: Types of Continuous Damage: Burn, Bleed, Poison, Shock",
     "dpresreduction": "DP Res. Reduction Lv. 1/2/3: Reduces DP Res. by x/x/35%",
-    "sever": "Applies [Damage Increase] to self proportionate to your remaining HP (max 30%)"
+    "sever": "Applies [Damage Increase] to self proportionate to your remaining HP (max 30%)",
+    "dmgresincrease": "DMG RES. Lv. 1/2/3: Increeases DMG RES. by: x/x/32%",
+    "protection": "Protection: The selected friendly target cannot be targeted",
+    "dpreduction": "DP Reduction Lv. 1/2/3: x/20/x%"
 }
