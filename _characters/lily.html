@@ -1,8 +1,6 @@
 ---
 layout: characterProfile
 
-disabled: WIP
-
 code: lily
 name: lily
 squad: The Clover Kingdom
@@ -10,9 +8,9 @@ type: healer
 rarity: r
 class: tenacity
 profile:
-    grimoireCode: for_marie
-    fullName: gordon_agrippa
-    title: Black Bulls
+    grimoireCode: mild_oath
+    fullName: Sister Lily
+    title: Sister of Hage Village Church
     cards:
         passive:
             layoutTags: 
@@ -21,15 +19,14 @@ profile:
                 - 'no-upgrades'
                 - 'no-img'
             desc: 
-                - Applies 4% <b>[Damage Increase]</b> when attacking a Healer Class enemy.
+                - Applies 3% <b>[Healing Increase]</b>.
         skill:
             header: "Skill I"
-            name: Reflect Ray
+            name: Aqua Strike
             desc: 
-                - Fires a ray of light from a mirror, dealing damage to one enemy target.
-                - • Has a 50% chance to perform <b>[Additional Attack]</b> equal to 30% of ATK and M. ATK on the enemy target.
+                - Fires a small orb of water, dealing damage to one enemy target.
             pills:
-                - 'ATK: 95% M. ATK: 95%'
+                - 'ATK: 70% M. ATK: 70%'
                 - 'Single-Target'
             upgrades:
                 - Lv. 2 ATK +5%, M. ATK +5%
@@ -38,59 +35,61 @@ profile:
                 - Lv. 5 ATK +5%, M. ATK +5%
         skill2:
             header: "Skill II"
-            name: Reflect Refrain
+            name: Holy Fist of Love
             desc:
-                - Fires multiple rays of light from several mirrors, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 50% of ATK and M. ATK on the enemy target if there is an active buff on self.
+                - Summons a fist of water and throws a punch, dealing damage to one enemy target.
+                - • Applies <b>[Recovery]</b> to the friendly target with the lowest health, restoring their health equal to 20% of Lily's Max HP.
             pills:
-                - 'Single-Target'
-                - '3 turns'
+                - 'ATK: 90% M. ATK: 90%'
+                - 'Ally'
+                - '2 turns'
             upgrades:
                 - Lv. 2 ATK +10%, M. ATK +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
+                - Lv. [Recvoery] +5%
                 - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. 5 ATK +10%, M. ATK +10%
+                - Lv. [Recvoery] +5%
         special:
-            name: Strike of the Sleeping Sheep
+            name: Earnest Prayer
             desc:
-                - Fires a powerful ray of light from a giant mirror, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 90% of ATK and M. ATK on the enemy target if a Critical Strike occured.
+                - Grants HP Recovery to a friendly target with Water Recovery Magic.
+                - • Applies <b>[Recovery]</b> to a friendly target, restoring their health equal to 360% of M. ATK.
+                - • Applies <b class="dtt-indicator dtt-atkincrease">[ATK Increase Lv. 2]</b> to the friendly target for 2 turns.
             pills:
-                - 'ATK: 150% M. ATK: 150%'
-                - 'Single-Target'
+                - 'Ally'
             upgrades:
-                - Lv. 2 ATK +15%, M. ATK +15%
-                - Lv. 3 ATK +15%, M. ATK +15%
-                - Lv. 4 ATK +15%, M. ATK +15%
-                - Lv. 5 ATK +15%, M. ATK +15%
+                - Lv. 2 [Recvoery] +45%
+                - Lv. 3 [Recvoery] +45%
+                - Lv. 4 [Recvoery] +45%
+                - Lv. 5 [Recvoery] +45%
         combined:
             layoutTags:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
             desc:
                 - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
+                - • Has a 60% chance to remove 2 <b>Buffs</b> from the enemy target.
             pills:
-                - 'Ally'
+                - 'ATK +45%, M. ATK +45%'
+                - 'Single-Target'
                 - '15 turns'
             upgrades:
-                - Lv. 2 ATK +15%, M. ATK +15%
-                - Lv. 3 ATK +15%, M. ATK +15%
-                - Lv. 4 ATK +15%, M. ATK +15%
-                - Lv. 5 ATK +15%, M. ATK +15%
+                - Lv. 2 ATK +5%, M. ATK +5%
+                - Lv. 3 Remove Buff Chance +10%
+                - Lv. 4 ATK +5%, M. ATK +5%
+                - Lv. 5 Remove Buff Chance +10%
             ovrImgPath: combat/UI_common_joinatk_01
     stats:
-        Total Power: 21297
-        ATK: 3704
-        M. ATK: 3704
-        DEF: 3103
-        HP: 49199
+        Total Power: 21364
+        ATK: 0
+        M. ATK: 7295
+        DEF: 3207
+        HP: 49248
         ACC: 205
         DMG. RES.: 205
         CRIT. %: 8.1%
         CRIT. DMG: 50%
         CRIT. RES: 0%
-        SPD: 93
+        SPD: 95
         DP: 101
         DP. RES: 60
 ---
