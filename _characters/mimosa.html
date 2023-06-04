@@ -1,8 +1,6 @@
 ---
 layout: characterProfile
 
-disabled: WIP
-
 code: mimosa
 name: mimosa
 squad: Golden Dawn
@@ -22,87 +20,96 @@ profile:
                 - 'no-upgrades'
                 - 'no-img'
             desc: 
-                - Applies 5% <b>[Damage Increase]</b> when attacking a Defender Class enemy.
-        passive2:
-                header: 'Unique Passive'
-                layoutTags: 
-                    - 'no-name'
-                    - 'no-pill'
-                    - 'no-upgrades'
-                    - 'no-img'
-                desc: Applies 1 <b class="dtt-indicator dtt-burn">[Burn]</b> Debuff to enemy targets when using Skill II, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
+                - Applies 4% <b>[Healing Increase]</b>.
         skill:
-            name: Piercing Sand Spear
+            header: 'Skill I'
+            name: Magic Flower Bullet
             desc: 
-            - Raises several sharp sand pillars out of the ground, dealing damage to one enemy target.
-            - • Applies <b class="dtt-indicator dtt-weaponenhancement">[Weapon Enhancement Lv. 1]</b> then attacks the enemy target if the target has <b class="dtt-indicator dtt-statusailment">[Status Ailment]</b>.
+            - Fires condensed mana, dealing damage to one enemy target.
+            - • Applies <b>[Recovery]</b> to the friendly target with the lowest HP, restoring health equal to 120% of M. ATK.
             pills:
-                - 'ATK: 90%, M. ATK: 90%'
+                - 'ATK: 65%, M. ATK: 65%'
                 - 'Single-Target'
             upgrades:
-                - Lv. 2 ATK +5%, M. ATK +5%
-                - Lv. 3 ATK +5%, M. ATK +5%
-                - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 ATK +5%, M. ATK +5%
-            ovrImgPath: combat/UI_alecdora_001_skill01_01
+                - Lv. 2 Recovery +15%
+                - Lv. 3 Recovery +15%
+                - Lv. 4 Recovery +15%
+                - Lv. 5 Recovery +15%
         skill2:
-            name: Sand-Armored Guard
+            header: 'Skill II'
+            name: Dream-Healing Flower Cradle
             desc: 
-            - Summons a Sand-Armored Guard to attack an enemy, dealing damage to one enemy target.
-            - • Has a 50% chance to <b class="dtt-indicator dtt-stun">[Stun]</b> an enemy target for 1 turn.
+            - Uses Plant Magic to summon the Dream-Healing Flower Cradle, restoring HP of one friendly target.
+            - • Applies <b>[Recovery]</b> to one friendly target, restoring health equal to 240% of M. ATK.
+            - • Has an 80% chance to remove <b class="dtt-indicator dtt-bleed"></b>[Bleed]</b> debuff from the friendly target.
             pills:
-                - 'ATK: 110%, M. ATK: 110%'
-                - 'Single-Target'
-                - '3 turns'
+                - 'Ally'
+                - '2 turns'
             upgrades:
-                - Lv. 2 ATK +10%, M. ATK +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. 5 ATK +10%, M. ATK +10%
-            ovrImgPath: combat/UI_alecdora_001_skill02_01
+                - Lv. 2 Recovery +35%
+                - Lv. 3 Recovery +35%
+                - Lv. 4 Recovery +35%
+                - Lv. 5 Recovery +35%
         special:
-            name: Sand-Armored Heavy Guard
+            name: Princess-Healing Flower
             desc: 
-            - Summons a Sand-Armored Heavy Guard, dealing damage to all enemies targets.
-            - • Has a 40% chance to <b class="dtt-indicator dtt-stun">[Stun]</b> each enemy target for 1 turn.
+            - Wears a flower robe, restoring the HP of all friendly targets.
+            - • Applies <b>[Recovery]</b> to all friendly targets, restoring health equal to 180% of M. ATK.
+            - • Applies <b>[Recovery]</b> to allies with less than 50% HP, restoring health equal to 10% of Mimosa's Max HP.
             pills:
-                - 'ATK: 60%, M. ATK: 60%'
-                - 'AOE'
+                - 'Allies'
             upgrades:
-                - Lv. 2 ATK +10%, M. ATK +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. 5 ATK +10%, M. ATK +10%
-            ovrImgPath: combat/UI_alecdora_001_special_01
+                - Lv. 2 Recovery +25% of M. ATK
+                - Lv. 3 Recovery +25% of M. ATK
+                - Lv. 4 Recovery +25% of M. ATK
+                - Lv. 5 Recovery +25% of M. ATK
         combined:
             layoutTags:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
             desc: 
-            - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> on self and attacks the enemy target if the target has an active debuff.
+            -  Applies a buff to your partner.
+            - • Applies <b class="dtt-indicator dtt-atkincrease">[ATK Increase Lv. 4]</b> to your partner's attack.
+            - • Applies <b>[Recovery]</b> to your partner, restoring health equal to 200% of Mimosa's M. ATK.
             pills:
-                - 'ATK: 60%, M. ATK: 60%'
-                - 'Single-Target'
+                - 'Ally'
                 - '15 turns'
             upgrades:
-                - Lv. 2 ATK +8%, M. ATK +8%
-                - Lv. 3 Damage Increase +8%
-                - Lv. 4 ATK +8%, M. ATK +8%
-                - Lv. 5 Damage Increase +8%
+                - Lv. 2 Recovery +30%
+                - Lv. 3 Recovery +30%
+                - Lv. 4 Recovery +30%
+                - Lv. 5 Recovery +30%
+            ovrImgPath: combat/UI_common_match_01
+        united:
+            header: United Attack (Lv. 1)
+            name: '&#60;Black Bulls&#62; Noelle Silva'
+            desc: 
+                - Uses water and plant magic to buff all friendly targets.
+                - • Applies <b class="dtt-indicator dtt-continuousrecovery">[Continuous Recovery]</b> equal to 45% of Mimosa's M. ATK on all friendly targets for 2 turns.
+                - • Applies <b class="dtt-indicator dtt-critrateincrease">[Crit Rate Increase Lv. 3]</b> to all friendly targets for 2 turns.
+            pills:
+                - 'Allies'
+                - '15 turns'
+            upgrades: 
+                - Lv. 2 Continuous Recovery +5%
+                - Lv. 3 Continuous Recovery +5%
+                - Lv. 4 Continuous Recovery +5%
+                - Lv. 5 Continuous Recovery +5%
             ovrImgPath: combat/UI_common_match_01
     stats:
-        Total Power: 22899
-        ATK: 6480
-        M. ATK: 6480
-        DEF: 2886
-        HP: 40499
-        ACC: 210
-        DMG. RES.: 201
-        CRIT. %: 15%
+        Total Power: 23170
+        ATK: 1710
+        M. ATK: 5129
+        DEF: 3608
+        HP: 58320
+        ACC: 205
+        DMG. RES.: 205
+        CRIT. %: 8.1%
         CRIT. DMG: 50%
         CRIT. RES: 0%
-        SPD: 103
-        DP: 106
-        DP. RES: 57
+        SPD: 95
+        DP: 101
+        DP. RES: 60
+    fateLinks:
+        - noelle
 ---
