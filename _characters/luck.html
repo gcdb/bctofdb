@@ -1,8 +1,6 @@
 ---
 layout: characterProfile
 
-disabled: WIP
-
 code: luck
 name: luck
 squad: Black Bulls
@@ -10,8 +8,8 @@ type: attacker
 rarity: sr
 class: proficiency
 profile:
-    grimoireCode: for_marie
-    fullName: gordon_agrippa
+    grimoireCode: aesthetics_of_battle
+    fullName: Luck Voltia
     title: Black Bulls
     cards:
         passive:
@@ -21,13 +19,14 @@ profile:
                 - 'no-upgrades'
                 - 'no-img'
             desc: 
-                - Applies 4% <b>[Damage Increase]</b> when attacking a Healer Class enemy.
+                - Applies 3.5% <b>[Damage Increase]</b> when your turn ends. (Stacks up to 2 times)
         skill:
             header: "Skill I"
-            name: Reflect Ray
+            name: Thunder Fist
             desc: 
-                - Fires a ray of light from a mirror, dealing damage to one enemy target.
-                - • Has a 50% chance to perform <b>[Additional Attack]</b> equal to 30% of ATK and M. ATK on the enemy target.
+                - Attacks with the speed olightning, dealing damage to one enemy target.
+                - • Has a 45% chance to perform <b>[Additional Attack]</b> equal to 35% of ATK and M. ATK on the enemy target.
+                - • Performs  30% <b>[Additional Attack]</b> equal to 35% of ATK and M. ATK on the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
             pills:
                 - 'ATK: 95% M. ATK: 95%'
                 - 'Single-Target'
@@ -38,26 +37,27 @@ profile:
                 - Lv. 5 ATK +5%, M. ATK +5%
         skill2:
             header: "Skill II"
-            name: Reflect Refrain
+            name: Lightning God's Kick
             desc:
-                - Fires multiple rays of light from several mirrors, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 50% of ATK and M. ATK on the enemy target if there is an active buff on self.
+                - Channels lightning energy, dealing damage to one random enemy target 3 times.
+                - • Has a 70% chance to apply <b class="dtt-indicator dtt-shock">[Shock]</b> to each enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
             pills:
-                - 'Single-Target'
+                - 'ATK: 50% M. ATK: 50%'
+                - 'Random Target'
                 - '3 turns'
             upgrades:
-                - Lv. 2 ATK +10%, M. ATK +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. 5 ATK +10%, M. ATK +10%
+                - Lv. 2 ATK +3%, M. ATK +3%
+                - Lv. 3 ATK +3%, M. ATK +3%
+                - Lv. 4 ATK +3%, M. ATK +3%
+                - Lv. 5 ATK +3%, M. ATK +3%
         special:
-            name: Strike of the Sleeping Sheep
+            name: Holy Lightning Boots
             desc:
-                - Fires a powerful ray of light from a giant mirror, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 90% of ATK and M. ATK on the enemy target if a Critical Strike occured.
+                - Equips a pair of lightning boots and swiftly kicks, dealing damage to all enemy targets.
+                - • Applies <b class="dtt-indicator dtt-defpen" style="color:#26c6f9">[DEF PEN. Increase Lv. 3]</b> on self and then attacks all enemy targets.
             pills:
-                - 'ATK: 150% M. ATK: 150%'
-                - 'Single-Target'
+                - 'ATK: 80% M. ATK: 80%'
+                - 'AOE'
             upgrades:
                 - Lv. 2 ATK +15%, M. ATK +15%
                 - Lv. 3 ATK +15%, M. ATK +15%
@@ -69,28 +69,45 @@ profile:
             header: Combined Attack (Lv. 1)
             desc:
                 - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
+                - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target has <b class="dtt-indicator dtt-statusailment">[Status Ailment]</b>.
             pills:
-                - 'Ally'
+                - 'ATK: 60% M. ATK: 60%'
+                - 'Single-Target'
                 - '15 turns'
             upgrades:
-                - Lv. 2 ATK +15%, M. ATK +15%
-                - Lv. 3 ATK +15%, M. ATK +15%
-                - Lv. 4 ATK +15%, M. ATK +15%
-                - Lv. 5 ATK +15%, M. ATK +15%
+                - Lv. 2 ATK +8%, M. ATK +8%
+                - Lv. 3 [Damage Increase] +8%
+                - Lv. 4 ATK +8%, M. ATK +8%
+                - Lv. 5 [Damage Increase] +8%
             ovrImgPath: combat/UI_common_joinatk_01
+        united:
+            header: United Attack (Lv. 1)
+            name: '&#60;Black Bulls&#62; Magna Swing'
+            desc: 
+                - Using Holy Lightning Boots with Magna's Fireball, dealing damage to all enemies targets.
+                - • Applies <b class="dtt-indicator dtt-shock">[Shock]</b> to each enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
+            pills:
+                - 'ATK: 40%, M. ATK: 40%'
+                - 'AOE'
+                - '15 turns'
+            upgrades: 
+                - Lv. 2 ATK +5%, M. ATK +5%
+                - Lv. 3 ATK +5%, M. ATK +5%
+                - Lv. 4 ATK +5%, M. ATK +5%
+                - Lv. 5 ATK +5%, M. ATK +5%
+            ovrImgPath: combat/UI_common_match_01
     stats:
-        Total Power: 21297
-        ATK: 3704
-        M. ATK: 3704
-        DEF: 3103
-        HP: 49199
-        ACC: 205
-        DMG. RES.: 205
-        CRIT. %: 8.1%
+        Total Power: 22899
+        ATK: 6480
+        M. ATK: 6480
+        DEF: 2886
+        HP: 40499
+        ACC: 210
+        DMG. RES.: 201
+        CRIT. %: 15%
         CRIT. DMG: 50%
         CRIT. RES: 0%
-        SPD: 93
-        DP: 101
-        DP. RES: 60
+        SPD: 103
+        DP: 106
+        DP. RES: 57
 ---

@@ -1,8 +1,6 @@
 ---
 layout: characterProfile
 
-disabled: WIP
-
 code: magna
 name: magna
 squad: Black Bulls
@@ -21,15 +19,15 @@ profile:
                 - 'no-upgrades'
                 - 'no-img'
             desc: 
-                - Applies 4% <b>[Damage Increase]</b> when attacking a Healer Class enemy.
+                - Applies 4% <b>[Damage Increase]</b>.
         skill:
             header: "Skill I"
-            name: Reflect Ray
+            name: Punch
             desc: 
-                - Fires a ray of light from a mirror, dealing damage to one enemy target.
-                - • Has a 50% chance to perform <b>[Additional Attack]</b> equal to 30% of ATK and M. ATK on the enemy target.
+                - Throws a flame fist, dealing damage to one enemy target.
+                - • Has a 70% chance to apply <b class="dtt-indicator dtt-burn">[Burn]</b> damage to each enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
             pills:
-                - 'ATK: 95% M. ATK: 95%'
+                - 'ATK: 90% M. ATK: 90%'
                 - 'Single-Target'
             upgrades:
                 - Lv. 2 ATK +5%, M. ATK +5%
@@ -38,11 +36,13 @@ profile:
                 - Lv. 5 ATK +5%, M. ATK +5%
         skill2:
             header: "Skill II"
-            name: Reflect Refrain
+            name: Exploding Fireball
             desc:
-                - Fires multiple rays of light from several mirrors, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 50% of ATK and M. ATK on the enemy target if there is an active buff on self.
+                - Throws fireballs, dealing damage to one enemy target.
+                - • Has a 50% chance to <b class="dtt-indicator dtt-stun">[Stun]</b> an enemy target for 1 turn.
+                - • Applies <b class="dtt-indicator dtt-stun">[Stun]</b> if the target has an active <b class="dtt-indicator dtt-burn">[Burn]</b> debuff.
             pills:
+                - 'ATK: 110% M. ATK: 110%'
                 - 'Single-Target'
                 - '3 turns'
             upgrades:
@@ -51,46 +51,63 @@ profile:
                 - Lv. 4 ATK +10%, M. ATK +10%
                 - Lv. 5 ATK +10%, M. ATK +10%
         special:
-            name: Strike of the Sleeping Sheep
+            name: Explosive Scattershot
             desc:
-                - Fires a powerful ray of light from a giant mirror, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 90% of ATK and M. ATK on the enemy target if a Critical Strike occured.
+                - Casts a powerful flaming orb, dealing damage to all enemy targets.
+                - • Has a 60% chance to apply <b class="dtt-indicator dtt-burn">[Burn]</b> damage to each enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
             pills:
                 - 'ATK: 150% M. ATK: 150%'
-                - 'Single-Target'
+                - 'AOE'
             upgrades:
-                - Lv. 2 ATK +15%, M. ATK +15%
-                - Lv. 3 ATK +15%, M. ATK +15%
-                - Lv. 4 ATK +15%, M. ATK +15%
-                - Lv. 5 ATK +15%, M. ATK +15%
+                - Lv. 2 ATK +10%, M. ATK +10%
+                - Lv. 3 ATK +10%, M. ATK +10%
+                - Lv. 4 ATK +10%, M. ATK +10%
+                - Lv. 5 [Burn] Chance +10%
         combined:
             layoutTags:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
             desc:
                 - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
+                - • Applies <b class="dtt-indicator dtt-defreduction">[DEF Reduction Lv. 4]</b> to one enemy taget.
             pills:
-                - 'Ally'
+                - 'ATK: 55% M. ATK: 55%'
+                - 'Single-Target'
                 - '15 turns'
             upgrades:
-                - Lv. 2 ATK +15%, M. ATK +15%
-                - Lv. 3 ATK +15%, M. ATK +15%
-                - Lv. 4 ATK +15%, M. ATK +15%
-                - Lv. 5 ATK +15%, M. ATK +15%
+                - Lv. 2 ATK +5%, M. ATK +5%
+                - Lv. 3 ATK +5%, M. ATK +5%
+                - Lv. 4 ATK +5%, M. ATK +5%
+                - Lv. 5 ATK +5%, M. ATK +5%
             ovrImgPath: combat/UI_common_joinatk_01
+        united:
+            header: United Attack (Lv. 1)
+            name: '&#60;Black Bulls&#62; Luck Voltia'
+            desc: 
+                - Using Holy Lightning Boots with Magna's Fireball, dealing damage to all enemies targets.
+                - • Applies 10% <b>[Damage Increase]</b> for every active <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> debuff on the enemy target and then attacks the targets.
+            pills:
+                - 'ATK: 35%, M. ATK: 35%'
+                - 'AOE'
+                - '15 turns'
+            upgrades: 
+                - Lv. 2 ATK +5%, M. ATK +5%
+                - Lv. 3 ATK +5%, M. ATK +5%
+                - Lv. 4 ATK +5%, M. ATK +5%
+                - Lv. 5 ATK +5%, M. ATK +5%
+            ovrImgPath: combat/UI_common_match_01
     stats:
-        Total Power: 21297
-        ATK: 3704
-        M. ATK: 3704
-        DEF: 3103
-        HP: 49199
-        ACC: 205
-        DMG. RES.: 205
-        CRIT. %: 8.1%
+        Total Power: 23062
+        ATK: 2610
+        M. ATK: 7829
+        DEF: 3247
+        HP: 46979
+        ACC: 207
+        DMG. RES.: 201
+        CRIT. %: 13.5%
         CRIT. DMG: 50%
         CRIT. RES: 0%
-        SPD: 93
-        DP: 101
-        DP. RES: 60
+        SPD: 107
+        DP: 104
+        DP. RES: 59
 ---

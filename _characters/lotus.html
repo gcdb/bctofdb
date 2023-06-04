@@ -1,8 +1,6 @@
 ---
 layout: characterProfile
 
-disabled: WIP
-
 code: lotus
 name: lotus
 squad: The Diamond Kingdom
@@ -10,9 +8,9 @@ type: debuffer
 rarity: ssr
 class: wisdom
 profile:
-    grimoireCode: respectable_rival
-    fullName: Fuegoleon Vermillion
-    title: Captain of the Crimson Lion Kings
+    grimoireCode: cunning_commander
+    fullName: Lotus Whomalt
+    title: The Diamond Kingdom
     cards:
         passive:
             header: 'Awakened Passive'
@@ -21,7 +19,7 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
                 - 'no-img'
-            desc: Applies 5% <b>[DP Increase]</b>; 3.5% <b>[Damage Increase]</b> when attacking enemy target with <b class="dtt-indicator dtt-burn">Burn</b>.
+            desc: Has a 25% chance to apply 10% <b>[All ATK Reduction]</b> when attacked for 1 turn.
         passive2:
             header: 'Unique Passive'
             layoutTags: 
@@ -29,76 +27,77 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
                 - 'no-img'
-            desc: Applies 1 continuous <b class="dtt-indicator dtt-burn">Burn</b> damage to enemy targets when using Skill II for 2 turns.
+            desc: Applies 12% <b>[M. ATK Increase]</b>.
         skill:
             header: 'Skill I'
-            name: Ray of Extinction
+            name: Emit Smoke
             desc:
-                - Casts a Flame Ray, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks an enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
+                - Emits smoke, dealing damage to all enemy targets.
+                - • Has a 50% chance to apply 15% <b>[Stamina Reduction]</b> to all enemy targets.
             pills:
-                - 'ATK: 105%, M. ATK: 105%'
-                - 'Single-Target'
+                - 'ATK: 50%, M. ATK: 50%'
+                - 'AOE'
             upgrades:
-                - Lv. 2 ATK +5%, M. ATK +5%
-                - Lv. 3 ATK +5%, M. ATK +5%
-                - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 ATK +5%, M. ATK +5%
+                - Lv. 2 ATK +2%, M. ATK +2%
+                - Lv. 3 ATK +2%, M. ATK +2%
+                - Lv. 4 ATK +2%, M. ATK +2%
+                - Lv. 5 [Stamina Reduction] Chance +5%
         skill2:
             header: 'Skill II'
-            name: Onslaught of the Flame Lion
+            name: Smoke Burst
             desc: 
-                - Creates a Flame Lion that charges at all enemies targets, dealing damage to the tragets.
-                - • Has a 50% chance to apply continuous <b class="dtt-indicator dtt-burn">[Burn]</b> damage to each enemy target for 2 turns.
+                - Creates a smoke explosion, dealing damage to one enemy target.
+                - • Applies <b>[Extend Debuff Duration]</b> to one enemy target for 1 turn.
+                - • Applies <b class="dtt-indicator dtt-dmgresreduction">[DMG RES. Reduction Lv. 3]</b> to one enemy target for 2 turns.
             pills:
-                - 'ATK: 65%, M. ATK: 65%'
-                - 'AOE'
+                - 'ATK: 90%, M. ATK: 90%'
+                - 'Single-Target'
                 - '2 turns'
             upgrades:
-                - Lv. 2 ATK +5%, M. ATK +5%
-                - Lv. 3 ATK +5%, M. ATK +5%
-                - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 ATK +5%, M. ATK +5%
+                - Lv. 2 ATK +10%, M. ATK +10%
+                - Lv. 3 ATK +10%, M. ATK +10%
+                - Lv. 4 ATK +10%, M. ATK +10%
+                - Lv. 5 ATK +10%, M. ATK +10%
         special:
-            name: Leo Rugiens
+            name: Prison of the Fallen King
             desc: 
-                - Creates a Giant Flame Lion that breathes fire, dealing damage to one enemy target.
-                - • Applies 40% <b>[Damage Increase]</b> then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
-                - • Applies continuous <b class="dtt-indicator dtt-burn">[Burn]</b> damage to an enemy target for 2 turns.
+                - Surrounds all enemies with a smoke tornado, dealing damage to all enemy targets.
+                - • Applies <b class="dtt-indicator dtt-incapacitate">[Incapacitate Lv.3]</b> on all enemy targets for 2 turns.
+                - • Has a 50% chance to remove all buffs from each enemy target.
+                - • Has a 50% chance to apply <b class="dtt-indicator dtt-spdreduction">[SPD Reduction Lv.3]</b> to each enemy target for 2 turns.
             pills:
-                - 'ATK: 150%, M. ATK: 150%'
-                - 'Single-Target'
+                - 'ATK: 55%, M. ATK: 55%'
+                - 'AOE'
             upgrades:
-                - Lv. 2 ATK +20%, M. ATK +20%
-                - Lv. 3 ATK +20%, M. ATK +20%
-                - Lv. 4 ATK +20%, M. ATK +20%
-                - Lv. 5 [Damage Increase] +20%
+                - Lv. 2 ATK +5%, M. ATK +5%
+                - Lv. 3 Remove Buff Chance +5%
+                - Lv. 4 ATK +20%, M. ATK +5%
+                - Lv. 5 Remove Buff Chance +5%
         combined:
             layoutTags:
                 - no-name
             header: Combined Attack (Lv. 1)
             desc: 
                 - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target has an active debuff.
+                - • Has a 60% chance to apply 20% <b>[Stamina Reduction]</b> to all enemy targets.
             pills:
-                - 'ATK: 60%, M. ATK: 60%'
-                - 'Single-Target'
+                - 'ATK: 20%, M. ATK: 20%'
+                - 'AOE'
                 - '15 turns'
             upgrades: 
-                - Lv. 2 [Damage Increase] +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 [Damage Increase] +20%
-                - Lv. 5 ATK +10%, M. ATK +10%
+                - Lv. 2 ATK +5%, M. ATK +5%
+                - Lv. 3 ATK +5%, M. ATK +5%
+                - Lv. 4 ATK +5%, M. ATK +5%
+                - Lv. 5 ATK +5%, M. ATK +5%
             ovrImgPath: combat/UI_common_joinatk_01
         united:
             header: United Attack (Lv. 1)
-            name: '&#60;Captain of the Silver Eagles&#62; Nozel Silva'
+            name: '&#60;The Diamond Kingdom&#62; Mars'
             desc: 
-                - Pierces with Mercury Thorns and burns everything with a Flame Lion's explosion, dealing damage to all enemies targets.
-                - • Applies continuous <b class="dtt-indicator dtt-burn">[Burn]</b> damage to each enemy target for 2 turns if a Critical Strike occured.
-                - • Applies <b>[DP Res. Reduction Lv. 3]</b> on all enemy targets for 2 turns.
+                - Cages all enemies in a smoke cloud before striking them with a mineral sword, dealing damage to all enemies targets.
+                - • Applies <b class="dtt-indicator dtt-spdreduction">[SPD Reduction Lv.3]</b> to all enemy targets for 2 turns.
             pills:
-                - 'ATK: 40%, M. ATK: 40%'
+                - 'ATK: 35%, M. ATK: 35%'
                 - 'AOE'
                 - '15 turns'
             upgrades: 
@@ -108,19 +107,19 @@ profile:
                 - Lv. 5 ATK +5%, M. ATK +5%
             ovrImgPath: combat/UI_common_match_01
     stats:
-        Total Power: 25259
-        ATK: 3420
-        M. ATK: 10260
-        DEF: 3207
-        HP: 49500
-        ACC: 210
+        Total Power: 25642
+        ATK: 3189
+        M. ATK: 9570
+        DEF: 2886
+        HP: 57420
+        ACC: 207
         DMG. RES.: 201
-        CRIT. %: 15%
-        CRIT. DMG: 40%
+        CRIT. %: 12.83%
+        CRIT. DMG: 45%
         CRIT. RES: 0%
-        SPD: 103
-        DP: 122
-        DP. RES: 57
+        SPD: 107
+        DP: 114
+        DP. RES: 53
     fateLinks:
-        - nozel
+        - mars
 ---
