@@ -1,8 +1,6 @@
 ---
 layout: characterProfile
 
-disabled: WIP
-
 code: marx
 name: marx
 squad: The Clover Kingdom
@@ -10,9 +8,9 @@ type: supporter
 rarity: r
 class: wisdom
 profile:
-    grimoireCode: for_marie
-    fullName: gordon_agrippa
-    title: Black Bulls
+    grimoireCode: memory_observer
+    fullName: Marx Francois
+    title: The Clover Kingdom
     cards:
         passive:
             layoutTags: 
@@ -21,13 +19,12 @@ profile:
                 - 'no-upgrades'
                 - 'no-img'
             desc: 
-                - Applies 4% <b>[Damage Increase]</b> when attacking a Healer Class enemy.
+                - Applies 3% <b>[Max HP Increase]</b>.
         skill:
             header: "Skill I"
-            name: Reflect Ray
+            name: Magic Bullet
             desc: 
-                - Fires a ray of light from a mirror, dealing damage to one enemy target.
-                - • Has a 50% chance to perform <b>[Additional Attack]</b> equal to 30% of ATK and M. ATK on the enemy target.
+                - Fires a magic bullet, dealing damage to one enemy target.
             pills:
                 - 'ATK: 95% M. ATK: 95%'
                 - 'Single-Target'
@@ -38,59 +35,61 @@ profile:
                 - Lv. 5 ATK +5%, M. ATK +5%
         skill2:
             header: "Skill II"
-            name: Reflect Refrain
+            name: Emergency Communication
             desc:
-                - Fires multiple rays of light from several mirrors, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 50% of ATK and M. ATK on the enemy target if there is an active buff on self.
+                - Supports an ally target with memory communication magic.
+                - • Applies <b class="dtt-indicator dtt-critrateincrease">[Crit Rate Increase Lv. 1]</b> to all friendly targets for 2 turns.
+                - • Has a 40% chance to apply <b class="dtt-indicator dtt-accincrease">[ACC. Increase Lv. 2]</b> to each friendly target for 1 turn.
             pills:
-                - 'Single-Target'
-                - '3 turns'
+                - 'Allies'
+                - '2 turns'
             upgrades:
-                - Lv. 2 ATK +10%, M. ATK +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. 5 ATK +10%, M. ATK +10%
+                - Lv. 2 [ACC. Increase] Chance +10%
+                - Lv. 3 [ACC. Increase] Chance +10%
+                - Lv. 4 [ACC. Increase] Chance +10%
+                - Lv. 5 [ACC. Increase] Chance +10%
         special:
-            name: Strike of the Sleeping Sheep
+            name: Mémoire Absolue
             desc:
-                - Fires a powerful ray of light from a giant mirror, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 90% of ATK and M. ATK on the enemy target if a Critical Strike occured.
+                - Reads information from all enemy targets' memories.
+                - • Applies <b class="dtt-indicator dtt-atkreduction">[ATK Reduction Lv. 3]</b> to one designated enemy target for 2 turns.
+                - • Has a 40% chance to apply <b>[Extend Debuff Duration]</b> for 1 turn on each enemy target.
             pills:
-                - 'ATK: 150% M. ATK: 150%'
-                - 'Single-Target'
+                - 'Single-Target & AOE'
             upgrades:
-                - Lv. 2 ATK +15%, M. ATK +15%
-                - Lv. 3 ATK +15%, M. ATK +15%
-                - Lv. 4 ATK +15%, M. ATK +15%
-                - Lv. 5 ATK +15%, M. ATK +15%
+                - Lv. 2 [Extend Debuff Duration] Chance +10%
+                - Lv. 3 [Extend Debuff Duration] Chance +10%
+                - Lv. 4 [Extend Debuff Duration] Chance +10%
+                - Lv. 5 [Extend Debuff Duration] Chance +10%
         combined:
             layoutTags:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
             desc:
                 - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
+                - • Has a 60% chance to <b class="dtt-indicator dtt-silence">[Silence]</b> one enemy target for 1 turn.
             pills:
-                - 'Ally'
+                - 'ATK: 65% M. ATK: 65%'
+                - 'Single-Target'
                 - '15 turns'
             upgrades:
-                - Lv. 2 ATK +15%, M. ATK +15%
-                - Lv. 3 ATK +15%, M. ATK +15%
-                - Lv. 4 ATK +15%, M. ATK +15%
-                - Lv. 5 ATK +15%, M. ATK +15%
+                - Lv. 2 Silence Chance +5%
+                - Lv. 3 ATK +5%, M. ATK +5%
+                - Lv. 4 Silence Chance +5%
+                - Lv. 5 ATK +5%, M. ATK +5%
             ovrImgPath: combat/UI_common_joinatk_01
     stats:
-        Total Power: 21297
-        ATK: 3704
-        M. ATK: 3704
-        DEF: 3103
-        HP: 49199
-        ACC: 205
-        DMG. RES.: 205
-        CRIT. %: 8.1%
-        CRIT. DMG: 50%
+        Total Power: 21662
+        ATK: 9504
+        M. ATK: 3167
+        DEF: 2052
+        HP: 39599
+        ACC: 210
+        DMG. RES.: 201
+        CRIT. %: 14.24%
+        CRIT. DMG: 45%
         CRIT. RES: 0%
-        SPD: 93
-        DP: 101
-        DP. RES: 60
+        SPD: 103
+        DP: 117
+        DP. RES: 51
 ---

@@ -1,8 +1,6 @@
 ---
 layout: characterProfile
 
-disabled: WIP
-
 code: mars
 name: mars
 squad: The Diamond Kingdom
@@ -10,9 +8,9 @@ type: defender
 rarity: ssr
 class: wisdom
 profile:
-    grimoireCode: respectable_rival
-    fullName: Fuegoleon Vermillion
-    title: Captain of the Crimson Lion Kings
+    grimoireCode: survival_of_the_fittest
+    fullName: Mars
+    title: The Diamind Kingdom
     cards:
         passive:
             header: 'Awakened Passive'
@@ -21,7 +19,7 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
                 - 'no-img'
-            desc: Applies 5% <b>[DP Increase]</b>; 3.5% <b>[Damage Increase]</b> when attacking enemy target with <b class="dtt-indicator dtt-burn">Burn</b>.
+            desc: Applies 5% <b>[Damage Taken Reduction]</b> when attacked.
         passive2:
             header: 'Unique Passive'
             layoutTags: 
@@ -29,45 +27,44 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
                 - 'no-img'
-            desc: Applies 1 continuous <b class="dtt-indicator dtt-burn">Burn</b> damage to enemy targets when using Skill II for 2 turns.
+            desc: Applies <b>[Debuff Block]</b> on all allies at the start of the combat for 1 turn.
         skill:
             header: 'Skill I'
-            name: Ray of Extinction
+            name: Mineral Fragment
             desc:
-                - Casts a Flame Ray, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks an enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
+                - Shoots a sharp mineral fragment, dealing damage to one enemy target.
+                - • Has a 60% chance to <b class="dtt-indicator dtt-taunt">[Taunt]</b> one enemy target for 1 turn.
             pills:
-                - 'ATK: 105%, M. ATK: 105%'
+                - 'ATK: 90%, M. ATK: 90%'
                 - 'Single-Target'
             upgrades:
                 - Lv. 2 ATK +5%, M. ATK +5%
-                - Lv. 3 ATK +5%, M. ATK +5%
+                - Lv. 3 [Taunt] Chance +10%
                 - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 ATK +5%, M. ATK +5%
+                - Lv. 5 [Taunt] Chance +10%
         skill2:
             header: 'Skill II'
-            name: Onslaught of the Flame Lion
+            name: Mineral Assault
             desc: 
-                - Creates a Flame Lion that charges at all enemies targets, dealing damage to the tragets.
-                - • Has a 50% chance to apply continuous <b class="dtt-indicator dtt-burn">[Burn]</b> damage to each enemy target for 2 turns.
+                - Raises minerals from the ground, dealing damage to one enemy target.
+                - • Applies <b class="dtt-indicator dtt-defreduction">[DEF Reduction Lv. 3]</b> if the target has an active <b class="dtt-indicator dtt-burn">[Stun]</b> debuff.
             pills:
-                - 'ATK: 65%, M. ATK: 65%'
-                - 'AOE'
-                - '2 turns'
-            upgrades:
-                - Lv. 2 ATK +5%, M. ATK +5%
-                - Lv. 3 ATK +5%, M. ATK +5%
-                - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 ATK +5%, M. ATK +5%
-        special:
-            name: Leo Rugiens
-            desc: 
-                - Creates a Giant Flame Lion that breathes fire, dealing damage to one enemy target.
-                - • Applies 40% <b>[Damage Increase]</b> then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
-                - • Applies continuous <b class="dtt-indicator dtt-burn">[Burn]</b> damage to an enemy target for 2 turns.
-            pills:
-                - 'ATK: 150%, M. ATK: 150%'
+                - 'ATK: 120%, M. ATK: 120%'
                 - 'Single-Target'
+                - '3 turns'
+            upgrades:
+                - Lv. 2 ATK +10%, M. ATK +10%
+                - Lv. 3 [Stun] Chance +10%
+                - Lv. 4 ATK +10%, M. ATK +10%
+                - Lv. 5 [Stun] Chance +10%
+        special:
+            name: Laevateinn
+            desc: 
+                - Applies <b class="dtt-indicator dtt-fortify">[Fortify Lv. 3]</b> on self for 2 turns.
+                - • Has a 25% chance to apply <b>[Extend Debuff Duration]</b> to each enemy target for 1 turn.
+            pills:
+                - 'ATK: 70%, M. ATK: 70%'
+                - 'AOE'
             upgrades:
                 - Lv. 2 ATK +20%, M. ATK +20%
                 - Lv. 3 ATK +20%, M. ATK +20%
@@ -79,48 +76,48 @@ profile:
             header: Combined Attack (Lv. 1)
             desc: 
                 - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target has an active debuff.
+                - • Has a 40% chance to <b class="dtt-indicator dtt-taunt">[Taunt]</b> each enemy target for 1 turn.
             pills:
-                - 'ATK: 60%, M. ATK: 60%'
-                - 'Single-Target'
-                - '15 turns'
-            upgrades: 
-                - Lv. 2 [Damage Increase] +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 [Damage Increase] +20%
-                - Lv. 5 ATK +10%, M. ATK +10%
-            ovrImgPath: combat/UI_common_joinatk_01
-        united:
-            header: United Attack (Lv. 1)
-            name: '&#60;Captain of the Silver Eagles&#62; Nozel Silva'
-            desc: 
-                - Pierces with Mercury Thorns and burns everything with a Flame Lion's explosion, dealing damage to all enemies targets.
-                - • Applies continuous <b class="dtt-indicator dtt-burn">[Burn]</b> damage to each enemy target for 2 turns if a Critical Strike occured.
-                - • Applies <b>[DP Res. Reduction Lv. 3]</b> on all enemy targets for 2 turns.
-            pills:
-                - 'ATK: 40%, M. ATK: 40%'
+                - 'ATK: 30%, M. ATK: 30%'
                 - 'AOE'
                 - '15 turns'
             upgrades: 
-                - Lv. 2 ATK +5%, M. ATK +5%
-                - Lv. 3 ATK +5%, M. ATK +5%
-                - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 ATK +5%, M. ATK +5%
+                - Lv. 2 ATK +3%, M. ATK +3%
+                - Lv. 3 [Stun] Chance +5%
+                - Lv. 4 ATK +3%, M. ATK +3%
+                - Lv. 5 [Stun] Chance +5%
+            ovrImgPath: combat/UI_common_joinatk_01
+        united:
+            header: United Attack (Lv. 1)
+            name: '&#60;The Diamond Kingdom&#62; Lotus Whomalt'
+            desc: 
+                -  Cages all enemies in a smoke cloud before striking them with a mineral sword, dealing damage to all enemies targets.
+                - • Applies <b class="dtt-indicator dtt-allatkreduction">[All ATK Reduction Lv. 1]</b> damage to each enemy target for 2 turns if their Stamina is 50% or less.
+                - • Has a 40% chance to <b class="dtt-indicator dtt-taunt">[Taunt]</b> each enemy target for 1 turn.
+            pills:
+                - 'ATK: 30%, M. ATK: 30%'
+                - 'AOE'
+                - '15 turns'
+            upgrades: 
+                - Lv. 2 ATK +4%, M. ATK +4%
+                - Lv. 3 ATK +4%, M. ATK +4%
+                - Lv. 4 ATK +4%, M. ATK +4%
+                - Lv. 5 ATK +4%, M. ATK +4%
             ovrImgPath: combat/UI_common_match_01
     stats:
-        Total Power: 25259
-        ATK: 3420
-        M. ATK: 10260
-        DEF: 3207
-        HP: 49500
-        ACC: 210
-        DMG. RES.: 201
-        CRIT. %: 15%
-        CRIT. DMG: 40%
+        Total Power: 30203
+        ATK: 6479
+        M. ATK: 2160
+        DEF: 7361
+        HP: 67420
+        ACC: 201
+        DMG. RES.: 252
+        CRIT. %: 12.15%
+        CRIT. DMG: 50%
         CRIT. RES: 0%
-        SPD: 103
-        DP: 122
-        DP. RES: 57
+        SPD: 100
+        DP: 96
+        DP. RES: 63
     fateLinks:
-        - nozel
+        - lotus
 ---
