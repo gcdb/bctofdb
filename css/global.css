@@ -112,10 +112,6 @@ span.card-badge-width-r {
     min-width: 250px
 }
 
-#navItemsContainer {
-    max-width: 1140px
-}
-
 @media (min-width: 800px) {
     div.form-check-md-inline {
         display: inline-block;
@@ -123,7 +119,25 @@ span.card-badge-width-r {
     }
 }
 
+/* Skill Hover Tooltip CSS */
 .dtt-indicator {
     color: #26c6f9
+}
+
+/* Navbar CSS */
+#navItemsContainer {
+    max-width: 1140px
+}
+
+.navbar-nav .nav-item a {
+    color: #8d8fa7
+}
+
+.navbar-nav .nav-item:hover a {
+    color: #fff
+}
+
+.navbar-nav .nav-item.active a {
+    color: #fff
 }
 

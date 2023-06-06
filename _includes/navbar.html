@@ -1,19 +1,26 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand navbar-dark bg-label-primary justify-content-center">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-label-primary justify-content-center">
     <div id="navItemsContainer" class="container-fluid">
         <div class="me-2" style="height: 40px">
-            <a href="{{ site.baseurl }}/"><img class="h-100" src="{{ site.baseurl }}/img/site/bc_logo_wh_jp.webp" loading="lazy" alt="brand-logo"></a>
+            <a href="{{ site.baseurl }}/"><img class="h-100" src="{{ site.baseurl }}/img/site/bc_logo_wh_jp.webp" alt="brand-logo"></a>
         </div>
-    </button>
-    <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-            <a class="nav-link fs-5" href="{{ site.baseurl }}/characters">Characters</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link fs-5 disabled" href="{{ site.baseurl }}/grimoires">Grimoires (WIP)</a>
-        </li>
-    </ul>
-</div>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarSupportedContent" class="navbar-collapse collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link fs-5" data-linkname="home" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5" data-linkname="characters" href="/characters">Characters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5 disabled" data-linkname="grimoires" href="{{ site.baseurl }}/grimoires">Grimoires (WIP)</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
 <!-- <div class="card mb-4">
