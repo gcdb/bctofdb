@@ -1,8 +1,6 @@
 ---
 layout: characterProfile
 
-disabled: WIP
-
 code: nebra
 name: nebra
 squad: Silver Eagles
@@ -19,17 +17,17 @@ profile:
                 - 'no-name'
                 - 'no-pill'
                 - 'no-upgrades'
-                - 'no-img'
             desc: 
-                - Applies 4% <b>[Damage Increase]</b> when attacking a Healer Class enemy.
+                - Applies 5% <b>[Favorable Damage Dealt Increase]</b>.
+            ovrImgPath: passive/UI_Awakening_Passive_01
         skill:
             header: "Skill I"
-            name: Reflect Ray
+            name: Mist Bullet
             desc: 
-                - Fires a ray of light from a mirror, dealing damage to one enemy target.
-                - • Has a 50% chance to perform <b>[Additional Attack]</b> equal to 30% of ATK and M. ATK on the enemy target.
+                - Fires a condensed mass of mist mana, dealing damage to one enemy target.
+                - • Applies <b class="dtt-indicator dtt-matkreduction">[M. ATK Reduction Lv. 1]</b> to the enemy target with the highest Stamina for 2 turns.
             pills:
-                - 'ATK: 95% M. ATK: 95%'
+                - 'ATK: 80% M. ATK: 80%'
                 - 'Single-Target'
             upgrades:
                 - Lv. 2 ATK +5%, M. ATK +5%
@@ -38,11 +36,12 @@ profile:
                 - Lv. 5 ATK +5%, M. ATK +5%
         skill2:
             header: "Skill II"
-            name: Reflect Refrain
+            name: Mist Spider's Thread
             desc:
-                - Fires multiple rays of light from several mirrors, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 50% of ATK and M. ATK on the enemy target if there is an active buff on self.
+                - Surrounds an enemy target with mist.
+                - • Has a 40% chance to <b class="dtt-indicator dtt-transform">[Transform]</b> one enemy target for 1 turn.
             pills:
+                - 'ATK: 100% M. ATK: 100%'
                 - 'Single-Target'
                 - '3 turns'
             upgrades:
@@ -51,10 +50,10 @@ profile:
                 - Lv. 4 ATK +10%, M. ATK +10%
                 - Lv. 5 ATK +10%, M. ATK +10%
         special:
-            name: Strike of the Sleeping Sheep
+            name: Mist Clones
             desc:
-                - Fires a powerful ray of light from a giant mirror, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 90% of ATK and M. ATK on the enemy target if a Critical Strike occured.
+                - Summons a clone and throws a chunk of mist, damaging 1 enemy target.
+                - • Activates <b class="dtt-indicator dtt-summonclone">[Summon Clone]</b> for 2 turns.
             pills:
                 - 'ATK: 150% M. ATK: 150%'
                 - 'Single-Target'
@@ -69,28 +68,28 @@ profile:
             header: Combined Attack (Lv. 1)
             desc:
                 - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
+                - • Applies <b class="dtt-indicator dtt-incapacitate">[Incapacitate Lv. 4]</b> for 2 turns.
             pills:
-                - 'Ally'
+                - 'ATK: 55% M. ATK: 55%'
                 - '15 turns'
             upgrades:
-                - Lv. 2 ATK +15%, M. ATK +15%
-                - Lv. 3 ATK +15%, M. ATK +15%
-                - Lv. 4 ATK +15%, M. ATK +15%
-                - Lv. 5 ATK +15%, M. ATK +15%
+            - Lv. 2 ATK +5%, M. ATK +5%
+            - Lv. 3 ATK +5%, M. ATK +5%
+            - Lv. 4 ATK +5%, M. ATK +5%
+            - Lv. 5 ATK +5%, M. ATK +5%
             ovrImgPath: combat/UI_common_joinatk_01
     stats:
-        Total Power: 21297
-        ATK: 3704
-        M. ATK: 3704
-        DEF: 3103
-        HP: 49199
-        ACC: 205
-        DMG. RES.: 205
-        CRIT. %: 8.1%
-        CRIT. DMG: 50%
+        Total Power: 23682
+        ATK: 2871
+        M. ATK: 8613
+        DEF: 2598
+        HP: 51677
+        ACC: 207
+        DMG. RES.: 201
+        CRIT. %: 12.83%
+        CRIT. DMG: 45%
         CRIT. RES: 0%
-        SPD: 93
-        DP: 101
-        DP. RES: 60
+        SPD: 107
+        DP: 114
+        DP. RES: 53
 ---

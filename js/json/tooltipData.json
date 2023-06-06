@@ -1,6 +1,6 @@
 {   
-    "matkreduction": "TBA",
-    "atkreduction": "ATK Reduction: Lv 1/2/3: Reduces ATK by x/x/52%",
+    "matkreduction": "M. ATK Reduction Lv. 1/2/3: Reduces M. ATK by 35/x/x%",
+    "atkreduction": "ATK Reduction Lv. 1/2/3: Reduces ATK by x/x/52%",
     "atkincrease": "ATK Increase Lv. 1/2/3/4/5: Increases by ATK 42/55/84/x/100%",
     "matkincrease": "M. ATK Reduction Lv 1/2/3/4: Reduces ATK by x/x/x/84%",
     "critrateincrease": "Crit % Increase Lv. 1/2/3/4: Increase Crit % by 14/18/22/26%",
@@ -15,9 +15,9 @@
     "taunt": "Taunt: Attacks the target with the effect.",
     "counterattack": "TBA",
     "weaponenhancement": "Weapon Enhancement Lv. 1/2/3: Increases damage by 30/x/x%",
-    "stun": "Stun: You will be disabled and will lose your turn",
+    "stun": "Stun: Target will be disabled and lose their turn",
     "invulnerability": "Cannot take damage",
-    "incapacitate": "Incapacitate Lv. 1/2/3/4/5: Increases damage taken by x/x/50/x/70%",
+    "incapacitate": "Incapacitate Lv. 1/2/3/4/5: Increases damage taken by 30/40/50/60/70%",
     "cursedbuff": "TBA",
     "burn": "Burn: At the start of the turn, receive damage equal to [ATK: 15%, M. ATK: 15%], up to 3 times",
     "spdreduction": "SPD Reduction Lv. 1/2/3: x/x/55%",
@@ -29,7 +29,7 @@
     "lifesteal": "TBA",
     "healingincrease": "TBA",
     "defensivestance": "Defensive Stance: Reduces damage taken by 50%.",
-    "statusailment": "Status Ailment: Types of Status Ailment: Stun, Freeze, Mutation",
+    "statusailment": "Status Ailment: Types of Status Ailment: Stun, Freeze, Transform",
     "mark": "Mark: Gains an additional turn after defeating a Marked enemy",
     "continuousdamage": "Continuous Damage: Types of Continuous Damage: Burn, Bleed, Poison, Shock",
     "dpresreduction": "DP Res. Reduction Lv. 1/2/3: Reduces DP Res. by x/x/35%",
@@ -44,5 +44,7 @@
     "allatkreduction": "All ATK Reduction Lv. 1/2/3: Reduces all ATK by 23/x/x%",
     "accincrease": "ACC. Increase Lv. 1/2/3: Increeases ACC. by: x/25/x%",
     "silence": "Silence: Skill II is disabled",
-    "continuousrecovery": "Continuous Recovery: Restores a certain amount of HP at the start of every turn"
+    "continuousrecovery": "Continuous Recovery: Restores a certain amount of HP at the start of every turn",
+    "transform": "Transform: Target will be disabled and lose their turn",
+    "summonclone": "Summon clone: When using Mist Bullet, the clones will do damage equal to 35% of ATK and 35% of M. ATK"
 }
