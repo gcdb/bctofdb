@@ -1,12 +1,12 @@
 ---
 layout: characterProfile
 
-disabled: Upcoming
+new: New
 
 code: licht
 name: licht
 squad: The Eye of the Midnight Sun
-type: TBA
+type: attacker
 rarity: ssr
 class: wisdom
 profile:
@@ -20,8 +20,8 @@ profile:
                 - 'no-name'
                 - 'no-pill'
                 - 'no-upgrades'
-            desc: 
-                - Applies 4% <b>[Damage Taken Reduction]</b>.
+            desc:
+                - Has 10% <b>[Crit Damage Increase]</b>.
             ovrImgPath: passive/UI_Awakening_Passive_01
         passive2:
             header: 'Unique Passive'
@@ -29,92 +29,102 @@ profile:
                 - 'no-name'
                 - 'no-pill'
                 - 'no-upgrades'
-            desc: Ally ressurects with 50% HP using Special Skill.
-            ovrImgPath: passive/UI_Cp_Supporter
+            desc:
+                - Applies <b class="dtt-indicator dtt-immortality">[Immortality]</b> on self when HP is less than 30% for 1 turn. (Once per battle)
+            ovrImgPath: passive/UI_Cp_Attack
         skill:
             header: "Skill I"
-            name: Reflect Ray
+            name: Light Sword of Judgement
             desc: 
-                - Fires a ray of light from a mirror, dealing damage to one enemy target.
-                - • Has a 50% chance to perform <b>[Additional Attack]</b> equal to 30% of ATK and M. ATK on the enemy target.
+                - Sends piercing light swords flying, dealing damage to one enemy target.
+                - • Applies <b class="dtt-indicator dtt-critrateincrease">[Crit Rate Increase Lv. 3]</b> and then attacks one enemy target.
             pills:
-                - 'ATK: 95% M. ATK: 95%'
+                - 'ATK: 100% M. ATK: 100%'
                 - 'Single-Target'
             upgrades:
                 - Lv. 2 ATK +5%, M. ATK +5%
                 - Lv. 3 ATK +5%, M. ATK +5%
                 - Lv. 4 ATK +5%, M. ATK +5%
                 - Lv. 5 ATK +5%, M. ATK +5%
-        skill:
-            header: "Skill I"
-            name: Ice Shard
-            desc: 
-                - Shoots an ice shard, dealing damage to one enemy target.
-                - • Has a 70% chance to apply <b class="dtt-indicator dtt-bleed">[Bleed]</b> debuff to one enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
-            pills:
-                - 'ATK: 95% M. ATK: 95%'
-                - 'Single-Target'
-            upgrades:
-                - Lv. 2 ATK +5%, M. ATK +5%
-                - Lv. 3 ATK +5%, M. ATK +5%
-                - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 ATK +5%, M. ATK +5%
+            ovrImgPath: combat/UI_licht_001_skill01_01
         skill2:
             header: "Skill II"
-            name: Heavenly Ice Fangs
+            name: Bright Judgment Whip
             desc:
-                - Summons and fires sharp ice fangs, dealing damage to one enemy target.
-                - • Has a 50% chance to apply <b class="dtt-indicator dtt-freeze">[Freeze]</b> debuff to one enemy target.
+                - Swings a light whip, dealing damage to one enemy target.
+                - • Applies <b class="dtt-indicator dtt-critrateincrease">[Crit Rate Increase Lv. 2]</b> and then attacks one enemy target.
+                - • Applies <b class="dtt-indicator dtt-defpen" style="color:#26c6f9">[DEF PEN. Lv. 2]</b> on self and then attacks one enemy target.
             pills:
-                - 'ATK: 110% M. ATK: 110%'
-                - 'Single-Target'
+                - 'ATK: 130% M. ATK: 130%'
+                - 'AOE'
                 - '3 turns'
             upgrades:
                 - Lv. 2 ATK +10%, M. ATK +10%
                 - Lv. 3 ATK +10%, M. ATK +10%
                 - Lv. 4 ATK +10%, M. ATK +10%
                 - Lv. 5 ATK +10%, M. ATK +10%
+            ovrImgPath: combat/UI_licht_001_skill02_01
         special:
-            name: Endless Ice Fangs
+            name: Light Shaft of Divine Punishment
             desc:
-                - Summons and fires sharp icicles, dealing damage to all enemies.
-                - • Has a 60% chance to apply <b class="dtt-indicator dtt-bleed">[Bleed]</b> to each enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
+                - Shoots a huge beam of light at all enemies and swallows them, dealing damage to all enemy targets.
+                - • Applies <b class="dtt-indicator dtt-critrateincrease">[Crit Rate Increase Lv. 3]</b> and then attacks all enemy targets.
             pills:
-                - 'ATK: 70% M. ATK: 70%'
+                - 'ATK: 80% M. ATK: 80%'
                 - 'AOE'
             upgrades:
                 - Lv. 2 ATK +10%, M. ATK +10%
                 - Lv. 3 ATK +10%, M. ATK +10%
                 - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. 5 [Bleed] Chance +10%
+                - Lv. 5 ATK +10%, M. ATK +10%
+            ovrImgPath: combat/UI_licht_001_special_01
         combined:
             layoutTags:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
             desc:
                 - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Has a 40% chance to apply <b class="dtt-indicator dtt-freeze">[Freeze]</b> debuff to one enemy target.
+                - • Applies 30% <b>[Damage Increase]</b> and then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
             pills:
-                - 'Ally'
+                - 'ATK: 65%, M. ATK: 65%'
+                - 'Single-Target'
                 - '15 turns'
             upgrades:
+                - Lv. 2 ATK +10%, M. ATK +10%
+                - Lv. 3 [Damage Increase] +10%
+                - Lv. 4 ATK +10%, M. ATK +10%
+                - Lv. 5 [Damage Increase] +10%
+            ovrImgPath: combat/UI_common_joinatk_01
+        united:
+            header: United Attack (Lv. 1)
+            name: '&#60;Eye of the Midnight Sun&#62; Rhya'
+            desc: 
+                - Rhya and Licht attacks with beam of lights, dealing damage to all enemy targets.
+                - • Applies <b class="dtt-indicator dtt-defpen" style="color:#26c6f9">[DEF PEN. Lv. 2]</b> on partner and self and then attacks all enemy target.
+            pills:
+                - 'ATK: 4%, M. ATK: 40%'
+                - 'AOE'
+                - '15 turns'
+            upgrades: 
                 - Lv. 2 ATK +5%, M. ATK +5%
                 - Lv. 3 ATK +5%, M. ATK +5%
                 - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 [Freeze] Chance +5%
-            ovrImgPath: combat/UI_common_joinatk_01
+                - Lv. 5 ATK +5%, M. ATK +5%
+            ovrImgPath: combat/UI_common_match_01
     stats:
-        Total Power: 22216
-        ATK: 4959
-        M. ATK: 4959
-        DEF: 3572
-        HP: 42282
-        ACC: 207
-        DMG. RES.: 221
-        CRIT. %: 13.5%
-        CRIT. DMG: 50%
+        Total Power: 24316
+        ATK: 3239
+        M. ATK: 9719
+        DEF: 3207
+        HP: 42750
+        ACC: 221
+        DMG. RES.: 201
+        CRIT. %: 22.03%
+        CRIT. DMG: 57.5%
         CRIT. RES: 0%
-        SPD: 112
-        DP: 104
-        DP. RES: 47
+        SPD: 103
+        DP: 106
+        DP. RES: 57
+    fateLinks:
+        - rhya
 ---
