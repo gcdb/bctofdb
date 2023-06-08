@@ -42,6 +42,7 @@
     "defpenincrease": "DEF PEN. Increase Lv. 1/2/3: Ignores x/x/30% of target's DEF when attacking",
     "fortify": "Fortify Lv. 1/2/3: Reduces damage taken by x/x/34%",
     "allatkreduction": "All ATK Reduction Lv. 1/2/3: Reduces all ATK by 23/x/x%",
+    "allatkincrease": "All ATK Increase Lv. 1/2/3: Increases all ATK by x/40/x%",
     "accincrease": "ACC. Increase Lv. 1/2/3: Increeases ACC. by: x/25/x%",
     "silence": "Silence: Skill II is disabled",
     "continuousrecovery": "Continuous Recovery: Restores a certain amount of HP at the start of every turn",
