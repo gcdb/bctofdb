@@ -9,8 +9,11 @@ data-theme="theme-default" data-assets-path="../assets/" data-template="vertical
         {% if page.layout == 'characterProfile' %}
             {{ page.name | capitalize }}, {{ page.profile.title }}
         {% elsif page.layout == 'grimoireProfile' %}
-            Grimoire: {{ page.name }}
+            Skill Page: {{ page.name }}
+        {% else %}
+            {{ page.title }}
         {% endif %}
+        | Black Clover Mobile | BCMDatabase
     </title>
 
     <!-- Favicon -->
