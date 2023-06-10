@@ -3,7 +3,7 @@ layout: default
 ---
 {% assign cCode = page.code %}
 {% assign pData = page.profile %}
-{% assign gData = site.grimoires | where: "code", pData.grimoireCode | first %}
+{% assign gData = site.skill-pages | where: "code", pData.grimoireCode | first %}
 {% assign gDefaultCode = cCode | append: "_01" %}
 
 {% assign grimoireImgPath = gData.ovr.gImgPath | default: gDefaultCode %}

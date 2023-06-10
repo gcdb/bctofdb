@@ -145,15 +145,14 @@ data-theme="theme-default" data-assets-path="../assets/" data-template="vertical
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.3/purify.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="../js/filterCharacters.js"></script>
+    {% if page.path == 'characters.html' %}
+        <script src="../js/filterCharacters.js"></script>
+    {% elsif page.path == 'skill-pages.html' %}
+        <script src="../js/filterGrimoires.js"></script>
+    {% endif %}
     <script src="../js/tooltipHandler.js"></script>
     <script>
         $(document).ready(function() {
-            $('#squadSelect').selectize({
-                onChange: filterCharacters
-            });
-            $("input[name=typeRadio], input[name=rarityRadio], input[name=classRadio]").change(filterCharacters);
-
             // Set active tab
             $('.navbar-nav .nav-link').each((idx, elem) => {
                 if (elem.dataset.linkname === '{{ page.navActive }}'.toLowerCase()) elem.classList.add('active');

@@ -38,8 +38,6 @@ function filterGrimoires() {
         })
         hiddenQuery += ')';
 
-        console.log(shownQuery)
-
         shownCards = cardDiv.querySelectorAll(shownQuery);
         hiddenCards = cardDiv.querySelectorAll(hiddenQuery);
     }
@@ -56,3 +54,7 @@ function clearFields() {
     
     filterGrimoires();
 }
+
+$(document).ready(function() {
+    $("input[name=typeRadio], input[name=rarityRadio]").change(filterGrimoires);
+});

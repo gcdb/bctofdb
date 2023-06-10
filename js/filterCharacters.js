@@ -59,3 +59,10 @@ function clearFields() {
     
     filterCharacters();
 }
+
+$(document).ready(function() {
+    $('#squadSelect').selectize({
+        onChange: filterCharacters
+    });
+    $("input[name=typeRadio], input[name=rarityRadio], input[name=classRadio]").change(filterCharacters);
+});

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Skill Pages
-navActive: grimoires
+navActive: skill-pages
 ---
 {% include wipHeader.html %}
 <div class="row mb-4">
@@ -18,7 +18,7 @@ navActive: grimoires
                         <input type="text" class="form-control bg-body" 
                         id="grimoireNameInput" placeholder="Search here.."
                         onkeyup="filterGrimoires()">
-                        <label for="searchInput">Search Grimoire Names..</label>
+                        <label for="searchInput">Search Skill Pages..</label>
                     </div>
                 </div>
                 <div class="row mb-2">
@@ -77,7 +77,7 @@ navActive: grimoires
     </div>
     <div class="card-body">
         <div id="char-cardDiv" class="row mb-4">
-            {% assign grimoiresGroupByNew = site.grimoires | group_by: "new" | sort: "name" | reverse %}
+            {% assign grimoiresGroupByNew = site.skill-pages | group_by: "new" | sort: "name" | reverse %}
             {% for grimoireGroup in grimoiresGroupByNew %}
             {% assign sortedGrimoires = grimoireGroup.items | sort_natural: "name" %}
             {% for g in sortedGrimoires %}
