@@ -1,8 +1,6 @@
 ---
 layout: characterProfile
 
-disabled: WIP
-
 code: neige
 name: neige
 squad: Clover Kingdom
@@ -20,78 +18,81 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
             desc: 
-                - Applies 3% <b>[Healing Increase]</b>.
+                - Applies 5% <b>[PEN Increase]</b>.
             ovrImgPath: passive/UI_Awakening_Passive_01
         skill:
             header: "Skill I"
-            name: Aqua Strike
+            name: Snow Friends
             desc: 
-                - Fires a small orb of water, dealing damage to one enemy target.
+                - Snowman swings its fist, dealing damage to one enemy target.
             pills:
-                - 'ATK: 70% M. ATK: 70%'
+                - 'ATK: 85% M. ATK: 85%'
                 - 'Single-Target'
             upgrades:
                 - Lv. 2 ATK +5%, M. ATK +5%
                 - Lv. 3 ATK +5%, M. ATK +5%
                 - Lv. 4 ATK +5%, M. ATK +5%
                 - Lv. 5 ATK +5%, M. ATK +5%
+            ovrImgPath: combat/UI_neige_001_skill01_01
         skill2:
             header: "Skill II"
-            name: Holy Fist of Love
+            name: Snow Cry
             desc:
-                - Summons a fist of water and throws a punch, dealing damage to one enemy target.
-                - • Applies <b>[Recovery]</b> to the friendly target with the lowest health, restoring their health equal to 20% of Lily's Max HP.
+                - Summons a freezing blizzard, dealing damage to all enemy targets.
+                - • Has a 60% chance to apply <b class="dtt-indicator dtt-incapacitate">[Incapacitate Lv.2]</b> on each enemy target for 2 turn.
             pills:
-                - 'ATK: 90% M. ATK: 90%'
-                - 'Ally'
-                - '2 turns'
+                - 'ATK: 50% M. ATK: 50%'
+                - 'AOE'
+                - '3 turns'
             upgrades:
-                - Lv. 2 ATK +10%, M. ATK +10%
-                - Lv. [Recvoery] +5%
-                - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. [Recvoery] +5%
+                - Lv. 2 ATK +5%, M. ATK +5%
+                - Lv. 3 ATK +5%, M. ATK +5%
+                - Lv. 4 ATK +5%, M. ATK +5%
+                - Lv. 5 ATK +5%, M. ATK +5%
+            ovrImgPath: combat/UI_neige_001_skill02_01
         special:
-            name: Earnest Prayer
+            name: Snow Lime Rock
             desc:
-                - Grants HP Recovery to a friendly target with Water Recovery Magic.
-                - • Applies <b>[Recovery]</b> to a friendly target, restoring their health equal to 360% of M. ATK.
-                - • Applies <b class="dtt-indicator dtt-atkincrease">[ATK Increase Lv. 2]</b> to the friendly target for 2 turns.
+                - Creates a huge snow prison, imprisoning and damaging all enemy targets.
+                - • Has a 30% chance to apply <b class="dtt-indicator dtt-freeze">[Freeze]</b> on each enemy target for 1 turn.
             pills:
-                - 'Ally'
+                - 'ATK: 50% M. ATK: 50%'
+                - 'AOE'
             upgrades:
-                - Lv. 2 [Recvoery] +45%
-                - Lv. 3 [Recvoery] +45%
-                - Lv. 4 [Recvoery] +45%
-                - Lv. 5 [Recvoery] +45%
+                - Lv. 2 ATK +7%, M. ATK +7%
+                - Lv. 3 ATK +7%, M. ATK +7%
+                - Lv. 4 ATK +7%, M. ATK +7%
+                - Lv. 5 ATK +7%, M. ATK +7%
+            ovrImgPath: combat/UI_neige_001_special_01
         combined:
             layoutTags:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
             desc:
                 - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Has a 60% chance to remove 2 <b>Buffs</b> from the enemy target.
+                - • Applies <b class="dtt-indicator dtt-incapacitate">[Incapacitate Lv.2]</b> on an enemy target for 1 turn if they have an active <b class="dtt-indicator dtt-incapacitate">[Incapacitate]</b> debuff.
             pills:
-                - 'ATK +45%, M. ATK +45%'
+                - 'ATK +60%, M. ATK +60%'
                 - 'Single-Target'
                 - '15 turns'
             upgrades:
                 - Lv. 2 ATK +5%, M. ATK +5%
-                - Lv. 3 Remove Buff Chance +10%
+                - Lv. 3 ATK +5%, M. ATK +5%
                 - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 Remove Buff Chance +10%
+                - Lv. 5 ATK +5%, M. ATK +5%
             ovrImgPath: combat/UI_common_joinatk_01
     stats:
-        Total Power: 21364
-        ATK: 0
-        M. ATK: 7295
-        DEF: 3207
-        HP: 49248
-        ACC: 205
-        DMG. RES.: 205
-        CRIT. %: 8.1%
-        CRIT. DMG: 50%
+        Total Power: 21720
+        ATK: 5104
+        M. ATK: 5104
+        DEF: 20309
+        HP: 45935
+        ACC: 207
+        DMG. RES.: 201
+        CRIT. %: 12.83%
+        CRIT. DMG: 45%
         CRIT. RES: 0%
-        SPD: 95
-        DP: 101
-        DP. RES: 60
+        SPD: 107
+        DP: 114
+        DP. RES: 53
 ---
