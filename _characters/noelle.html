@@ -1,8 +1,6 @@
 ---
 layout: characterProfile
 
-disabled: WIP
-
 code: noelle
 name: noelle
 squad: Black Bulls
@@ -21,14 +19,15 @@ profile:
                 - 'no-upgrades'
             desc: 
                 - Applies 5% <b>[Damage Taken Reduction]</b> when attacked by an Attacker Class enemy.
+            ovrImgPath: passive/UI_Awakening_Passive_01
         skill:
             header: "Skill I"
-            name: Reflect Ray
+            name: Aqua Strike
             desc: 
-                - Fires a ray of light from a mirror, dealing damage to one enemy target.
-                - • Has a 50% chance to perform <b>[Additional Attack]</b> equal to 30% of ATK and M. ATK on the enemy target.
+                - Casts an water ball and sends it flying, dealing damage to one enemy target.
+                - Applies <b class="dtt-indicator dtt-defincrease">[DEF Increase Lv. 1]</b> to a friendly target with the lowest HP for 2 turns.
             pills:
-                - 'ATK: 95% M. ATK: 95%'
+                - 'ATK: 80% M. ATK: 80%'
                 - 'Single-Target'
             upgrades:
                 - Lv. 2 ATK +5%, M. ATK +5%
@@ -37,59 +36,77 @@ profile:
                 - Lv. 5 ATK +5%, M. ATK +5%
         skill2:
             header: "Skill II"
-            name: Reflect Refrain
+            name: Water Barrier
             desc:
-                - Fires multiple rays of light from several mirrors, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 50% of ATK and M. ATK on the enemy target if there is an active buff on self.
+                - Creates a water wall, protecting a friendly target.
+                - • Applies a <b>[Barrier]</b> equal to 130% of your M. ATK to one friendly target for 2 turns.
+                - • Has a 80% chance to remove <b class="dtt-indicator dtt-freeze">[Freeze]</b> on the friendly target.
             pills:
-                - 'Single-Target'
-                - '3 turns'
+                - 'Ally'
+                - '2 turns'
             upgrades:
-                - Lv. 2 ATK +10%, M. ATK +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. 5 ATK +10%, M. ATK +10%
+                - Lv. 2 Barrier +30%
+                - Lv. 3 Barrier +30%
+                - Lv. 4 Barrier +30%
+                - Lv. 5 Barrier +30%
         special:
-            name: Strike of the Sleeping Sheep
+            name: Sea Dragon's Lair
             desc:
-                - Fires a powerful ray of light from a giant mirror, dealing damage to one enemy target.
-                - • Perform <b>[Additional Attack]</b> equal to 90% of ATK and M. ATK on the enemy target if a Critical Strike occured.
+                - Creates a water barrier, projecting all allies.
+                - • Applies a <b>[Barrier]</b> equal to 180% of your M. ATK to all friendly targets.
+                - • Applies <b class="dtt-indicator dtt-defincrease">[DEF Increase Lv. 3]</b> to all friendly targets.
             pills:
-                - 'ATK: 150% M. ATK: 150%'
-                - 'Single-Target'
+                - 'All Allies'
             upgrades:
-                - Lv. 2 ATK +15%, M. ATK +15%
-                - Lv. 3 ATK +15%, M. ATK +15%
-                - Lv. 4 ATK +15%, M. ATK +15%
-                - Lv. 5 ATK +15%, M. ATK +15%
+                - Lv. 2 Barrier +20%
+                - Lv. 3 Barrier +20%
+                - Lv. 4 Barrier +20%
+                - Lv. 5 Barrier +20%
         combined:
             layoutTags:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
             desc:
-                - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> then attacks the enemy target if the target is inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
+                - Applies a buff to your partner.
+                - • Applies <b class="dtt-indicator dtt-atkincrease">[ATK Increase Lv. 4]</b> on your partner.
+                - • Has a 30% chance during your partner's attack to apply <b class="dtt-indicator dtt-stun">[Stun]</b> to one enemy target for 1 turn.
             pills:
                 - 'Ally'
                 - '15 turns'
             upgrades:
-                - Lv. 2 ATK +15%, M. ATK +15%
-                - Lv. 3 ATK +15%, M. ATK +15%
-                - Lv. 4 ATK +15%, M. ATK +15%
-                - Lv. 5 ATK +15%, M. ATK +15%
+                - Lv. 2 Stun Chance +5%
+                - Lv. 3 Stun Chance +5%
+                - Lv. 4 Stun Chance +5%
+                - Lv. 5 Stun Chance +5%
             ovrImgPath: combat/UI_common_joinatk_01
+        united:
+            header: United Attack (Lv. 1)
+            name: '&#60;Golden Dawn&#62; Mimosa Vermillion'
+            desc: 
+                - Uses water and plant magic to buff all friendly targets.
+                - • Applies a <b>[Barrier]</b> equal to 90% of Mimosa's M. ATK on all friendly targets for 2 turns.
+                - • Applies <b class="dtt-indicator dtt-allatkincrease">[All ATK Increase Lv. 1]</b> to all friendly targets for 2 turns.
+            pills:
+                - 'Allies'
+                - '15 turns'
+            upgrades: 
+                - Lv. 2 Barrier +10%
+                - Lv. 3 Barrier +10%
+                - Lv. 4 Barrier +10%
+                - Lv. 5 Barrier +10%
+            ovrImgPath: combat/UI_common_match_01
     stats:
-        Total Power: 21297
-        ATK: 3704
-        M. ATK: 3704
-        DEF: 3103
-        HP: 49199
+        Total Power: 23015
+        ATK: 1800
+        M. ATK: 5400
+        DEF: 4150
+        HP: 51839
         ACC: 205
         DMG. RES.: 205
-        CRIT. %: 8.1%
+        CRIT. %: 10.8%
         CRIT. DMG: 50%
         CRIT. RES: 0%
-        SPD: 93
+        SPD: 110
         DP: 101
         DP. RES: 60
 ---
