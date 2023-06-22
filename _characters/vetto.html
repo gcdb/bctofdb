@@ -1,16 +1,16 @@
 ---
 layout: characterProfile
 
-disabled: Not in Game
+new: New
 
 code: vetto
 name: vetto
 squad: The Eye of the Midnight Sun
-type: TBA
+type: tenacity
 rarity: ssr
-class: TBA
+class: debuffer
 profile:
-    grimoireCode: burning_hatred
+    grimoireCode: guide_of_despair
     fullName: Vetto
     title: The Eye of the Midnight Sun
     cards:
@@ -21,7 +21,7 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
             desc:
-                - Has 7% <b>[Favorable Damage Dealt Increase]</b>.
+                - Has 7% <b>[Damage Taken Reduction]</b> when attacked by a Boss type enemy.
             ovrImgPath: passive/UI_Awakening_Passive_01
         passive2:
             header: 'Unique Passive'
@@ -30,100 +30,102 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
             desc:
-                - Applies 15% <b>[Damage Increase]</b> when HP is above 100%.
+                - Applies 15% <b class="dtt-indicator dtt-fortify">[Fortify]</b> for 1 turn when [Lifesteal] is applied. (Applicable only to Lifesteal from self's skills)
             ovrImgPath: passive/UI_Cp_Attack
         skill:
             header: "Skill I"
-            name: Salamander'S Trick
+            name: Wild Blow
             desc: 
-                - Sends a magic flameball flying, dealing damage to one enemy target.
-                - • Has a 50% chance to apply <b class="dtt-indicator dtt-burn">[Burn]</b> damage to one enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
+                - Brutally strikes, dealing damage to one enemy target.
+                - • Applies <b class="dtt-indicator dtt-weapondisarm">[Weapon Disarm Lv. 1]</b> on one enemy target for 2 turns.
             pills:
-                - 'ATK: 90% M. ATK: 90%'
+                - 'ATK: 100% M. ATK: 100%'
                 - 'Single-Target'
             upgrades:
                 - Lv. 2 ATK +5%, M. ATK +5%
                 - Lv. 3 ATK +5%, M. ATK +5%
                 - Lv. 4 ATK +5%, M. ATK +5%
                 - Lv. 5 ATK +5%, M. ATK +5%
-            ovrImgPath: combat/UI_fana_001_skill01_01
+            ovrImgPath: combat/UI_vetto_001_skill01_01
         skill2:
             header: "Skill II"
-            name: Salamander's Whim
+            name: Savage Onslaught
             desc:
-                - Salamander sends a huge flame foward, dealing damage to all enemy targets.
-                - • Applies 50% <b class="dtt-indicator dtt-lifesteal">[Lifesteal]</b> and then attacks the enemy targets if there is at least 1 target inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
+                - Performs a flurry of attacks with an insane speed, dealing damage to all enemy targets.
+                - • Applies 50% <b class="dtt-indicator dtt-lifesteal">[Lifesteal]</b> and then attacks the enemy targets if HP is below 60%.
+                - • For every ally target defeated, applies 20% [Damage Increase] and then attacks.
             pills:
-                - 'ATK: 70% M. ATK: 70%'
+                - 'ATK: 62% M. ATK: 62%'
                 - 'AOE'
                 - '3 turns'
             upgrades:
-                - Lv. 2 ATK +5%, M. ATK +5%
-                - Lv. 3 ATK +5%, M. ATK +5%
-                - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 ATK +5%, M. ATK +5%
-            ovrImgPath: combat/UI_fana_001_skill02_01
+                - Lv. 2 ATK +7%, M. ATK +7%
+                - Lv. 3 Damage Increase +15%
+                - Lv. 4 ATK +7%, M. ATK +7%
+                - Lv. 5 Damage Increase +15%
+            ovrImgPath: combat/UI_vetto_001_skill02_01
         special:
-            name: Salamander's Breath
+            name: Bear Claw
             desc:
-                - Salamander launches an enormous blaze of fire from its mouth, dealing damage to all enemy targets.
-                - • Applies <b class="dtt-indicator dtt-allatkincrease">[All ATK Increase Lv. 2]</b>
+                - Strikes with a bear claw, dealing damage to one enemy target.
+                - • Applies 50% <b class="dtt-indicator dtt-lifesteal">[Lifesteal]</b> and then attacks.
+                - • Applies 35% <b class="dtt-indicator dtt-lifesteal">[Lifesteal]</b> and then attacks if attacking an enemy inflicted with <b class="dtt-indicator dtt-weapondisarm">[Weapon Disarm]</b>.
             pills:
-                - 'ATK: 80% M. ATK: 80%'
-                - 'AOE'
+                - 'ATK: 150% M. ATK: 150%'
+                - 'Single-Target'
             upgrades:
-                - Lv. 2 ATK +10%, M. ATK +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. 5 ATK +10%, M. ATK +10%
-            ovrImgPath: combat/UI_fana_001_special_01
+                - Lv. 2 ATK +15%, M. ATK +15%
+                - Lv. 3 ATK +15%, M. ATK +15%
+                - Lv. 4 ATK +15%, M. ATK +15%
+                - Lv. 5 ATK +15%, M. ATK +15%
+            ovrImgPath: combat/UI_vetto_001_special_01
         combined:
             layoutTags:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
             desc:
                 - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> and then attacks the enemy target if the target has an active debuff.
+                - • Has a 60% chance to <b class="dtt-indicator dtt-taunt">[Taunt]</b> one enemy target for 1 turn.
             pills:
-                - 'ATK: 65%, M. ATK: 65%'
+                - 'ATK: 75%, M. ATK: 75%'
                 - 'Single-Target'
                 - '15 turns'
             upgrades:
-                - Lv. 2 ATK +5%, M. ATK +5%
+                - Lv. 2 Taunt Chance +20%
                 - Lv. 3 ATK +5%, M. ATK +5%
-                - Lv. 4 ATK +5%, M. ATK +5%
+                - Lv. 4 Taunt Chance +20%
                 - Lv. 5 ATK +5%, M. ATK +5%
             ovrImgPath: combat/UI_common_joinatk_01
         united:
             header: United Attack (Lv. 1)
-            name: '&#60;Eye of the Midnight Sun&#62; Vetto'
+            name: '&#60;Eye of the Midnight Sun&#62; Fana'
             desc: 
                 - Launches a follow up attack on the enemy that got sent flying by Vetto's fist, dealing damage to one enemy target.
-                - • Applies <b class="dtt-indicator dtt-burn">[Burn]</b> damage to one enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
+                - • Applies a Max of 50% <b>[Damaage Increase]</b> based on the on your current HP and then attacks.
             pills:
-                - 'ATK: 80%, M. ATK: 80%'
+                - 'ATK: 60%, M. ATK: 60%'
                 - 'Single-Target'
                 - '15 turns'
             upgrades: 
-                - Lv. 2 ATK +10%, M. ATK +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. 5 ATK +10%, M. ATK +10%
+                - Lv. 2 ATK +8%, M. ATK +8%
+                - Lv. 3 ATK +8%, M. ATK +8%
+                - Lv. 4 ATK +8%, M. ATK +8%
+                - Lv. 5 ATK +8%, M. ATK +8%
             ovrImgPath: combat/UI_common_match_01
     stats:
-        Total Power: 24659
-        ATK: 3959
-        M. ATK: 11879
-        DEF: 3207
-        HP: 40500
-        ACC: 210
-        DMG. RES.: 201
-        CRIT. %: 15%
+        Total Power: 29492
+        ATK: 7200
+        M. ATK: 2400
+        DEF: 5412
+        HP: 73800
+        ACC: 201
+        DMG. RES.: 210
+        CRIT. %: 12.15%
         CRIT. DMG: 50%
         CRIT. RES: 0%
-        SPD: 103
-        DP: 106
-        DP. RES: 57
+        SPD: 100
+        DP: 96
+        DP. RES: 63
     fateLinks:
-        - vetto
+        - fana
 ---

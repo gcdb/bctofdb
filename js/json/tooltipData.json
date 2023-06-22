@@ -15,6 +15,7 @@
     "taunt": "Taunt: Attacks the target with the effect.",
     "counterattack": "TBA",
     "weaponenhancement": "Weapon Enhancement Lv. 1/2/3: Increases damage by 30/x/x%",
+    "weapondisarm": "Weapon Disarm Lv. 1/2/3: Reduces damage by 23/x/x%",
     "stun": "Stun: Target will be disabled and lose their turn",
     "invulnerability": "Cannot take damage",
     "incapacitate": "Incapacitate Lv. 1/2/3/4/5: Increases damage taken by 30/40/50/60/70%",
