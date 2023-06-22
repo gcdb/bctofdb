@@ -1,16 +1,16 @@
 ---
 layout: characterProfile
 
-disabled: Not in Game
+new: New
 
 code: rhya
 name: rhya
 squad: The Eye of the Midnight Sun
-type: TBA
+type: wisdom
 rarity: ssr
-class: TBA
+class: attacker
 profile:
-    grimoireCode: burning_hatred
+    grimoireCode: treacherous_man
     fullName: Rhya
     title: The Eye of the Midnight Sun
     cards:
@@ -21,7 +21,7 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
             desc:
-                - Has 7% <b>[Favorable Damage Dealt Increase]</b>.
+                - Applies 2.5% <b>[Attack Increase]</b> if a buff on self expires. (Stacks up to 3 times)
             ovrImgPath: passive/UI_Awakening_Passive_01
         passive2:
             header: 'Unique Passive'
@@ -30,92 +30,94 @@ profile:
                 - 'no-pill'
                 - 'no-upgrades'
             desc:
-                - Applies 15% <b>[Damage Increase]</b> when HP is above 100%.
+                - Applies <b>[Recovery]</b> to self equal to 15% of Max HP if a buff on self expires. (1 time per wave)
             ovrImgPath: passive/UI_Cp_Attack
         skill:
             header: "Skill I"
-            name: Salamander'S Trick
+            name: Copy Dark Magic "Continuous Slash"
             desc: 
-                - Sends a magic flameball flying, dealing damage to one enemy target.
-                - • Has a 50% chance to apply <b class="dtt-indicator dtt-burn">[Burn]</b> damage to one enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
+                - Performs a dark slash continuously, dealing damage to all enemy targets.
+                - • Has 30% chance to perform <b>[Additional Attack]</b> equal to 70% of ATK and M. ATK if you have an active buff.
             pills:
-                - 'ATK: 90% M. ATK: 90%'
-                - 'Single-Target'
+                - 'ATK: 50% M. ATK: 50%'
+                - 'AOE'
             upgrades:
-                - Lv. 2 ATK +5%, M. ATK +5%
-                - Lv. 3 ATK +5%, M. ATK +5%
-                - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 ATK +5%, M. ATK +5%
-            ovrImgPath: combat/UI_fana_001_skill01_01
+                - Lv. 2 ATK +3%, M. ATK +3%
+                - Lv. 3 ATK +3%, M. ATK +3%
+                - Lv. 4 ATK +3%, M. ATK +3%
+                - Lv. 5 ATK +3%, M. ATK +3%
+            ovrImgPath: combat/UI_rhya_001_skill01_01
         skill2:
             header: "Skill II"
-            name: Salamander's Whim
+            name: Copy Dark Magic "Gale Slash"
             desc:
-                - Salamander sends a huge flame foward, dealing damage to all enemy targets.
-                - • Applies 50% <b class="dtt-indicator dtt-lifesteal">[Lifesteal]</b> and then attacks the enemy targets if there is at least 1 target inflicted with <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b>.
+                - Slashes an enemy using a blade enhanced with Dark Magic, dealing damage to one enemy target.
+                - • Copies 2 buffs on the enemy target.
             pills:
-                - 'ATK: 70% M. ATK: 70%'
-                - 'AOE'
-                - '3 turns'
+                - 'ATK: 105% M. ATK: 105%'
+                - 'Single-Target'
+                - '2 turns'
             upgrades:
-                - Lv. 2 ATK +5%, M. ATK +5%
-                - Lv. 3 ATK +5%, M. ATK +5%
-                - Lv. 4 ATK +5%, M. ATK +5%
-                - Lv. 5 ATK +5%, M. ATK +5%
-            ovrImgPath: combat/UI_fana_001_skill02_01
+                - Lv. 2 ATK +8%, M. ATK +8%
+                - Lv. 3 ATK +8%, M. ATK +8%
+                - Lv. 4 ATK +8%, M. ATK +8%
+                - Lv. 5 ATK +8%, M. ATK +8%
+            ovrImgPath: combat/UI_rhya_001_skill02_01
         special:
-            name: Salamander's Breath
+            name: Copy Dark Magic "Dark Cloaked Avidya Slash"
             desc:
-                - Salamander launches an enormous blaze of fire from its mouth, dealing damage to all enemy targets.
-                - • Applies <b class="dtt-indicator dtt-allatkincrease">[All ATK Increase Lv. 2]</b>
+                - Unleashes potent dark magic, dealing damage to all enemy targets.
+                - • Performs <b>[Additional Attack]</b> equal to 70% of ATK and M. ATK if you have two or more active buff.
+                - • Applies 15% <b>[Damage Increase]</b> and then attacks all enemy targets for every active buff you have.
             pills:
-                - 'ATK: 80% M. ATK: 80%'
-                - 'AOE'
+                - 'ATK: 150% M. ATK: 150%'
+                - 'Single-Target'
             upgrades:
-                - Lv. 2 ATK +10%, M. ATK +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. 5 ATK +10%, M. ATK +10%
-            ovrImgPath: combat/UI_fana_001_special_01
+                - Lv. 2 ATK +20%, M. ATK +20%
+                - Lv. 3 ATK +20%, M. ATK +20%
+                - Lv. 4 ATK +20%, M. ATK +20%
+                - Lv. 5 ATK +20%, M. ATK +20%
+            ovrImgPath: combat/UI_rhya_001_special_01
         combined:
             layoutTags:
                 - 'no-name'
             header: Combined Attack (Lv. 1)
             desc:
-                - Performs a combined attack with your partner, dealing damage to one enemy target.
-                - • Applies 30% <b>[Damage Increase]</b> and then attacks the enemy target if the target has an active debuff.
+                - Performs a combined attack with your partner, dealing damage to all enemy targets.
+                - • Applies 15% <b>[Damage Increase]</b> and then attacks the enemy targets if you have an active buff.
             pills:
-                - 'ATK: 65%, M. ATK: 65%'
-                - 'Single-Target'
+                - 'ATK: 35%, M. ATK: 35%'
+                - 'AOE'
                 - '15 turns'
             upgrades:
+                - Lv. 2 ATK +5%, M. ATK +5%
+                - Lv. 3 [Damage Increase] +5%
+                - Lv. 4 ATK +5%, M. ATK +5%
+                - Lv. 5 [Damage Increase] +5%
+            ovrImgPath: combat/UI_common_joinatk_01
+        united:
+            header: United Attack (Lv. 1)
+            name: '&#60;Eye of the Midnight Sun&#62; Licht'
+            desc: 
+                - Rhya and Licht attacks with beam of lights, dealing damage to all enemy targets.
+                - • Copy one buff on your partner and then attkcs.
+                - • Applies <b class="dtt-indicator dtt-allatkincrease">[All ATK Increase Lv. 2]</b> and then attacks all enemy targets.
+            pills:
+                - 'ATK: 40%, M. ATK: 40%'
+                - 'AOE'
+                - '15 turns'
+            upgrades: 
                 - Lv. 2 ATK +5%, M. ATK +5%
                 - Lv. 3 ATK +5%, M. ATK +5%
                 - Lv. 4 ATK +5%, M. ATK +5%
                 - Lv. 5 ATK +5%, M. ATK +5%
-            ovrImgPath: combat/UI_common_joinatk_01
-        united:
-            header: United Attack (Lv. 1)
-            name: '&#60;Eye of the Midnight Sun&#62; Vetto'
-            desc: 
-                - Launches a follow up attack on the enemy that got sent flying by Vetto's fist, dealing damage to one enemy target.
-                - • Applies <b class="dtt-indicator dtt-burn">[Burn]</b> damage to one enemy target, dealing <b class="dtt-indicator dtt-continuousdamage">[Continuous Damage]</b> for 2 turns.
-            pills:
-                - 'ATK: 80%, M. ATK: 80%'
-                - 'Single-Target'
-                - '15 turns'
-            upgrades: 
-                - Lv. 2 ATK +10%, M. ATK +10%
-                - Lv. 3 ATK +10%, M. ATK +10%
-                - Lv. 4 ATK +10%, M. ATK +10%
-                - Lv. 5 ATK +10%, M. ATK +10%
             ovrImgPath: combat/UI_common_match_01
     stats:
-        Total Power: 24659
-        ATK: 3959
-        M. ATK: 11879
+        Total Power: 24749
+        ATK: 10799
+        M. ATK: 3599
         DEF: 3207
-        HP: 40500
+        HP: 45000
         ACC: 210
         DMG. RES.: 201
         CRIT. %: 15%
@@ -125,5 +127,5 @@ profile:
         DP: 106
         DP. RES: 57
     fateLinks:
-        - vetto
+        - licht
 ---
