@@ -38,9 +38,10 @@ plugins:
 collections:
   characters:
     output: true
+    permalink: /:collection/:name
   skill-pages:
     output: true
-
+    permalink: /:collection/:name
 
 # Exclude from processing.
 # The following items will not be processed, by default.

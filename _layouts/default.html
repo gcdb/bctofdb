@@ -5,19 +5,27 @@ data-theme="theme-default" data-assets-path="../assets/" data-template="vertical
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta name="description" content="
+    {%- if page.description -%}
+        {{ page.description }}
+    {%- else -%}
+        BCM Database is a wiki & database with the latest information on Black Clover Mobile: Rise of the Wizard King.
+    {%- endif %}">
+
     <title>
-        {% if page.layout == 'characterProfile' %}
-            {{ page.name | capitalize }}, {{ page.profile.title }}
-        {% elsif page.layout == 'grimoireProfile' %}
-            Skill Page: {{ page.name }}
-        {% else %}
-            {{ page.title }}
-        {% endif %}
-        | Black Clover Mobile | BCMDatabase
-    </title>
+    {%- if page.layout == 'characterProfile' -%}
+        {{ page.name | capitalize }}, {{ page.profile.title }}
+    {%- elsif page.layout == 'grimoireProfile' -%}
+        Skill Page: {{ page.name }}
+    {%- else -%}
+        {{ page.title }}
+    {%- endif %} | Black Clover Mobile | BCMDatabase</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../img/site/404-image.png" />
+
+    <!-- Canonical SEO  -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
